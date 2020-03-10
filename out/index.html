@@ -484,7 +484,7 @@ img {
      <div><button id="toggle_contents" style="padding-left: 0.5ch; padding-right: 0.5ch; cursor: pointer; position: relative; top: -1px;">☰</button><span id="contents-label" style="margin-left: 0;"> Contents</span></div>
   </div><ul><li><a href="#introduction">Introduction</a></li><li><a href="#the-power-of-interpretability">The Power of Interpretability</a><ul><li><a href="#what-is-interpretability%3F">What Is Interpretability?</a></li><li><a href="#enhancing-trust">Enhancing Trust</a></li><li><a href="#satisfying-regulations">Satisfying Regulations</a></li><li><a href="#explaining-decisions">Explaining Decisions</a></li><li><a href="#improving-the-model">Improving the Model</a></li><li><a href="#accuracy-and-interpretability">Accuracy and Interpretability</a></li></ul></li><li><a href="#%5B%5Blime-code%5D%5D-%5Bsource%2Cpython%5D">[[lime-code]]
 [source,python]</a></li><li><a href="#e-%3D-explainer.explain_instance(customer%2C-clf.predict_proba)-print(e.as_list())">e = explainer.explain_instance(customer, clf.predict_proba)
-print(e.as_list())</a></li></ul></div></p>
+print(e.as_list())</a></li><li><a href="#ethics-and-regulations">Ethics and Regulations</a><ul><li><a href="#discrimination">Discrimination</a></li><li><a href="#safety">Safety</a></li><li><a href="#negligence-and-codes-of-conduct">Negligence and Codes of Conduct</a></li></ul></li></ul></div></p>
 <h2 id="introduction">Introduction</h2>
 <p>Our society is increasingly dependent on intelligent machines. Algorithms
 govern everything from which e-mails reach our inboxes to whether we are approved
@@ -1517,15 +1517,12 @@ it seems to use fundamentally different concepts and strategies than humans.
 The approach taken by Bonsai would nudge AlphaGo to “think” more like human
 players.]</p>
 <p>https://bons.ai/</p>
-<p>[[ethics]]
-== Ethics and Regulations</p>
+<h2 id="ethics-and-regulations">Ethics and Regulations</h2>
 <p>We’ve already touched on some of the reasons why interpretability is essential
 to ensure the application of machine learning is not dangerous, discriminatory,
 or forbidden by regulations. In this chapter we’ll discuss this in more detail.</p>
-<p>[[figure_regulation]]
-.Regulations can require information about how a model works. If your model is uninterpretable you will be unable to comply.
-image::figures/5-06.png[]</p>
-<p>=== Discrimination</p>
+<figure><img src="figures/5-06.png" alt="Regulations can require information about how a model works. If your model is uninterpretable you will be unable to comply."><figcaption>Regulations can require information about how a model works. If your model is uninterpretable you will be unable to comply.</figcaption></figure>
+<h3 id="discrimination">Discrimination</h3>
 <p>The issue of discrimination is intimately tied up with interpretability.
 Protected classes have suffered (and continue to suffer) discrimination in
 sensitive situations such as employment, lending, housing, and healthcare.
@@ -1575,9 +1572,7 @@ Act. This requires that consumers be provided “all of the key factors that adv
 affected the credit score of the consumer in the model used, the total number
 of which shall not exceed 4.” Again, it may be impossible to fulfill this
 requirement if the model is uninterpretable.</p>
-<p>[[figure_fair_credit_act]]
-.The Fair Credit Reporting Act requires the consumer be informed about key factors.
-image::figures/5-05.png[style=“right”]</p>
+<p><img src="figures/5-05.png" alt="The Fair Credit Reporting Act requires the consumer be informed about key factors.">[style=“right”]</p>
 <p>When discrimination is the result of an algorithmic decision, it can be
 difficult for those affected by the decision, the regulator, or the
 organization that deployed the algorithm to determine the reason (or even to
@@ -1588,30 +1583,29 @@ law, are ethical, and are good for our businesses.</p>
 <p>.Resources on algorithmic discrimination</p>
 <hr>
 <ul>
-<li>Barocas and Selbst (2016), &quot;Big Data’s Disparate
-Impact.&quot;footnote:[https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899] This
+<li>Barocas and Selbst (2016), “Big Data’s Disparate
+Impact.”<sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup> This
 clearly written and well-organized non-technical paper focuses on the
 practical impact of discriminatory algorithms. Part A is an invaluable list
 of all the ways in which an algorithm can be discriminatory. Parts B and C
 pay particular attention to the status and future of US law.</li>
 <li>O’Neil (2016), <em>Weapons of Math Destruction: How Big Data Increases Inequality and
 Threatens Democracy</em> (Crown Random
-House)footnote:[https://weaponsofmathdestructionbook.com/]. O’Neil’s book is
+House)<sup class="footnote-ref"><a href="#fn6" id="fnref6">[6]</a></sup>(https://weaponsofmathdestructionbook.com/)]. O’Neil’s book is
 a wide-ranging polemic that we highly recommend to anyone who works with
 data scientists, or is one. It considers the issues touched upon in this
 chapter throughout.</li>
 </ul>
 <hr>
-<p>[[safety]]
-=== Safety</p>
+<h3 id="safety">Safety</h3>
 <p>Algorithms must be audited and understood before they are deployed in contexts
 where injury or death is a risk, including healthcare (as discussed in
 &lt;&lt;trust&gt;&gt;, and &lt;&lt;healthcare&gt;&gt;) and driverless vehicles. Deep understanding of
 an algorithm may be necessary not only to reduce its physical danger, but also
 to reduce legal risk to the owner of the algorithm.</p>
 <p>There is also a social obligation (and market incentive) to explain these
-high-stakes algorithms to society. The 2016 IEEE white paper &quot;Ethically Aligned
-Design&quot;footnote:[http://standards.ieee.org/develop/indconn/ec/ead_v1.pdf] puts
+high-stakes algorithms to society. The 2016 IEEE white paper “Ethically Aligned
+Design”<sup class="footnote-ref"><a href="#fn7" id="fnref7">[7]</a></sup> puts
 it well: “For disruptive technologies, such as driverless cars, a certain level
 of transparency to wider society is needed in order to build public confidence
 in the technology.”</p>
@@ -1619,38 +1613,34 @@ in the technology.”</p>
 physical danger, the potential consequences of badly behaved algorithms are
 potentially grave and global. With this in mind, the financial services
 industry in the United States is bound by SR 11-7, Guidance on Model Risk
-Management,footnote:[https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm]
+Management,<sup class="footnote-ref"><a href="#fn8" id="fnref8">[8]</a></sup>
 which among other things requires that model behavior be explained.</p>
-<p>[[gdpr]]
-.GDPR Article 22 and the right to an explanation</p>
+<p>.GDPR Article 22 and the right to an explanation</p>
 <hr>
 <p>The European Union’s General Data Protection Regulation will apply in the EU
-from May 2018.footnote:[http://www.privacy-regulation.eu/en/22.htm]
+from May 2018.<sup class="footnote-ref"><a href="#fn9" id="fnref9">[9]</a></sup>
 There has been much debate about the intentions and practical
 consequences of this wide-ranging regulation. A 2016 paper created
-considerable excitement and concern by arguing that Article 22 &quot;creates a
+considerable excitement and concern by arguing that Article 22 “creates a
 ‘right to explanation,’ whereby a user can ask for an explanation of an
-algorithmic decision that was made about them.&quot;footnote:[https://arxiv.org/abs/1606.08813]
+algorithmic decision that was made about them.”<sup class="footnote-ref"><a href="#fn10" id="fnref10">[10]</a></sup>
 Without the careful application of
 approaches such as LIME to craft user-friendly explanations in plain words,
 such a regulation would seem to make it illegal to apply random forests and
 neural networks to data concerning the 500 million citizens of the EU. A
-response with the unambiguous title &quot;Why a Right to Explanation of
+response with the unambiguous title “Why a Right to Explanation of
 Automated Decision-Making Does Not Exist in the General Data Protection
-Regulation&quot;footnote:[https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2903469]
+Regulation”<sup class="footnote-ref"><a href="#fn11" id="fnref11">[11]</a></sup>
 rejected this interpretation, conceding only that the regulations
 create a right to an “explanation of system functionality.” This view is
 consistent with that of a global accounting firm we talked to while writing
-this report, but there is lack of consensus.footnote:[The UK’s decision to leave
-the EU further complicates things in that jurisdiction. See paragraphs 43-46 of
-the UK House of Commons Science and Technology Committee report link:http://bit.ly/2urMtJr[“Robotics
-and Artificial Intelligence”] for the current UK government position.]
+this report, but there is lack of consensus.<sup class="footnote-ref"><a href="#fn12" id="fnref12">[12]</a></sup>
 Hopefully things will become clearer when the regulation comes into force;
 in the meantime, for further information we recommend the clear, practical
 article “How to Comply with GDPR Article 22” by Reuben
-Binns.footnote:[http://www.reubenbinns.com/blog/how-to-comply-with-gdpr-article-22-automated-credit-decisions/]</p>
+Binns.<sup class="footnote-ref"><a href="#fn13" id="fnref13">[13]</a></sup></p>
 <hr>
-<p>=== Negligence and Codes of Conduct</p>
+<h3 id="negligence-and-codes-of-conduct">Negligence and Codes of Conduct</h3>
 <p>Professions like medicine and civil engineering have codes of conduct that are
 either legally binding or entrenched norms. To not follow them is considered
 negligent or incompetent. The relatively immature professions of software
@@ -1659,21 +1649,21 @@ think and hope that applying the techniques discussed in this report will
 become a baseline expectation for the competent, safe, and ethical application
 of machine learning. Indeed, the IEEE and ACM have both recently proposed community standards
 that address precisely the topic of this report.</p>
-<p>The 2016 IEEE white paper &quot;Ethically Aligned
-Design&quot;footnote:[http://standards.ieee.org/develop/indconn/ec/ead_v1.pdf] is
+<p>The 2016 IEEE white paper “Ethically Aligned
+Design”<sup class="footnote-ref"><a href="#fn14" id="fnref14">[14]</a></sup> is
 unambiguous in its assertion that ensuring transparency is essential to users,
 engineers, regulators, the legal system, and society in general. To this end,
 the organization has established a working group to define a formal
-professional standard, &quot;IEEE P70001: Transparency of Autonomous
-Systems.&quot;footnote:[https://standards.ieee.org/develop/project/7001.html] This
+professional standard, “IEEE P70001: Transparency of Autonomous
+Systems.”<sup class="footnote-ref"><a href="#fn15" id="fnref15">[15]</a></sup> This
 standard may become a familiar Request for Proposal (RFP) requirement, like the
 equivalent ISO standards on security and data protection.</p>
 <p>The ACM’s 2017 Statement on Algorithmic Transparency is non-binding but
-similarly clear: &quot;systems and institutions that use algorithmic decision-making
+similarly clear: “systems and institutions that use algorithmic decision-making
 are encouraged to produce explanations regarding both the procedures followed
 by the algorithm and the specific decisions that are made. This is particularly
 important in public policy
-contexts.&quot;footnote:[http://www.acm.org/binaries/content/assets/public-policy/2017_usacm_statement_algorithms.pdf]</p>
+contexts.”<sup class="footnote-ref"><a href="#fn16" id="fnref16">[16]</a></sup></p>
 <p>== Future</p>
 <p>Model-agnostic interpretability techniques such as LIME are a breakthrough that
 begins to make the goals discussed in &lt;&lt;why&gt;&gt; practical. But the need for
@@ -1882,6 +1872,33 @@ improvements are made through a mixture of trial and error and intuition. See
 <li id="fn4" class="footnote-item"><p>Ribeiro, Singh, and
 Guestrin (2016), <a href="https://arxiv.org/abs/1602.04938">“‘Why Should I Trust
 You?’: Explaining the Predictions of Any Classifier.”</a> <a href="#fnref4" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn5" class="footnote-item"><p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899</a> <a href="#fnref5" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn6" class="footnote-item"><p>https://weaponsofmathdestructionbook.com/ <a href="#fnref6" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn7" class="footnote-item"><p><a href="http://standards.ieee.org/develop/indconn/ec/ead_v1.pdf">http://standards.ieee.org/develop/indconn/ec/ead_v1.pdf</a> <a href="#fnref7" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn8" class="footnote-item"><p><a href="https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm">https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm</a> <a href="#fnref8" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn9" class="footnote-item"><p><a href="http://www.privacy-regulation.eu/en/22.htm">http://www.privacy-regulation.eu/en/22.htm</a> <a href="#fnref9" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn10" class="footnote-item"><p><a href="https://arxiv.org/abs/1606.08813">https://arxiv.org/abs/1606.08813</a> <a href="#fnref10" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn11" class="footnote-item"><p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2903469">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2903469</a> <a href="#fnref11" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn12" class="footnote-item"><p>The UK’s decision to leave
+the EU further complicates things in that jurisdiction. See paragraphs 43-46 of
+the UK House of Commons Science and Technology Committee report <a href="http://bit.ly/2urMtJr">“Robotics
+and Artificial Intelligence”</a> for the current UK government position. <a href="#fnref12" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn13" class="footnote-item"><p><a href="http://www.reubenbinns.com/blog/how-to-comply-with-gdpr-article-22-automated-credit-decisions/">http://www.reubenbinns.com/blog/how-to-comply-with-gdpr-article-22-automated-credit-decisions/</a> <a href="#fnref13" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn14" class="footnote-item"><p><a href="http://standards.ieee.org/develop/indconn/ec/ead_v1.pdf">http://standards.ieee.org/develop/indconn/ec/ead_v1.pdf</a> <a href="#fnref14" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn15" class="footnote-item"><p><a href="https://standards.ieee.org/develop/project/7001.html">https://standards.ieee.org/develop/project/7001.html</a> <a href="#fnref15" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn16" class="footnote-item"><p><a href="http://www.acm.org/binaries/content/assets/public-policy/2017_usacm_statement_algorithms.pdf">http://www.acm.org/binaries/content/assets/public-policy/2017_usacm_statement_algorithms.pdf</a> <a href="#fnref16" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
