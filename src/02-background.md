@@ -1,10 +1,8 @@
-[[why]]
 ## The Power of Interpretability
 
 If a model makes correct decisions, should we care how they are made? More
 often than not, the answer is a resounding yes. This chapter explains why.
 
-[[what]]
 ### What Is Interpretability?
 
 From the point of view of a business deploying machine learning in a process or
@@ -17,16 +15,13 @@ product, there are three important kinds of interpretability:
    interested in, can you say how the model works, and thus learn about how the
    real system works?
 
-[[figure_global_interpretability]]
 ![Global interpretability shows feature importance for the model's prediction at a global level. Local interpretability shows feature importance for the model's prediction at a record-by-record level.](figures/2-03.png)
 
 When one or more of these conditions holds, it makes our use of data safer and
 opens the door to new kinds of products.
 
-[[figure_trusted_model]]
 ![If you trust a model, interpretability can provide you with concrete actions to pursue.](figures/2-04.png)
 
-[[trust]]
 ### Enhancing Trust
 
 Data scientists have a well-established protocol to measure the performance of
@@ -35,7 +30,6 @@ data, then measure its performance on the remainder. By assessing the model
 using data it has never seen, they reduce the risk that a powerful model with a
 lot of flexibility will simply memorize the training data.
 
-[[figure_model_validation]]
 ![Model validation can prevent overfitting.](figures/2-06.png)
 
 This possibility, known as overfitting, is a concern because the model will one
@@ -55,15 +49,13 @@ example, if you train a self-driving car on public roads in a country where
 people drive on the left, and then deploy that car in the United States, you're
 asking for trouble.
 
-[[figure_model_validation_abstract]]
 ![Validation does not help when training data and real-world data are too different.](figures/2-07.png)
 
 But sometimes subtler discrepancies can exist in the training data without your
 knowledge. A memorable example taken from a 2015 paper makes this point
-clearly.footnote:[Caruana et al. (2015),
-link:http://people.dbmi.columbia.edu/noemie/papers/15kdd.pdf["Intelligible
+clearly.^[[Caruana et al. (2015), "Intelligible
 Models for HealthCare: Predicting Pneumonia Risk and Hospital 30-day
-Readmission."]] Doctors and statisticians trained a model to predict the
+Readmission."](http://people.dbmi.columbia.edu/noemie/papers/15kdd.pdf)] Doctors and statisticians trained a model to predict the
 "probability of death" of patients suffering from pneumonia. The goal was to
 identify high-risk patients who should be admitted to hospital, and low-risk
 patients for outpatient treatment. With enough data, the conceit of machine
@@ -85,9 +77,7 @@ feature that should not be used to make predictions in this way. In this case,
 the model depended on a flawed assumption about the reason for the correlation
 between asthma and pneumonia survival.
 
-[[figure_asthma]]
-.Models built from training data can lack context for certain relationships.
-image::figures/2-01.png[]
+![Models built from training data can lack context for certain relationships.](figures/2-01.png)
 
 It is obviously essential to be confident that you haven't embedded bugs like
 this into a statistical model if it is to be used to make life-and-death
@@ -106,8 +96,7 @@ is a new technology. Rightly or wrongly, people tend to distrust novel things.
 Machine learning will only earn the trust of consumers, regulators, and society
 if we know and communicate how it works.
 
-[[regulations]]
-=== Satisfying Regulations
+### Satisfying Regulations
 
 In many industries and jurisdictions, the application of machine learning (or
 algorithmic decision-making) is regulated. This report does not offer legal
@@ -141,7 +130,6 @@ captures and recapitulates these biases. Interpretability allows you to reason
 about whether your model embeds biases before you go ahead and apply it
 at scale.
 
-[[explanations]]
 ### Explaining Decisions
 
 Local interpretability -- the ability to explain individual decisions -- opens
@@ -150,9 +138,7 @@ question "Why has the model made this decision?" is a superpower that raises
 the possibility of taking an action to _change_ the model's decision. Let's
 consider some examples of what you can do with that capability.
 
-[[figure_local_actions]]
-.Local interpretability means you can explain a model's predictions and even suggest actions.
-image::figures/2-08.png[]
+![Local interpretability means you can explain a model's predictions and even suggest actions.](figures/2-08.png)
 
 A model of customer churn tells you how likely a customer is to leave. A
 _locally interpretable_ model -- that is, one in which you can explain a
@@ -171,8 +157,7 @@ remotely or by giving the engineer the reason, saving them time in the field.
 A model that predicts loan repayment (or credit rating) is not only useful to
 the lender, it is of enormous interest to the borrower. But showing borrowers
 a credit rating number on its own is of limited use if they want to know what
-they need to do to improve it. The consumer app Credit Karma
-footnote:[http://creditkarma.com/] allows its users to figure this out for
+they need to do to improve it. The consumer app Credit Karma^[[http://creditkarma.com/](http://creditkarma.com/)] allows its users to figure this out for
 themselves using a brute force method similar to the new algorithm that we use
 in this report's prototype (see <<perturbation>>).
 
@@ -188,11 +173,9 @@ with the inputs in their head: the ultimate in usability. As we discuss in
 a huge neural network would be. But it can often be worth trading a little
 accuracy for interpretability, even in contexts less extreme than hospitals.
 
-[[figure_apgar]]
-.The APGAR score, used in evaluating the health of infants, shows how a simple model can inspire confidence because its operations are understandable.
-image::figures/2-09.png[]
+![The APGAR score, used in evaluating the health of infants, shows how a simple model can inspire confidence because its operations are understandable.](figures/2-09.png)
 
-=== Improving the Model
+### Improving the Model
 
 An uninterpretable model suffers from the performance and regulatory risks
 discussed earlier (see <<trust>>, and <<regulations>>), and closes the door on
@@ -206,15 +189,15 @@ interpretable, however, you can easily spot glaring problems or construct a
 kind of theory about how it works. The problems can be fixed, and the theory
 narrows down the possibilities for improvements. This means experiments are
 driven by hypotheses rather than trial and error, which makes improvements
-quicker.footnote:[This difficulty continues to plague deep learning. The models
+quicker.^[This difficulty continues to plague deep learning. The models
 are hard to interpret, which means the field lacks theory, and thus
 improvements are made through a mixture of trial and error and intuition. See
 <<long_term>>.]
 
 A striking example of debugging is given in the paper introducing Local
-Interpretable Model-agnostic Explanations (LIME),footnote:[Ribeiro, Singh, and
-Guestrin (2016), link:https://arxiv.org/abs/1602.04938["'Why Should I Trust
-You?': Explaining the Predictions of Any Classifier."]] the black-box
+Interpretable Model-agnostic Explanations (LIME),^[Ribeiro, Singh, and
+Guestrin (2016), ["'Why Should I Trust
+You?': Explaining the Predictions of Any Classifier."](https://arxiv.org/abs/1602.04938)] the black-box
 interpretability technique we use in this report's prototype (<<prototype>>).
 In that paper, the authors describe a convolutional neural network image
 classification model able to distinguish between images of wolves and Husky
@@ -223,12 +206,9 @@ makes it obvious that the classifier has incorrectly learned to identify not
 wolves and Husky dogs, but snow in the background of the image, which was more
 common in the training images of wolves.
 
-[[figure_wolf_example]]
-.An explanation or interpretation of a model can reveal major problems, such as in this image classifier, which was trained to distinguish between wolves and Husky dogs but is using the snow in the background to tell the difference. Figure and example from the LIME paper (https://arxiv.org/abs/1602.04938).
-image::figures/2-10.png[]
+![An explanation or interpretation of a model can reveal major problems, such as in this image classifier, which was trained to distinguish between wolves and Husky dogs but is using the snow in the background to tell the difference. Figure and example from [the LIME paper] (https://arxiv.org/abs/1602.04938).](figures/2-10.png)
 
-[[downside]]
-=== Accuracy and Interpretability
+### Accuracy and Interpretability
 
 So, why not simply use interpretable models? The problem is that there is a
 fundamental tension between accuracy and interpretability. The more
@@ -244,6 +224,4 @@ approaches that provide tools to peer inside accurate but previously
 uninterpretable "black-box" models have been devised. The following chapters
 discuss and illustrate these developments.
 
-[[figure_interpretability_accuracy]]
-.Choosing a model often involves a trade-off between interpretability and accuracy. This report is about breaking out of this trade-off.
-image::figures/2-16.png[]
+![Choosing a model often involves a trade-off between interpretability and accuracy. This report is about breaking out of this trade-off.](figures/2-16.png)
