@@ -1,6 +1,6 @@
-=== Product: Refractor
+### Product: Refractor
 
-==== The Product Possibilities of Interpretability
+#### The Product Possibilities of Interpretability
 
 As the use of machine learning algorithms increases, the need to understand
 them grows as well. This is true at both a societal and a product level. As
@@ -28,7 +28,7 @@ global table view of customers to an exploration of the effects of different
 features on an individual user. The process of building the prototype was also
 a movement between, and eventually a balancing of, those two levels.
 
-==== Global View: Understanding the Model
+#### Global View: Understanding the Model
 
 LIME is focused on local explanation of feature importance through feature
 perturbation. It may initially seem a strange choice, then, to use it in a
@@ -61,7 +61,7 @@ abstracted _representation_ of how the model works, not how it _actually_
 works. After all, if we could think at the scale and in the way the model
 does, we wouldn't need the model in the first place.
 
-==== Local View: Understanding the Customer
+#### Local View: Understanding the Customer
 
 While the table view is a powerful interface, it can feel overwhelming. For
 this prototype, we wanted to complement it with an individual customer view
@@ -103,7 +103,7 @@ how the model works. In the case of a customer service representative with an
 accurate model, that intuitive understanding translates to an ability to act
 off of its insights.
 
-==== Product Tension: Focus vs. Context
+#### Product Tension: Focus vs. Context
 
 As we developed the global and local interfaces of the prototype, we constantly
 engaged with a tension between providing the user with context and providing a
@@ -138,7 +138,7 @@ providing it alongside the full feature list helps the user feel like they're
 on stable ground. The context provides the background for users to take more
 focused action.
 
-==== Collaborating with Algorithms
+#### Collaborating with Algorithms
 
 Trust is a key component of any collaboration. As algorithms become
 increasingly prevalent in our lives the need for trust and collaboration will

@@ -482,9 +482,9 @@ img {
           <h1 id="interpretability">Interpretability</h1>
 <p><div class="table-of-contents"><div id="toc-header" style="display: flex; font-weight: bold; text-transform: uppercase;">
      <div><button id="toggle_contents" style="padding-left: 0.5ch; padding-right: 0.5ch; cursor: pointer; position: relative; top: -1px;">☰</button><span id="contents-label" style="margin-left: 0;"> Contents</span></div>
-  </div><ul><li><a href="#introduction">Introduction</a></li><li><a href="#the-power-of-interpretability">The Power of Interpretability</a><ul><li><a href="#what-is-interpretability%3F">What Is Interpretability?</a></li><li><a href="#enhancing-trust">Enhancing Trust</a></li><li><a href="#satisfying-regulations">Satisfying Regulations</a></li><li><a href="#explaining-decisions">Explaining Decisions</a></li><li><a href="#improving-the-model">Improving the Model</a></li><li><a href="#accuracy-and-interpretability">Accuracy and Interpretability</a></li></ul></li><li><a href="#%5B%5Blime-code%5D%5D-%5Bsource%2Cpython%5D">[[lime-code]]
+  </div><ul><li><a href="#introduction">Introduction</a></li><li><a href="#the-power-of-interpretability">The Power of Interpretability</a><ul><li><a href="#what-is-interpretability%3F">What Is Interpretability?</a></li><li><a href="#enhancing-trust">Enhancing Trust</a></li><li><a href="#satisfying-regulations">Satisfying Regulations</a></li><li><a href="#explaining-decisions">Explaining Decisions</a></li><li><a href="#improving-the-model">Improving the Model</a></li><li><a href="#accuracy-and-interpretability">Accuracy and Interpretability</a></li></ul></li><li><a href="#the-challenge-of-interpretability">The Challenge of Interpretability</a><ul><li><a href="#why-are-some-models-uninterpretable%3F">Why Are Some Models Uninterpretable?</a></li><li><a href="#white-box-models">White-box Models</a><ul><li><a href="#gams">GAMs</a></li><li><a href="#rule-lists">Rule Lists</a></li><li><a href="#slims">SLIMs</a></li></ul></li><li><a href="#black-box-interpretability">Black-box Interpretability</a><ul><li><a href="#perturbation">Perturbation</a></li><li><a href="#lime">LIME</a></li><li><a href="#extensions-and-limitations">Extensions and Limitations</a></li></ul></li></ul></li><li><a href="#prototype">Prototype</a><ul><li><a href="#customer-churn">Customer Churn</a></li><li><a href="#applying-lime">Applying LIME</a></li></ul></li><li><a href="#%5B%5Blime-code%5D%5D-%5Bsource%2Cpython%5D">[[lime-code]]
 [source,python]</a></li><li><a href="#e-%3D-explainer.explain_instance(customer%2C-clf.predict_proba)-print(e.as_list())">e = explainer.explain_instance(customer, clf.predict_proba)
-print(e.as_list())</a></li><li><a href="#ethics-and-regulations">Ethics and Regulations</a><ul><li><a href="#discrimination">Discrimination</a></li><li><a href="#safety">Safety</a></li><li><a href="#negligence-and-codes-of-conduct">Negligence and Codes of Conduct</a></li></ul></li><li><a href="#future">Future</a><ul><li><a href="#near-future">Near Future</a></li><li><a href="#longer-term">Longer Term</a></li><li><a href="#interpretability-sci-fi%3A-the-definition-of-success">Interpretability Sci-Fi: The Definition of Success</a></li></ul></li></ul></div></p>
+print(e.as_list())</a><ul><li><a href="#product%3A-refractor">Product: Refractor</a><ul><li><a href="#the-product-possibilities-of-interpretability">The Product Possibilities of Interpretability</a></li><li><a href="#global-view%3A-understanding-the-model">Global View: Understanding the Model</a></li><li><a href="#local-view%3A-understanding-the-customer">Local View: Understanding the Customer</a></li><li><a href="#product-tension%3A-focus-vs.-context">Product Tension: Focus vs. Context</a></li><li><a href="#collaborating-with-algorithms">Collaborating with Algorithms</a></li></ul></li></ul></li><li><a href="#landscape">Landscape</a><ul><li><a href="#interviews">Interviews</a><ul><li><a href="#recommendation-engines">Recommendation Engines</a></li><li><a href="#credit-scores">Credit Scores</a></li><li><a href="#customer-churn">Customer Churn</a></li><li><a href="#fraud-detection">Fraud Detection</a></li><li><a href="#anomaly-detection">Anomaly Detection</a></li><li><a href="#healthcare">Healthcare</a></li></ul></li><li><a href="#data-science-platforms">Data Science Platforms</a><ul><li><a href="#h2o.ai">H2O.ai</a></li><li><a href="#datascience.com">DataScience.com</a></li><li><a href="#datarobot">DataRobot</a></li><li><a href="#bonsai">Bonsai</a></li></ul></li></ul></li><li><a href="#ethics-and-regulations">Ethics and Regulations</a><ul><li><a href="#discrimination">Discrimination</a></li><li><a href="#safety">Safety</a></li><li><a href="#negligence-and-codes-of-conduct">Negligence and Codes of Conduct</a></li></ul></li><li><a href="#future">Future</a><ul><li><a href="#near-future">Near Future</a></li><li><a href="#longer-term">Longer Term</a></li><li><a href="#interpretability-sci-fi%3A-the-definition-of-success">Interpretability Sci-Fi: The Definition of Success</a></li></ul></li><li><a href="#conclusion">Conclusion</a></li></ul></div></p>
 <h2 id="introduction">Introduction</h2>
 <p>Our society is increasingly dependent on intelligent machines. Algorithms
 govern everything from which e-mails reach our inboxes to whether we are approved
@@ -694,8 +694,7 @@ approaches that provide tools to peer inside accurate but previously
 uninterpretable “black-box” models have been devised. The following chapters
 discuss and illustrate these developments.</p>
 <figure><img src="figures/2-16.png" alt="Choosing a model often involves a trade-off between interpretability and accuracy. This report is about breaking out of this trade-off."><figcaption>Choosing a model often involves a trade-off between interpretability and accuracy. This report is about breaking out of this trade-off.</figcaption></figure>
-<p>[[how]]
-== The Challenge of Interpretability</p>
+<h2 id="the-challenge-of-interpretability">The Challenge of Interpretability</h2>
 <p>In the previous chapter we saw the power of interpretability to enhance trust,
 satisfy regulations, offer explanations to users, and improve models. But we
 also saw that there is a fundamental tension between these goals and a model’s
@@ -715,8 +714,7 @@ chapter is not an exhaustive discussion of techniques that can be used to make
 models more interpretable. We focus on the new ideas we’re most excited
 about. For a more complete list, we heartily recommend the clear and
 comprehensive white paper link:https://www.oreilly.com/ideas/ideas-on-interpreting-machine-learning[“Ideas on Interpreting Machine Learning”] from H2O.]</p>
-<p>[[why_uninterpretable]]
-=== Why Are Some Models Uninterpretable?</p>
+<h3 id="why-are-some-models-uninterpretable%3F">Why Are Some Models Uninterpretable?</h3>
 <p>What is it about a model that makes it uninterpretable? Let’s first look at the
 gold standard of interpretability – linear models – in the context of a
 classification problem (the difficulties with regression models are not
@@ -809,8 +807,7 @@ model concisely or to offer an explanation for a decision that is locally true.
 It is all but impossible to rule out the possibility that the model will exhibit
 nonsensical or dangerous behavior in situations not present in the training
 data.</p>
-<p>[[whitebox]]
-=== White-box Models</p>
+<h3 id="white-box-models">White-box Models</h3>
 <p>The least interpretable models, such as neural networks, are free to choose
 from an almost infinite menu of transformations of the input features. This
 allows them to divide up the classification space even if it is not linearly
@@ -825,7 +822,7 @@ they can be written down as a set of simple rules.</p>
 <p>[[figure_interpretability_more_accurate]]
 .White-box models are highly interpretable. Recent innovation is focused on increasing their accuracy.
 image::figures/3-10.png[]</p>
-<p>==== GAMs</p>
+<h4 id="gams">GAMs</h4>
 <p>Generalized additive models (GAMs) are a great example of this carefully
 controlled increase in model flexibility. As we saw earlier, a linear
 classification model assumes that the probability a given piece of data belongs
@@ -878,7 +875,7 @@ small number determined like any other hyperparameter.footnote:[See Lou et al.
 (2013), link:http://www.cs.cornell.edu/~yinlou/papers/lou-kdd13.pdf[“Accurate
 Intelligible Models with Pairwise Interactions,”] and the reference
 link:https://github.com/yinlou/mltk[Java implementation].]</p>
-<p>==== Rule Lists</p>
+<h4 id="rule-lists">Rule Lists</h4>
 <p>Rule lists are predictive models that learn simple flow charts from training
 data. The models are made up of simple <code>if...then...else</code> rules that partition
 the input data. These rules are the building blocks of rule lists. For
@@ -901,7 +898,7 @@ characteristics.</p>
 discretized, but if the statistical relationships among input attributes are
 affected by discretization, then the decision rules learned are likely to be
 distorted.</p>
-<p>==== SLIMs</p>
+<h4 id="slims">SLIMs</h4>
 <p>The APGAR score for newborn infants (see &lt;&lt;explanations&gt;&gt;) is calculated by
 assigning scores of 0, 1, or 2 to five attributes of the baby and adding them
 up:</p>
@@ -924,8 +921,7 @@ and potentially hugely more accurate. The challenge is figuring out how to
 choose the numbers. SLIMs cast this problem as a supervised machine learning
 problem and use the tools of integer programming to ensure the coefficients
 are round numbers.</p>
-<p>[[blackbox]]
-=== Black-box Interpretability</p>
+<h3 id="black-box-interpretability">Black-box Interpretability</h3>
 <p>If you won’t or can’t change your model, or you didn’t make it and don’t have
 access to its internals, white-box approaches are not useful. In this extremely
 common situation, you need an approach that allows you to interpret a black-box
@@ -954,8 +950,7 @@ explanations are correct.footnote:[One (anonymous) data scientist told us the
 interpretable twin model they use to explain their production model to clients
 is no better than “shadows on the cave wall.”] Additionally, you now need to
 build and maintain two models, which can be a significant engineering burden.</p>
-<p>[[perturbation]]
-==== Perturbation</p>
+<h4 id="perturbation">Perturbation</h4>
 <p>Perturbation is a model-agnostic interpretability technique that requires you
 to build and maintain only one model. This is your production model. It can be
 as complicated and uninterpretable as is justified by your dataset and
@@ -985,8 +980,7 @@ points per open credit card.” But if a particular user of the Credit Score
 Simulator discovers their score goes down by 10 points when they propose
 opening a new credit card, that is a valid explanation of the behavior of the
 model <em>locally</em>, in the vicinity of that user in feature space.</p>
-<p>[[lime]]
-==== LIME</p>
+<h4 id="lime">LIME</h4>
 <p>Local Interpretable Model-agnostic Explanation (LIME)footnote:[Ribeiro, Singh,
 and Guestrin (2016), link:https://arxiv.org/abs/1602.04938[&quot;‘Why Should I
 Trust You?’: Explaining the Predictions of Any Classifier.&quot;]] formalizes the
@@ -1018,7 +1012,7 @@ preceding explanation glosses over mathematical detail, but is conceptually
 complete). It allows you to train a model in any way you like and still have
 an answer to the local question, “Why has this particular decision been made?”
 We used LIME to build the prototype for this report (&lt;&lt;prototype&gt;&gt;).</p>
-<p>==== Extensions and Limitations</p>
+<h4 id="extensions-and-limitations">Extensions and Limitations</h4>
 <p>LIME is well suited to tabular data. It perturbs categorical features by
 sampling from their distribution in the training data, and it perturbs
 continuous features by sampling from a normal distribution.</p>
@@ -1095,8 +1089,7 @@ that, from a legal and ethical point of view, should make no difference to its
 output (see &lt;&lt;ethics&gt;&gt;). A more detailed introduction to FairML is available
 on the Fast Forward Labs blog.footnote:[http://blog.fastforwardlabs.com/2017/03/09/fairml-auditing-black-box-predictive-models.html]</p>
 <hr>
-<p>[[prototype]]
-== Prototype</p>
+<h2 id="prototype">Prototype</h2>
 <p>In order to bring interpretability to life, we chose to focus our prototype on
 LIME’s ability to explain individual algorithmic decisions.</p>
 <p>Alongside the rate at which a business acquires customers, the rate at which it
@@ -1125,7 +1118,7 @@ or neural networks.</p>
 <p>This is a job for model-agnostic interpretability. By applying LIME to an
 arbitrarily complicated model, we can have it both ways: an accurate model
 describing an intrinsically complicated dataset, that is also interpretable.</p>
-<p>=== Customer Churn</p>
+<h3 id="customer-churn">Customer Churn</h3>
 <p>We used a public dataset of 7,043 cable customers, around 25% of whom
 churned.footnote:[https://www.ibm.com/communities/analytics/watson-analytics-blog/predictive-insights-in-the-telco-customer-churn-data-set/]
 There are 20 features for each customer, which are a mixture of intrinsic
@@ -1134,7 +1127,7 @@ that describe their service or activity (payment method, monthly charge, etc.).<
 <p>We used <code>scikit-learn</code> to build an ensemble voting classifier that incorporated
 a linear model, a random forest, and a simple neural network. The model has an
 accuracy of around 80% and is completely uninterpretable.</p>
-<p>=== Applying LIME</p>
+<h3 id="applying-lime">Applying LIME</h3>
 <p>As described in &lt;&lt;lime&gt;&gt;, LIME explains the classification of a particular
 example by perturbing its features and running these perturbed variations
 through the classifier. This allows LIME to probe the behavior of the
@@ -1193,8 +1186,8 @@ standard 5,000 to speed this up if necessary.</p>
 standard Python Flask web API. This allows frontend applications to get
 customer data, the corresponding churn probabilities, and the LIME explanations
 for those probabilities.</p>
-<p>=== Product: Refractor</p>
-<p>==== The Product Possibilities of Interpretability</p>
+<h3 id="product%3A-refractor">Product: Refractor</h3>
+<h4 id="the-product-possibilities-of-interpretability">The Product Possibilities of Interpretability</h4>
 <p>As the use of machine learning algorithms increases, the need to understand
 them grows as well. This is true at both a societal and a product level. As
 algorithms enter into our workplaces and workflows, they appear mysterious and
@@ -1217,7 +1210,7 @@ interpretability, we can break out of those limitations.</p>
 global table view of customers to an exploration of the effects of different
 features on an individual user. The process of building the prototype was also
 a movement between, and eventually a balancing of, those two levels.</p>
-<p>==== Global View: Understanding the Model</p>
+<h4 id="global-view%3A-understanding-the-model">Global View: Understanding the Model</h4>
 <p>LIME is focused on local explanation of feature importance through feature
 perturbation. It may initially seem a strange choice, then, to use it in a
 globally oriented view. The stacked local interpretations, however, coalesce
@@ -1245,7 +1238,7 @@ perspective, however, and remember that the highlighted features are an
 abstracted <em>representation</em> of how the model works, not how it <em>actually</em>
 works. After all, if we could think at the scale and in the way the model
 does, we wouldn’t need the model in the first place.</p>
-<p>==== Local View: Understanding the Customer</p>
+<h4 id="local-view%3A-understanding-the-customer">Local View: Understanding the Customer</h4>
 <p>While the table view is a powerful interface, it can feel overwhelming. For
 this prototype, we wanted to complement it with an individual customer view
 that would focus on actions you could take in relation to a specific customer.</p>
@@ -1279,7 +1272,7 @@ of other features once again helps the user build up an intuitive feeling of
 how the model works. In the case of a customer service representative with an
 accurate model, that intuitive understanding translates to an ability to act
 off of its insights.</p>
-<p>==== Product Tension: Focus vs. Context</p>
+<h4 id="product-tension%3A-focus-vs.-context">Product Tension: Focus vs. Context</h4>
 <p>As we developed the global and local interfaces of the prototype, we constantly
 engaged with a tension between providing the user with context and providing a
 focused and directed experience. This tension will arise any time you are
@@ -1308,20 +1301,19 @@ individual view, this means that along with the full list of features we show th
 providing it alongside the full feature list helps the user feel like they’re
 on stable ground. The context provides the background for users to take more
 focused action.</p>
-<p>==== Collaborating with Algorithms</p>
+<h4 id="collaborating-with-algorithms">Collaborating with Algorithms</h4>
 <p>Trust is a key component of any collaboration. As algorithms become
 increasingly prevalent in our lives the need for trust and collaboration will
 grow. Interpretability strategies like LIME open up new possibilities for that
 collaboration, and for better and more responsible use of algorithms. As those
 techniques develop they will need to be supported by interfaces that balance
 the need for context with a focus on possible actions.</p>
-<p>[[application]]
-== Landscape</p>
+<h2 id="landscape">Landscape</h2>
 <p>In this chapter we discuss specific real-world applications of
 interpretability, based on interviews with working data scientists. We also
 assess the offerings of vendors who aim to help data scientists and others
 build interpretable models.</p>
-<p>=== Interviews</p>
+<h3 id="interviews">Interviews</h3>
 <p>In our interviews and discussions with data organizations where
 interpretability is a concern, we found that most chose white-box models in
 order to maintain interpretability. These companies are so concerned with
@@ -1336,7 +1328,7 @@ unwillingness to discuss may be rooted in regulatory concerns. Specifically, at
 least until there are regulatory rulings to bring certainty, it remains unclear
 whether a black box-compatible tool such as LIME is sufficient to meet
 regulations requiring explanation of model behavior.</p>
-<p>==== Recommendation Engines</p>
+<h4 id="recommendation-engines">Recommendation Engines</h4>
 <p>Recommendations are a straightforward, relatively low-risk, user-facing
 application of model interpretation. In the case of product recommendations,
 users may be curious <em>why</em> a certain item was recommended. Have they purchased
@@ -1348,7 +1340,7 @@ them what’s happening behind the scenes.</p>
 <p>[[figure_recommender]]
 .Model interpretation can be used to explain product recommendations.
 image::figures/5-01.png[]</p>
-<p>==== Credit Scores</p>
+<h4 id="credit-scores">Credit Scores</h4>
 <p>Customer credit evaluation uses interpretable models extensively. When
 evaluating a customer’s credit score, and particularly when <em>denying</em> a
 customer credit, it is necessary to explain the basis for the credit decision.
@@ -1357,7 +1349,7 @@ interpretable. Technologies like LIME permit the use of more complex and
 potentially more accurate models while preserving the ability to explain the
 reasons for denial or assigning a particular score. The ethical considerations
 associated with these kinds of decisions are discussed in &lt;&lt;ethics&gt;&gt;.</p>
-<p>==== Customer Churn</p>
+<h4 id="customer-churn-2">Customer Churn</h4>
 <p>As we demonstrate with our prototype, churn modeling is another clear case for
 interpretability. Knowing when a user is likely to defect is helpful on a
 number of levels. It’s useful for predicting revenue streams, testing
@@ -1370,7 +1362,7 @@ more customers by helping them identify those who may be considering taking
 their business elsewhere and offering insights into the reasons driving that
 prediction. Armed with this knowledge, the representative can offer a customer
 a promotion or better-suited product and improve the chance of their staying.</p>
-<p>==== Fraud Detection</p>
+<h4 id="fraud-detection">Fraud Detection</h4>
 <p>Predictive models can help identify fraudulent activities such as credit or
 bank transactions, or insurance claims. Flagging these transactions creates a
 high-risk list for risk management personnel (or criminal activity
@@ -1382,7 +1374,7 @@ additional context can help investigators to dismiss some flagged transactions
 as appropriate, quickly eliminating false positives and enabling them to focus
 investigative resources elsewhere. It may also help them to plan
 investigations, providing hints on where to look for evidence.</p>
-<p>==== Anomaly Detection</p>
+<h4 id="anomaly-detection">Anomaly Detection</h4>
 <p>Predictive models can be used to predict failures in a variety of systems,
 including computer systems and networks, or even mechanical systems or
 industrial plants. Airlines have used such models to schedule maintenance on
@@ -1394,8 +1386,7 @@ suggest improvements to the design of more robust new systems.</p>
 <p>[[figure_engine]]
 .Interpretation can be used to identify possible causes of a prediction of engine failure.
 image::figures/5-02.png[]</p>
-<p>[[healthcare]]
-==== Healthcare</p>
+<h4 id="healthcare">Healthcare</h4>
 <p>Models that support diagnosis or treatment must be interpretable in order to be
 safe. The danger of subtle problems with training data is particularly acute
 because ethical constraints make it difficult to modify or randomize care in
@@ -1404,8 +1395,7 @@ fulfilled with certainty if the model is understood. And as in the case of
 churn analysis, good models whose decisions can be explained offer hints
 toward (or even outright instructions for) the best next steps for a given
 case.</p>
-<p>[[vendors]]
-=== Data Science Platforms</p>
+<h3 id="data-science-platforms">Data Science Platforms</h3>
 <p>White-box models are interpretable by design. At the time of writing of this
 report, there were no vendors focused on providing interpretability solutions
 for black-box models. Interpretability-as-a-service is not available (yet), but
@@ -1441,7 +1431,7 @@ consideration. As trained data scientists become less involved in model
 selection, training, and deployment, we need tools to enable us to trust models
 trained automatically or by non-experts. The following offerings stand out for
 their interpretability solutions.</p>
-<p>==== H2O.ai</p>
+<h4 id="h2o.ai">H2O.ai</h4>
 <p>H2O.ai (Mountain View, CA; founded 2011; Series B Nov 2015) provides an open
 source platform for data science, including deep learning, with an enterprise
 product offering. The developers summarized their knowledge and offering with
@@ -1461,7 +1451,7 @@ exploration and feature engineering, including visualization tools to help
 humans, who are adapted to perceive a three-dimensional world, understand
 relationships in higher-dimensional spaces.</p>
 <p>https://www.h2o.ai/</p>
-<p>==== DataScience.com</p>
+<h4 id="datascience.com">DataScience.com</h4>
 <p>DataScience.com (Culver City, CA; founded 2014; Series A Dec 2015) released its
 data science platform in October 2016 and
 Skater,footnote:[https://www.datascience.com/resources/tools/skater] a Python
@@ -1473,7 +1463,7 @@ interpretability as part of its data science platform and services offering. We
 welcome its decision to open-source Skater, a meaningful contribution to the
 data science community.</p>
 <p>https://www.datascience.com/</p>
-<p>==== DataRobot</p>
+<h4 id="datarobot">DataRobot</h4>
 <p>DataRobot (Boston, MA; founded 2012; Series C March 2017) provides a data
 science platform with the ambition to automate the data science workflow, from
 data exploration to model deployment, to enable data scientists and non-data
@@ -1492,7 +1482,7 @@ relationships between sets of variables and their combined impact on the target
 variable. Likewise, the white-box algorithm RuleFit may not always be the best
 algorithmic choice for a given machine learning use case.</p>
 <p>https://www.datarobot.com/</p>
-<p>==== Bonsai</p>
+<h4 id="bonsai">Bonsai</h4>
 <p>Unlike all the other companies covered in this section, Bonsai (Berkeley, CA;
 founded 2014; Series A May 2017) does not offer a data science platform but
 rather a platform to develop interpretable models to increase automation and
@@ -1808,7 +1798,7 @@ less vulnerable it is to theft and gaming.</p>
 <p><em>5. Epilogue</em></p>
 <p>Rue and the other surviving crew members made it home safely in the escape pod. The alien contamination was destroyed. Using the data on the previous model, Rue successfully sued Space Exploitation Corp. under the “Algorithms Hostile to Human Life” act. She won the case and received a large settlement for the crew and their beneficiaries. Space Exploitation Corp.'s reputation took a hit, but it continues to run the majority of space exploration missions.</p>
 <hr>
-<p>== Conclusion</p>
+<h2 id="conclusion">Conclusion</h2>
 <p>Interpretability is a powerful and increasingly essential capability. A model
 you can interpret and understand is one you can more easily improve. It is also
 one you, regulators, and society can more easily trust to be safe and

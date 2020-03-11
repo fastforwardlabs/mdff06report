@@ -1,5 +1,4 @@
-[[how]]
-== The Challenge of Interpretability
+## The Challenge of Interpretability
 
 In the previous chapter we saw the power of interpretability to enhance trust,
 satisfy regulations, offer explanations to users, and improve models. But we
@@ -23,8 +22,7 @@ models more interpretable. We focus on the new ideas we're most excited
 about. For a more complete list, we heartily recommend the clear and
 comprehensive white paper link:https://www.oreilly.com/ideas/ideas-on-interpreting-machine-learning["Ideas on Interpreting Machine Learning"] from H2O.]
 
-[[why_uninterpretable]]
-=== Why Are Some Models Uninterpretable?
+### Why Are Some Models Uninterpretable?
 
 What is it about a model that makes it uninterpretable? Let's first look at the
 gold standard of interpretability -- linear models -- in the context of a
@@ -135,8 +133,7 @@ It is all but impossible to rule out the possibility that the model will exhibit
 nonsensical or dangerous behavior in situations not present in the training
 data.
 
-[[whitebox]]
-=== White-box Models
+### White-box Models
 
 The least interpretable models, such as neural networks, are free to choose
 from an almost infinite menu of transformations of the input features. This
@@ -154,7 +151,7 @@ they can be written down as a set of simple rules.
 .White-box models are highly interpretable. Recent innovation is focused on increasing their accuracy.
 image::figures/3-10.png[]
 
-==== GAMs
+#### GAMs
 
 Generalized additive models (GAMs) are a great example of this carefully
 controlled increase in model flexibility. As we saw earlier, a linear
@@ -217,7 +214,7 @@ small number determined like any other hyperparameter.footnote:[See Lou et al.
 Intelligible Models with Pairwise Interactions,"] and the reference
 link:https://github.com/yinlou/mltk[Java implementation].]
 
-==== Rule Lists
+#### Rule Lists
 
 Rule lists are predictive models that learn simple flow charts from training
 data. The models are made up of simple `if...then...else` rules that partition
@@ -246,7 +243,7 @@ discretized, but if the statistical relationships among input attributes are
 affected by discretization, then the decision rules learned are likely to be
 distorted.
 
-==== SLIMs
+#### SLIMs
 
 The APGAR score for newborn infants (see <<explanations>>) is calculated by
 assigning scores of 0, 1, or 2 to five attributes of the baby and adding them

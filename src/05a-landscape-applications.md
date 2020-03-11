@@ -1,12 +1,11 @@
-[[application]]
-== Landscape
+## Landscape
 
 In this chapter we discuss specific real-world applications of
 interpretability, based on interviews with working data scientists. We also
 assess the offerings of vendors who aim to help data scientists and others
 build interpretable models.
 
-=== Interviews
+### Interviews
 
 In our interviews and discussions with data organizations where
 interpretability is a concern, we found that most chose white-box models in
@@ -25,7 +24,7 @@ least until there are regulatory rulings to bring certainty, it remains unclear
 whether a black box-compatible tool such as LIME is sufficient to meet
 regulations requiring explanation of model behavior.
 
-==== Recommendation Engines
+#### Recommendation Engines
 
 Recommendations are a straightforward, relatively low-risk, user-facing
 application of model interpretation. In the case of product recommendations,
@@ -40,7 +39,7 @@ them what's happening behind the scenes.
 .Model interpretation can be used to explain product recommendations.
 image::figures/5-01.png[]
 
-==== Credit Scores
+#### Credit Scores
 
 Customer credit evaluation uses interpretable models extensively. When
 evaluating a customer's credit score, and particularly when _denying_ a
@@ -51,7 +50,7 @@ potentially more accurate models while preserving the ability to explain the
 reasons for denial or assigning a particular score. The ethical considerations
 associated with these kinds of decisions are discussed in <<ethics>>.
 
-==== Customer Churn
+#### Customer Churn
 
 As we demonstrate with our prototype, churn modeling is another clear case for
 interpretability. Knowing when a user is likely to defect is helpful on a
@@ -66,7 +65,7 @@ their business elsewhere and offering insights into the reasons driving that
 prediction. Armed with this knowledge, the representative can offer a customer
 a promotion or better-suited product and improve the chance of their staying.
 
-==== Fraud Detection
+#### Fraud Detection
 
 Predictive models can help identify fraudulent activities such as credit or
 bank transactions, or insurance claims. Flagging these transactions creates a
@@ -80,7 +79,7 @@ as appropriate, quickly eliminating false positives and enabling them to focus
 investigative resources elsewhere. It may also help them to plan
 investigations, providing hints on where to look for evidence.
 
-==== Anomaly Detection
+#### Anomaly Detection
 
 Predictive models can be used to predict failures in a variety of systems,
 including computer systems and networks, or even mechanical systems or
@@ -95,8 +94,7 @@ suggest improvements to the design of more robust new systems.
 .Interpretation can be used to identify possible causes of a prediction of engine failure.
 image::figures/5-02.png[]
 
-[[healthcare]]
-==== Healthcare
+#### Healthcare
 
 Models that support diagnosis or treatment must be interpretable in order to be
 safe. The danger of subtle problems with training data is particularly acute

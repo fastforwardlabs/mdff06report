@@ -1,5 +1,4 @@
-[[prototype]]
-== Prototype
+## Prototype
 
 In order to bring interpretability to life, we chose to focus our prototype on
 LIME's ability to explain individual algorithmic decisions.
@@ -35,7 +34,7 @@ This is a job for model-agnostic interpretability. By applying LIME to an
 arbitrarily complicated model, we can have it both ways: an accurate model
 describing an intrinsically complicated dataset, that is also interpretable.
 
-=== Customer Churn
+### Customer Churn
 
 We used a public dataset of 7,043 cable customers, around 25% of whom
 churned.footnote:[https://www.ibm.com/communities/analytics/watson-analytics-blog/predictive-insights-in-the-telco-customer-churn-data-set/]
@@ -47,7 +46,7 @@ We used `scikit-learn` to build an ensemble voting classifier that incorporated
 a linear model, a random forest, and a simple neural network. The model has an
 accuracy of around 80% and is completely uninterpretable.
 
-=== Applying LIME
+### Applying LIME
 
 As described in <<lime>>, LIME explains the classification of a particular
 example by perturbing its features and running these perturbed variations

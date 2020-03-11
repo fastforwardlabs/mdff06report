@@ -1,5 +1,4 @@
-[[vendors]]
-=== Data Science Platforms
+### Data Science Platforms
 
 White-box models are interpretable by design. At the time of writing of this
 report, there were no vendors focused on providing interpretability solutions
@@ -40,7 +39,7 @@ selection, training, and deployment, we need tools to enable us to trust models
 trained automatically or by non-experts. The following offerings stand out for
 their interpretability solutions.
 
-==== H2O.ai
+#### H2O.ai
 
 H2O.ai (Mountain View, CA; founded 2011; Series B Nov 2015) provides an open
 source platform for data science, including deep learning, with an enterprise
@@ -64,7 +63,7 @@ relationships in higher-dimensional spaces.
 
 https://www.h2o.ai/
 
-==== DataScience.com
+#### DataScience.com
 
 DataScience.com (Culver City, CA; founded 2014; Series A Dec 2015) released its
 data science platform in October 2016 and
@@ -79,7 +78,7 @@ data science community.
 
 https://www.datascience.com/
 
-==== DataRobot
+#### DataRobot
 
 DataRobot (Boston, MA; founded 2012; Series C March 2017) provides a data
 science platform with the ambition to automate the data science workflow, from
@@ -102,7 +101,7 @@ algorithmic choice for a given machine learning use case.
 
 https://www.datarobot.com/
 
-==== Bonsai
+#### Bonsai
 
 Unlike all the other companies covered in this section, Bonsai (Berkeley, CA;
 founded 2014; Series A May 2017) does not offer a data science platform but

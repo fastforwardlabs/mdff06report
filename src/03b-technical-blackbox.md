@@ -1,5 +1,4 @@
-[[blackbox]]
-=== Black-box Interpretability
+### Black-box Interpretability
 
 If you won't or can't change your model, or you didn't make it and don't have
 access to its internals, white-box approaches are not useful. In this extremely
@@ -34,8 +33,7 @@ interpretable twin model they use to explain their production model to clients
 is no better than "shadows on the cave wall."] Additionally, you now need to
 build and maintain two models, which can be a significant engineering burden.
 
-[[perturbation]]
-==== Perturbation
+#### Perturbation
 
 Perturbation is a model-agnostic interpretability technique that requires you
 to build and maintain only one model. This is your production model. It can be
@@ -72,8 +70,7 @@ Simulator discovers their score goes down by 10 points when they propose
 opening a new credit card, that is a valid explanation of the behavior of the
 model _locally_, in the vicinity of that user in feature space.
 
-[[lime]]
-==== LIME
+#### LIME
 
 Local Interpretable Model-agnostic Explanation (LIME)footnote:[Ribeiro, Singh,
 and Guestrin (2016), link:https://arxiv.org/abs/1602.04938["'Why Should I
@@ -112,7 +109,7 @@ complete). It allows you to train a model in any way you like and still have
 an answer to the local question, "Why has this particular decision been made?"
 We used LIME to build the prototype for this report (<<prototype>>).
 
-==== Extensions and Limitations
+#### Extensions and Limitations
 
 LIME is well suited to tabular data. It perturbs categorical features by
 sampling from their distribution in the training data, and it perturbs
