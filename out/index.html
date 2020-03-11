@@ -480,16 +480,18 @@ img {
         <div class="content nodebug" style="position: relative;">
           <div style="margin-top: 28px;"><a href="https://experiments.fastforwardlabs.com" >Cloudera Fast Forward</a></div>
           <h1 id="interpretability">Interpretability</h1>
+<p>FF06 · <em>Re-release April 2020</em></p>
 <p><div class="table-of-contents"><div id="toc-header" style="display: flex; font-weight: bold; text-transform: uppercase;">
      <div><button id="toggle_contents" style="padding-left: 0.5ch; padding-right: 0.5ch; cursor: pointer; position: relative; top: -1px;">☰</button><span id="contents-label" style="margin-left: 0;"> Contents</span></div>
   </div><ul><li><a href="#introduction">Introduction</a></li><li><a href="#the-power-of-interpretability">The Power of Interpretability</a><ul><li><a href="#what-is-interpretability%3F">What Is Interpretability?</a></li><li><a href="#enhancing-trust">Enhancing Trust</a></li><li><a href="#satisfying-regulations">Satisfying Regulations</a></li><li><a href="#explaining-decisions">Explaining Decisions</a></li><li><a href="#improving-the-model">Improving the Model</a></li><li><a href="#accuracy-and-interpretability">Accuracy and Interpretability</a></li></ul></li><li><a href="#the-challenge-of-interpretability">The Challenge of Interpretability</a><ul><li><a href="#why-are-some-models-uninterpretable%3F">Why Are Some Models Uninterpretable?</a></li><li><a href="#white-box-models">White-box Models</a><ul><li><a href="#gams">GAMs</a></li><li><a href="#rule-lists">Rule Lists</a></li><li><a href="#slims">SLIMs</a></li></ul></li><li><a href="#black-box-interpretability">Black-box Interpretability</a><ul><li><a href="#perturbation">Perturbation</a></li><li><a href="#lime">LIME</a></li><li><a href="#extensions-and-limitations">Extensions and Limitations</a></li></ul></li></ul></li><li><a href="#prototype">Prototype</a><ul><li><a href="#customer-churn">Customer Churn</a></li><li><a href="#applying-lime">Applying LIME</a></li></ul></li><li><a href="#%5Bsource%2Cpython%5D">[source,python]</a></li><li><a href="#e-%3D-explainer.explain_instance(customer%2C-clf.predict_proba)-print(e.as_list())">e = explainer.explain_instance(customer, clf.predict_proba)
 print(e.as_list())</a><ul><li><a href="#product%3A-refractor">Product: Refractor</a><ul><li><a href="#the-product-possibilities-of-interpretability">The Product Possibilities of Interpretability</a></li><li><a href="#global-view%3A-understanding-the-model">Global View: Understanding the Model</a></li><li><a href="#local-view%3A-understanding-the-customer">Local View: Understanding the Customer</a></li><li><a href="#product-tension%3A-focus-vs.-context">Product Tension: Focus vs. Context</a></li><li><a href="#collaborating-with-algorithms">Collaborating with Algorithms</a></li></ul></li></ul></li><li><a href="#landscape">Landscape</a><ul><li><a href="#interviews">Interviews</a><ul><li><a href="#recommendation-engines">Recommendation Engines</a></li><li><a href="#credit-scores">Credit Scores</a></li><li><a href="#customer-churn">Customer Churn</a></li><li><a href="#fraud-detection">Fraud Detection</a></li><li><a href="#anomaly-detection">Anomaly Detection</a></li><li><a href="#healthcare">Healthcare</a></li></ul></li><li><a href="#data-science-platforms">Data Science Platforms</a><ul><li><a href="#h2o.ai">H2O.ai</a></li><li><a href="#datascience.com">DataScience.com</a></li><li><a href="#datarobot">DataRobot</a></li><li><a href="#bonsai">Bonsai</a></li></ul></li></ul></li><li><a href="#ethics-and-regulations">Ethics and Regulations</a><ul><li><a href="#discrimination">Discrimination</a></li><li><a href="#safety">Safety</a></li><li><a href="#negligence-and-codes-of-conduct">Negligence and Codes of Conduct</a></li></ul></li><li><a href="#future">Future</a><ul><li><a href="#near-future">Near Future</a></li><li><a href="#longer-term">Longer Term</a></li><li><a href="#interpretability-sci-fi%3A-the-definition-of-success">Interpretability Sci-Fi: The Definition of Success</a></li></ul></li><li><a href="#conclusion">Conclusion</a></li></ul></div></p>
+<p>This is an applied research report by <a href="https://www.cloudera.com/products/fast-forward-labs-research.html">Cloudera Fast Forward</a>. We write reports about emerging technologies.  Accompanying each report are working prototypes that exhibit the capabilities of the algorithm and offer detailed technical advice on its practical application. Read our full report on interpretability below or download the PDF, and view our prototype here.</p>
 <h2 id="introduction">Introduction</h2>
 <p>Our society is increasingly dependent on intelligent machines. Algorithms
 govern everything from which e-mails reach our inboxes to whether we are approved
-for credit to whom we get the opportunity to date. And their impact on our
+for credit to whom we get the opportunity to date – and their impact on our
 experience of the world is growing.</p>
-<figure><img src="figures/1-02.png" alt="As algorithmic systems become more prevalent, the need to understand them grows."><figcaption>As algorithmic systems become more prevalent, the need to understand them grows.</figcaption></figure>
+<figure><img src="figures/1-02.png" alt="FIGURE 1.1 As algorithmic systems become more prevalent, the need to understand them grows."><figcaption>FIGURE 1.1 As algorithmic systems become more prevalent, the need to understand them grows.</figcaption></figure>
 <p>This rise in the use of algorithms coincides with a surge in the capabilities
 of <em>black-box</em> techniques, or algorithms whose inner workings cannot easily be
 explained. The question of interpretability has been important in applied
@@ -509,7 +511,7 @@ outcomes. It is necessary in regulated industries where you have to prove that
 business practices are not dangerous or discriminatory. Further,
 interpretability is a key tool in understanding bias and accountability in the
 increasingly automated systems we are deploying throughout society.</p>
-<figure><img src="figures/1-01.png" alt="With tools that aid interpretability, we can gain insight into black-box systems."><figcaption>With tools that aid interpretability, we can gain insight into black-box systems.</figcaption></figure>
+<figure><img src="figures/1-01.png" alt="FIGURE 1.2 With tools that aid interpretability, we can gain insight into black-box systems."><figcaption>FIGURE 1.2 With tools that aid interpretability, we can gain insight into black-box systems.</figcaption></figure>
 <p>In this report, we explore two areas of progress in interpretability: systems
 designed to be perfectly interpretable, or <em>white-box</em> algorithms, and emerging
 research on approaches for inspecting black-box algorithms.</p>
@@ -520,24 +522,24 @@ often than not, the answer is a resounding yes. This chapter explains why.</p>
 <p>From the point of view of a business deploying machine learning in a process or
 product, there are three important kinds of interpretability:</p>
 <ul>
-<li><em>Global</em> – Do you understand the model <em>as a whole</em> to the extent required
+<li><strong>Global</strong> – Do you understand the model <em>as a whole</em> to the extent required
 to <em>trust</em> it (or to convince someone else that it can be trusted)?</li>
-<li><em>Local</em> – Can you explain the <em>reason</em> for a <em>particular decision</em>?</li>
-<li><em>Proxy</em> – When the model is a perfect proxy for the system you are
+<li><strong>Local</strong> – Can you explain the <em>reason</em> for a <em>particular decision</em>?</li>
+<li><strong>Proxy</strong> – When the model is a perfect proxy for the system you are
 interested in, can you say how the model works, and thus learn about how the
 real system works?</li>
 </ul>
-<figure><img src="figures/2-03.png" alt="Global interpretability shows feature importance for the model’s prediction at a global level. Local interpretability shows feature importance for the model’s prediction at a record-by-record level."><figcaption>Global interpretability shows feature importance for the model’s prediction at a global level. Local interpretability shows feature importance for the model’s prediction at a record-by-record level.</figcaption></figure>
+<figure><img src="figures/2-03.png" alt="FIGURE 2.1 Global interpretability shows feature importance for the model’s prediction at a global level. Local interpretability shows feature importance for the model’s prediction at a record-by-record level."><figcaption>FIGURE 2.1 Global interpretability shows feature importance for the model’s prediction at a global level. Local interpretability shows feature importance for the model’s prediction at a record-by-record level.</figcaption></figure>
 <p>When one or more of these conditions holds, it makes our use of data safer and
 opens the door to new kinds of products.</p>
-<figure><img src="figures/2-04.png" alt="If you trust a model, interpretability can provide you with concrete actions to pursue."><figcaption>If you trust a model, interpretability can provide you with concrete actions to pursue.</figcaption></figure>
+<figure><img src="figures/2-04.png" alt="FIGURE 2.2 If you trust a model, interpretability can provide you with concrete actions to pursue."><figcaption>FIGURE 2.2 If you trust a model, interpretability can provide you with concrete actions to pursue.</figcaption></figure>
 <h3 id="enhancing-trust">Enhancing Trust</h3>
 <p>Data scientists have a well-established protocol to measure the performance of
 a model: <em>validation</em>. They train a model with perhaps 80% of their training
 data, then measure its performance on the remainder. By assessing the model
 using data it has never seen, they reduce the risk that a powerful model with a
 lot of flexibility will simply memorize the training data.</p>
-<figure><img src="figures/2-06.png" alt="Model validation can prevent overfitting."><figcaption>Model validation can prevent overfitting.</figcaption></figure>
+<figure><img src="figures/2-06.png" alt="FIGURE 2.3 Model validation can prevent overfitting."><figcaption>FIGURE 2.3 Model validation can prevent overfitting.</figcaption></figure>
 <p>This possibility, known as overfitting, is a concern because the model will one
 day be deployed in the wild. In this environment, by definition, it cannot have
 seen the data before. An overfitted model does not capture fundamental, general
@@ -552,7 +554,7 @@ on them, and then perform poorly when deployed.</p>
 example, if you train a self-driving car on public roads in a country where
 people drive on the left, and then deploy that car in the United States, you’re
 asking for trouble.</p>
-<figure><img src="figures/2-07.png" alt="Validation does not help when training data and real-world data are too different."><figcaption>Validation does not help when training data and real-world data are too different.</figcaption></figure>
+<figure><img src="figures/2-07.png" alt="FIGURE 2.4 Validation does not help when training data and real-world data are too different."><figcaption>FIGURE 2.4 Validation does not help when training data and real-world data are too different.</figcaption></figure>
 <p>But sometimes subtler discrepancies can exist in the training data without your
 knowledge. A memorable example taken from a 2015 paper makes this point
 clearly.<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> Doctors and statisticians trained a model to predict the
@@ -574,7 +576,7 @@ real world. This is an example of <em>leakage</em>: the training data includes a
 feature that should not be used to make predictions in this way. In this case,
 the model depended on a flawed assumption about the reason for the correlation
 between asthma and pneumonia survival.</p>
-<figure><img src="figures/2-01.png" alt="Models built from training data can lack context for certain relationships."><figcaption>Models built from training data can lack context for certain relationships.</figcaption></figure>
+<figure><img src="figures/2-01.png" alt="FIGURE 2.5 Models built from training data can lack context for certain relationships."><figcaption>FIGURE 2.5 Models built from training data can lack context for certain relationships.</figcaption></figure>
 <p>It is obviously essential to be confident that you haven’t embedded bugs like
 this into a statistical model if it is to be used to make life-and-death
 medical decisions. But it’s also acutely important in any commercial setting.
@@ -625,7 +627,7 @@ up new analyses and features, and even new products. The ability to answer the
 question “Why has the model made this decision?” is a superpower that raises
 the possibility of taking an action to <em>change</em> the model’s decision. Let’s
 consider some examples of what you can do with that capability.</p>
-<figure><img src="figures/2-08.png" alt="Local interpretability means you can explain a model’s predictions and even suggest actions."><figcaption>Local interpretability means you can explain a model’s predictions and even suggest actions.</figcaption></figure>
+<figure><img src="figures/2-08.png" alt="FIGURE 2.6 Local interpretability means you can explain a model’s predictions and even suggest actions."><figcaption>FIGURE 2.6 Local interpretability means you can explain a model’s predictions and even suggest actions.</figcaption></figure>
 <p>A model of customer churn tells you how likely a customer is to leave. A
 <em>locally interpretable</em> model – that is, one in which you can explain a
 particular prediction – offers an answer to the question of <em>why</em> this
@@ -655,7 +657,7 @@ with the inputs in their head: the ultimate in usability. As we discuss in
 &lt;&lt;downside&gt;&gt;, this simplicity comes at a cost: the model is less accurate than
 a huge neural network would be. But it can often be worth trading a little
 accuracy for interpretability, even in contexts less extreme than hospitals.</p>
-<figure><img src="figures/2-09.png" alt="The APGAR score, used in evaluating the health of infants, shows how a simple model can inspire confidence because its operations are understandable."><figcaption>The APGAR score, used in evaluating the health of infants, shows how a simple model can inspire confidence because its operations are understandable.</figcaption></figure>
+<figure><img src="figures/2-09.png" alt="FIGURE 2.7 The APGAR score, used in evaluating the health of infants, shows how a simple model can inspire confidence because its operations are understandable."><figcaption>FIGURE 2.7 The APGAR score, used in evaluating the health of infants, shows how a simple model can inspire confidence because its operations are understandable.</figcaption></figure>
 <h3 id="improving-the-model">Improving the Model</h3>
 <p>An uninterpretable model suffers from the performance and regulatory risks
 discussed earlier (see &lt;&lt;trust&gt;&gt;, and &lt;&lt;regulations&gt;&gt;), and closes the door on
@@ -678,7 +680,7 @@ dogs with high accuracy. LIME’s ability to “explain” individual classifica
 makes it obvious that the classifier has incorrectly learned to identify not
 wolves and Husky dogs, but snow in the background of the image, which was more
 common in the training images of wolves.</p>
-<figure><img src="figures/2-10.png" alt="An explanation or interpretation of a model can reveal major problems, such as in this image classifier, which was trained to distinguish between wolves and Husky dogs but is using the snow in the background to tell the difference. Figure and example from [the LIME paper] (https://arxiv.org/abs/1602.04938)."><figcaption>An explanation or interpretation of a model can reveal major problems, such as in this image classifier, which was trained to distinguish between wolves and Husky dogs but is using the snow in the background to tell the difference. Figure and example from [the LIME paper] (https://arxiv.org/abs/1602.04938).</figcaption></figure>
+<figure><img src="figures/2-10.png" alt="FIGURE 2.8 An explanation or interpretation of a model can reveal major problems, such as in this image classifier, which was trained to distinguish between wolves and Husky dogs but is using the snow in the background to tell the difference. Figure and example from the LIME paper."><figcaption>FIGURE 2.8 An explanation or interpretation of a model can reveal major problems, such as in this image classifier, which was trained to distinguish between wolves and Husky dogs but is using the snow in the background to tell the difference. Figure and example from <a href="https://arxiv.org/abs/1602.04938">the LIME paper</a>.</figcaption></figure>
 <h3 id="accuracy-and-interpretability">Accuracy and Interpretability</h3>
 <p>So, why not simply use interpretable models? The problem is that there is a
 fundamental tension between accuracy and interpretability. The more
@@ -692,7 +694,7 @@ interpretable, but also sacrifice minimal accuracy. Separately, model-agnostic
 approaches that provide tools to peer inside accurate but previously
 uninterpretable “black-box” models have been devised. The following chapters
 discuss and illustrate these developments.</p>
-<figure><img src="figures/2-16.png" alt="Choosing a model often involves a trade-off between interpretability and accuracy. This report is about breaking out of this trade-off."><figcaption>Choosing a model often involves a trade-off between interpretability and accuracy. This report is about breaking out of this trade-off.</figcaption></figure>
+<figure><img src="figures/2-16.png" alt="FIGURE 2.9 Choosing a model often involves a trade-off between interpretability and accuracy. This report is about breaking out of this trade-off."><figcaption>FIGURE 2.9 Choosing a model often involves a trade-off between interpretability and accuracy. This report is about breaking out of this trade-off.</figcaption></figure>
 <h2 id="the-challenge-of-interpretability">The Challenge of Interpretability</h2>
 <p>In the previous chapter we saw the power of interpretability to enhance trust,
 satisfy regulations, offer explanations to users, and improve models. But we
@@ -1753,9 +1755,9 @@ impact over the coming years.</p>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p><a href="http://people.dbmi.columbia.edu/noemie/papers/15kdd.pdf">Caruana et al. (2015), “Intelligible
+<li id="fn1" class="footnote-item"><p>Caruana et al. (2015), <em><a href="http://people.dbmi.columbia.edu/noemie/papers/15kdd.pdf">“Intelligible
 Models for HealthCare: Predicting Pneumonia Risk and Hospital 30-day
-Readmission.”</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+Readmission.”</a></em> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
 </li>
 <li id="fn2" class="footnote-item"><p><a href="http://creditkarma.com/">http://creditkarma.com/</a> <a href="#fnref2" class="footnote-backref">↩︎</a></p>
 </li>

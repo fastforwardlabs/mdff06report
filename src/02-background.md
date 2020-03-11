@@ -8,19 +8,19 @@ often than not, the answer is a resounding yes. This chapter explains why.
 From the point of view of a business deploying machine learning in a process or
 product, there are three important kinds of interpretability:
 
- - *Global* -- Do you understand the model _as a whole_ to the extent required
+ - **Global** -- Do you understand the model _as a whole_ to the extent required
    to _trust_ it (or to convince someone else that it can be trusted)?
- - *Local* -- Can you explain the _reason_ for a _particular decision_?
- - *Proxy* -- When the model is a perfect proxy for the system you are
+ - **Local** -- Can you explain the _reason_ for a _particular decision_?
+ - **Proxy** -- When the model is a perfect proxy for the system you are
    interested in, can you say how the model works, and thus learn about how the
    real system works?
 
-![Global interpretability shows feature importance for the model's prediction at a global level. Local interpretability shows feature importance for the model's prediction at a record-by-record level.](figures/2-03.png)
+![FIGURE 2.1 Global interpretability shows feature importance for the model's prediction at a global level. Local interpretability shows feature importance for the model's prediction at a record-by-record level.](figures/2-03.png)
 
 When one or more of these conditions holds, it makes our use of data safer and
 opens the door to new kinds of products.
 
-![If you trust a model, interpretability can provide you with concrete actions to pursue.](figures/2-04.png)
+![FIGURE 2.2 If you trust a model, interpretability can provide you with concrete actions to pursue.](figures/2-04.png)
 
 ### Enhancing Trust
 
@@ -30,7 +30,7 @@ data, then measure its performance on the remainder. By assessing the model
 using data it has never seen, they reduce the risk that a powerful model with a
 lot of flexibility will simply memorize the training data.
 
-![Model validation can prevent overfitting.](figures/2-06.png)
+![FIGURE 2.3 Model validation can prevent overfitting.](figures/2-06.png)
 
 This possibility, known as overfitting, is a concern because the model will one
 day be deployed in the wild. In this environment, by definition, it cannot have
@@ -49,13 +49,13 @@ example, if you train a self-driving car on public roads in a country where
 people drive on the left, and then deploy that car in the United States, you're
 asking for trouble.
 
-![Validation does not help when training data and real-world data are too different.](figures/2-07.png)
+![FIGURE 2.4 Validation does not help when training data and real-world data are too different.](figures/2-07.png)
 
 But sometimes subtler discrepancies can exist in the training data without your
 knowledge. A memorable example taken from a 2015 paper makes this point
-clearly.^[[Caruana et al. (2015), "Intelligible
+clearly.^[Caruana et al. (2015), *["Intelligible
 Models for HealthCare: Predicting Pneumonia Risk and Hospital 30-day
-Readmission."](http://people.dbmi.columbia.edu/noemie/papers/15kdd.pdf)] Doctors and statisticians trained a model to predict the
+Readmission."](http://people.dbmi.columbia.edu/noemie/papers/15kdd.pdf)*] Doctors and statisticians trained a model to predict the
 "probability of death" of patients suffering from pneumonia. The goal was to
 identify high-risk patients who should be admitted to hospital, and low-risk
 patients for outpatient treatment. With enough data, the conceit of machine
@@ -77,7 +77,7 @@ feature that should not be used to make predictions in this way. In this case,
 the model depended on a flawed assumption about the reason for the correlation
 between asthma and pneumonia survival.
 
-![Models built from training data can lack context for certain relationships.](figures/2-01.png)
+![FIGURE 2.5 Models built from training data can lack context for certain relationships.](figures/2-01.png)
 
 It is obviously essential to be confident that you haven't embedded bugs like
 this into a statistical model if it is to be used to make life-and-death
@@ -138,7 +138,7 @@ question "Why has the model made this decision?" is a superpower that raises
 the possibility of taking an action to _change_ the model's decision. Let's
 consider some examples of what you can do with that capability.
 
-![Local interpretability means you can explain a model's predictions and even suggest actions.](figures/2-08.png)
+![FIGURE 2.6 Local interpretability means you can explain a model's predictions and even suggest actions.](figures/2-08.png)
 
 A model of customer churn tells you how likely a customer is to leave. A
 _locally interpretable_ model -- that is, one in which you can explain a
@@ -173,7 +173,7 @@ with the inputs in their head: the ultimate in usability. As we discuss in
 a huge neural network would be. But it can often be worth trading a little
 accuracy for interpretability, even in contexts less extreme than hospitals.
 
-![The APGAR score, used in evaluating the health of infants, shows how a simple model can inspire confidence because its operations are understandable.](figures/2-09.png)
+![FIGURE 2.7 The APGAR score, used in evaluating the health of infants, shows how a simple model can inspire confidence because its operations are understandable.](figures/2-09.png)
 
 ### Improving the Model
 
@@ -206,7 +206,7 @@ makes it obvious that the classifier has incorrectly learned to identify not
 wolves and Husky dogs, but snow in the background of the image, which was more
 common in the training images of wolves.
 
-![An explanation or interpretation of a model can reveal major problems, such as in this image classifier, which was trained to distinguish between wolves and Husky dogs but is using the snow in the background to tell the difference. Figure and example from [the LIME paper] (https://arxiv.org/abs/1602.04938).](figures/2-10.png)
+![FIGURE 2.8 An explanation or interpretation of a model can reveal major problems, such as in this image classifier, which was trained to distinguish between wolves and Husky dogs but is using the snow in the background to tell the difference. Figure and example from [the LIME paper](https://arxiv.org/abs/1602.04938).](figures/2-10.png)
 
 ### Accuracy and Interpretability
 
@@ -224,4 +224,4 @@ approaches that provide tools to peer inside accurate but previously
 uninterpretable "black-box" models have been devised. The following chapters
 discuss and illustrate these developments.
 
-![Choosing a model often involves a trade-off between interpretability and accuracy. This report is about breaking out of this trade-off.](figures/2-16.png)
+![FIGURE 2.9 Choosing a model often involves a trade-off between interpretability and accuracy. This report is about breaking out of this trade-off.](figures/2-16.png)
