@@ -29,7 +29,7 @@ qualitatively different). Suppose we're classifying borrowers as likely to
 repay or not. For each applicant we will have access to two pieces of
 information: their annual income, and the amount they want to borrow. For a
 training sample we also have the outcome. If we were to plot the training data,
-we might see something like <<figure_repayment_linear>>.
+we might see something like this:
 
 ![FIGURE 3.2 Linear models are easy to understand and explain.](figures/2-11.png)
 
@@ -63,7 +63,7 @@ borrower why we think they are unlikely to repay in precise but plain words
 
 Let's look at a tougher problem. Suppose we plot the longitude and latitude of
 temperature sensors in a field, and mark with a check or cross whether the
-yield of corn was high or low (<<figure_nonlinear>>).
+yield of corn was high or low.
 
 ![FIGURE 3.4 Many problems are not linearly separable.](figures/2-13.png)
 
@@ -83,8 +83,7 @@ to a Support Vector Machine (SVM).
 An SVM essentially automates the process of engineering our "distance from the
 center of the field" metric. It does this by distorting the 2D surface on which
 the points in the previous figure sit into three or more dimensions, until it
-is possible to separate the high- and low-yield areas of the field with a plane
-(<<figure_nonlinear_separated>>).
+is possible to separate the high- and low-yield areas of the field with a plane.
 
 ![FIGURE 3.5 The classification for the nonlinear crop data.](figures/2-19.png)
 
@@ -164,7 +163,7 @@ These are simply graphs of `f(x)`, `g(y)`, and `h(z)` that allow us to
 visualize the behavior of the model. These graphs can be examined to ensure
 that there are no dangerous biases lurking in the model or, if necessary, to
 demonstrate to a regulator that a model responds _monotonically_ to a
-particular feature.footnote:[`f(x)` is monotonic if it _always_ increases when
+particular feature.^[`f(x)` is monotonic if it _always_ increases when
 `x` increases.]
 
 ![FIGURE 3.9 Partial dependence plots let you see the relationship between the prediction and key features.](figures/3-02.png)
@@ -199,7 +198,7 @@ Rule lists are predictive models that learn simple flow charts from training
 data. The models are made up of simple `if...then...else` rules that partition
 the input data. These rules are the building blocks of rule lists. For
 example, it's possible to predict survival of passengers on the _Titanic_ using
-<<figure_rule_list>>.
+a rule list like this:
 
 ![FIGURE 3.11 An example rule list predicting the survival of passengers on the Titanic.](figures/3-14.png)
 

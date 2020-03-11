@@ -134,7 +134,7 @@ at scale.
 
 Local interpretability -- the ability to explain individual decisions -- opens
 up new analyses and features, and even new products. The ability to answer the
-question "Why has the model made this decision?" is a superpower that raises
+question *"Why has the model made this decision?"* is a superpower that raises
 the possibility of taking an action to _change_ the model's decision. Let's
 consider some examples of what you can do with that capability.
 

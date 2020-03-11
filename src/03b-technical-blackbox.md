@@ -56,8 +56,8 @@ which has the biggest effect.
 
 Credit score is a nonlinear model; two people can open the same new credit card
 and it can have very different effects on their credit score. This means it is
-impossible to summarize the model _globally_ by saying something like "Lose 10
-points per open credit card." But if a particular user of the Credit Score
+impossible to summarize the model _globally_ by saying something like *"Lose 10
+points per open credit card."* But if a particular user of the Credit Score
 Simulator discovers their score goes down by 10 points when they propose
 opening a new credit card, that is a valid explanation of the behavior of the
 model _locally_, in the vicinity of that user in feature space.
