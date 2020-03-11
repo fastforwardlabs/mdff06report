@@ -6,9 +6,7 @@ common situation, you need an approach that allows you to interpret a black-box
 model. Thanks to recent research, this is not only possible, but relatively
 simple.
 
-[[figure_accuracy_more_interpretable]]
-.New techniques can make highly accurate neural network algorithms much more interpretable.
-image::figures/3-11.png[]
+![New techniques can make highly accurate neural network algorithms much more interpretable.](figures/3-11.png)
 
 Until recently, the usual way to interpret a black-box model was to train two
 models: the uninterpretable, highly accurate model that you use in production,
@@ -19,16 +17,14 @@ of the truth and, at a high level, may capture some of the broad strokes of the
 model. By inspecting the interpretable shadow model, you can offer
 explanations.
 
-[[figure_shadow_model]]
-.A shadow model can be trained from more complex models.
-image::figures/3-04.png[]
+![A shadow model can be trained from more complex models.](figures/3-04.png)
 
 The problem is that the shadow model is not only simplistic by construction.
 Its explanations can be misleading in ways you have no easy way of knowing.
 Inferences drawn from it are dubious, and come with no statistical guarantees
 about how wrong they could be. Simply put, you can offer explanations for the
 production model's decisions, but you have no way of knowing if those
-explanations are correct.footnote:[One (anonymous) data scientist told us the
+explanations are correct.^[One (anonymous) data scientist told us the
 interpretable twin model they use to explain their production model to clients
 is no better than "shadows on the cave wall."] Additionally, you now need to
 build and maintain two models, which can be a significant engineering burden.
@@ -47,9 +43,7 @@ asked to figure out how a black-box system worked. The input is _perturbed_,
 and the effect of that perturbation on the output is noted. This is repeated
 many times, until a local understanding of the model is built up.
 
-[[figure_perturb]]
-.By perturbing feature inputs, a local understanding of the model can be built up.
-image::figures/3-05.png[]
+![By perturbing feature inputs, a local understanding of the model can be built up.](figures/3-05.png)
 
 Let's look at a real-world example of the application of this basic idea in its
 simplest, most manual form. The website Credit Karma offers a Credit Score
@@ -58,9 +52,7 @@ can then change one of the two dozen or so inputs, to see what the effect is.
 The natural thing to do is to try changing them all, one at a time, to see
 which has the biggest effect.
 
-[[figure_credit_karma]]
-.Credit Karma lets users see how changes affect their credit score.
-image::figures/3-06.png[]
+![Credit Karma lets users see how changes affect their credit score.](figures/3-06.png)
 
 Credit score is a nonlinear model; two people can open the same new credit card
 and it can have very different effects on their credit score. This means it is
@@ -72,17 +64,15 @@ model _locally_, in the vicinity of that user in feature space.
 
 #### LIME
 
-Local Interpretable Model-agnostic Explanation (LIME)footnote:[Ribeiro, Singh,
-and Guestrin (2016), link:https://arxiv.org/abs/1602.04938["'Why Should I
-Trust You?': Explaining the Predictions of Any Classifier."]] formalizes the
+Local Interpretable Model-agnostic Explanation (LIME)^[Ribeiro, Singh,
+and Guestrin (2016), *["'Why Should I
+Trust You?': Explaining the Predictions of Any Classifier."](https://arxiv.org/abs/1602.04938)]*] formalizes the
 perturbation technique described in the previous section. It's exciting because
 it provides a simple method to interpret arbitrary black-box models. The
 algorithm is computationally simple, and the public reference implementation is
 a drop-in addition to many machine learning pipelines.
 
-[[figure_lime_local]]
-.LIME perturbs features to find a local linearly interpretable space.
-image::figures/3-07.png[]
+![LIME perturbs features to find a local linearly interpretable space.](figures/3-07.png)
 
 LIME takes as input a trained model and the particular example whose
 classification you want to explain. It then randomly perturbs the features of
@@ -135,26 +125,22 @@ alarming) to learn the words your model depends upon.
 We applied LIME to a black-box text classifier and saw sensible results. The
 model, a recurrent neural network to classify text as clickbait or not, was
 truly a black box to
-us.footnote:[https://github.com/saurabhmathur96/clickbait-detector] We found it
+us.^[[https://github.com/saurabhmathur96/clickbait-detector](https://github.com/saurabhmathur96/clickbait-detector)] We found it
 online and deliberately avoided reading about its structure. Nevertheless, we
 were able to use LIME to probe it, and build up some trust that it was paying
 attention to reasonable words.
 
-[[figure_clickbait]]
-.LIME word explanations of the clickbaitiness of headlines.
-image::figures/3-12.png[]
+![LIME word explanations of the clickbaitiness of headlines.](figures/3-12.png)
 
 The image perturbation strategy suggested by the creators of LIME is
 qualitatively similar. The image is divided up into high-level "superpixels,"
 which are zeroed out at random during perturbation. The result is the same: an
 explanation that says which part of the image is responsible for the behavior of
-the black-box model.footnote:[link:https://arxiv.org/abs/1704.03296[Fong and
-Vedaldi (2017)] recently proposed an image perturbation strategy that results in
+the black-box model.^[[Fong and
+Vedaldi (2017)](https://arxiv.org/abs/1704.03296) recently proposed an image perturbation strategy that results in
 even better "explanations."]
 
-[[figure_dog_guitar]]
-.LIME superpixel explanations of the classification of an image of a dog playing a guitar. Figure and example from LIME paper (https://arxiv.org/abs/1602.04938).
-image::figures/3-08.png[]
+![LIME superpixel explanations of the classification of an image of a dog playing a guitar. Figure and example from LIME paper [https://arxiv.org/abs/1602.04938](https://arxiv.org/abs/1602.04938).](figures/3-08.png)
 
 While LIME is designed with local explanation in mind, with enough explanations
 in hand, you can begin to build up in your head a global picture of the model.
@@ -164,9 +150,9 @@ introduced SP-LIME, an algorithm to select a small number of well-chosen real
 examples from a dataset. The algorithm greedily selects examples whose
 explanations are as different as possible from each other. The result is a
 small number of examples that, along with their explanations, give the big
-picture.footnote:[The code is not yet in the reference implementation of LIME,
+picture.^[The code is not yet in the reference implementation of LIME,
 but can be found at
-https://github.com/marcotcr/lime-experiments/blob/master/compare_classifiers.py.]
+[https://github.com/marcotcr/lime-experiments/blob/master/compare_classifiers.py](https://github.com/marcotcr/lime-experiments/blob/master/compare_classifiers.py).]
 
 Finally, it's important to note that the LIME approach has fundamental
 limitations. Whether it is used to explain a classifier of tabular, text, or
@@ -195,5 +181,5 @@ a model for harmful global biases it is a great tool. For example, it can be
 used to measure the extent to which a model depends on "protected features"
 that, from a legal and ethical point of view, should make no difference to its
 output (see <<ethics>>). A more detailed introduction to FairML is available
-on the Fast Forward Labs blog.footnote:[http://blog.fastforwardlabs.com/2017/03/09/fairml-auditing-black-box-predictive-models.html]
+on the Fast Forward Labs blog.^[[http://blog.fastforwardlabs.com/2017/03/09/fairml-auditing-black-box-predictive-models.html(http://blog.fastforwardlabs.com/2017/03/09/fairml-auditing-black-box-predictive-models.html)]
 ****

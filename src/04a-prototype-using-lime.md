@@ -37,7 +37,7 @@ describing an intrinsically complicated dataset, that is also interpretable.
 ### Customer Churn
 
 We used a public dataset of 7,043 cable customers, around 25% of whom
-churned.footnote:[https://www.ibm.com/communities/analytics/watson-analytics-blog/predictive-insights-in-the-telco-customer-churn-data-set/]
+churned.^[[https://www.ibm.com/communities/analytics/watson-analytics-blog/predictive-insights-in-the-telco-customer-churn-data-set/](https://www.ibm.com/communities/analytics/watson-analytics-blog/predictive-insights-in-the-telco-customer-churn-data-set/)]
 There are 20 features for each customer, which are a mixture of intrinsic
 attributes of the person or home (gender, family size, etc.) and quantities
 that describe their service or activity (payment method, monthly charge, etc.).
@@ -59,7 +59,7 @@ data to build an "explainer" object. It uses the properties of this sample to
 figure out the details of the perturbation strategy it will eventually use to
 explain an individual classification. This process is a little fiddly in the
 reference implementation that we
-used,footnote:[https://github.com/marcotcr/lime] because it requires some
+used,^[[https://github.com/marcotcr/lime](https://github.com/marcotcr/lime)] because it requires some
 bookkeeping information about categorical features. But once the explainer has
 been instantiated it can be saved for future use, alongside the model.
 
@@ -78,7 +78,6 @@ Numbers close to zero indicate that a feature is unimportant.
 
 This code will give us a list of `(feature, importance)` tuples: 
 
-[[lime-code]]
 [source,python]
 ----
 from lime.lime_tabular import LimeTabularExplainer

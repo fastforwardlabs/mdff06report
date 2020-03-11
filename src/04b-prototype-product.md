@@ -36,9 +36,7 @@ globally oriented view. The stacked local interpretations, however, coalesce
 into a powerful global representation of how the algorithm works. For many
 complex algorithms, this is the only kind of global view you can have.
 
-[[figure_limn_global_view]]
-.The global table displays the churn precision (calculated by the model) and highlights in red and blue the importance of different features in making that prediction (as calculated by LIME). Columns can be sorted by value to explore the relationships across customers.
-image::figures/4b-ps-1.png[scaledwidth="100%"]
+![The global table displays the churn precision (calculated by the model) and highlights in red and blue the importance of different features in making that prediction (as calculated by LIME). Columns can be sorted by value to explore the relationships across customers.](figures/4b-ps-1.png)[scaledwidth="100%"]
 
 Machine learning models are powerful because of their ability to capture
 nonlinear relationships. Nonlinear relationships cannot be reduced to global
@@ -67,9 +65,7 @@ While the table view is a powerful interface, it can feel overwhelming. For
 this prototype, we wanted to complement it with an individual customer view
 that would focus on actions you could take in relation to a specific customer.
 
-[[figure_limn_local_view]]
-.The individual customer view shifts the focus from comparisons across customers to one particular customer.
-image::figures/4b-ps-2.png[scaledwidth="100%"]
+![The individual customer view shifts the focus from comparisons across customers to one particular customer.](figures/4b-ps-2.png)[scaledwidth="100%"]
 
 Free of the table, we are now able to change the displayed feature order. The
 obvious move is to sort the features by their relative importance to the
@@ -90,9 +86,7 @@ further information. The recommendation side panel highlights the top three
 "changeable" features (e.g., not a customer's age) and uses the model to calculate the percent reduction in
 churn probability that changing each feature would have.
 
-[[figure_limn_recommendation_view]]
-.The recommendation sidebar highlights the top possible churn reduction actions.
-image::figures/4b-ps-4.png[scaledheight="200px"]
+![The recommendation sidebar highlights the top possible churn reduction actions.](figures/4b-ps-4.png)[scaledheight="200px"]
 
 As the user follows these recommendations, or explores by changing other
 feature values for the individual customer, we not only calculate the new churn
@@ -119,9 +113,7 @@ a customer service representative concerned with convincing a user to stay, why
 would you need to know about features that, according to the model, have no
 discernible effect on the churn prediction?
 
-[[figure_limn_early_shot]]
-.Early interface experiments displayed only the top three features for each customer. The view was focused but provided the user with less context to understand the model.
-image::figures/4b-ps-3.png[scaledwidth="100%"]
+![Early interface experiments displayed only the top three features for each customer. The view was focused but provided the user with less context to understand the model.](figures/4b-ps-3.png)[scaledwidth="100%"]
 
 We experimented with interfaces emphasizing just the top features, and they did
 have the benefit of being more clear and focused. However, the loss of context

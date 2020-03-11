@@ -13,9 +13,7 @@ order to maintain interpretability. These companies are so concerned with
 knowing _how_ a model produced a given result that they are willing to
 potentially trade off the accuracy of the result.
 
-[[figure_interpretability_applied_tradeoff]]
-.Currently, companies concerned with interpretability trade accuracy for higher interpretability. Technologies like LIME could change that.
-image::figures/5-03.png[]
+![Currently, companies concerned with interpretability trade accuracy for higher interpretability. Technologies like LIME could change that.](figures/5-03.png)
 
 Some companies using black-box models were unwilling to provide details about
 interpretability, or the applications of their models. We suspect that their
@@ -35,9 +33,7 @@ products complementary? Or is there some other reason? This explanation builds
 trust with the users (especially if the recommendations are good!) by showing
 them what's happening behind the scenes.
 
-[[figure_recommender]]
-.Model interpretation can be used to explain product recommendations.
-image::figures/5-01.png[]
+![Model interpretation can be used to explain product recommendations.](figures/5-01.png)
 
 #### Credit Scores
 
@@ -90,9 +86,7 @@ experience a failure and suggest targeted interventions to remedy, mitigate, or
 entirely prevent the problem. Fed back into the system, this understanding can
 suggest improvements to the design of more robust new systems.
 
-[[figure_engine]]
-.Interpretation can be used to identify possible causes of a prediction of engine failure.
-image::figures/5-02.png[]
+![Interpretation can be used to identify possible causes of a prediction of engine failure.](figures/5-02.png)
 
 #### Healthcare
 

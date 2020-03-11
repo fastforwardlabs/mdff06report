@@ -30,8 +30,8 @@ interpretability, these include:
 
 Domino Data Lab's service, for example, does not include off-the-shelf
 interpretability solutions, but it is nevertheless a high-quality data science
-platform.footnote:[For a recent complete list of data science platforms, see
-http://www.kdnuggets.com/2017/02/gartner-2017-mq-data-science-platforms-gainers-losers.html.]
+platform.^[For a recent complete list of data science platforms, see
+[http://www.kdnuggets.com/2017/02/gartner-2017-mq-data-science-platforms-gainers-losers.html](http://www.kdnuggets.com/2017/02/gartner-2017-mq-data-science-platforms-gainers-losers.html).]
 
 Still, as we emphasize throughout this report, interpretability is an important
 consideration. As trained data scientists become less involved in model
@@ -46,7 +46,7 @@ source platform for data science, including deep learning, with an enterprise
 product offering. The developers summarized their knowledge and offering with
 regard to interpretability in "Ideas on Interpreting Machine Learning," a white
 paper published by
-O'Reilly.footnote:[https://www.oreilly.com/ideas/ideas-on-interpreting-machine-learning]
+O'Reilly.^[[https://www.oreilly.com/ideas/ideas-on-interpreting-machine-learning](https://www.oreilly.com/ideas/ideas-on-interpreting-machine-learning)]
 Their work includes a twist on LIME called k-LIME. k-LIME trains _k_ linear
 models on the data, with _k_ chosen to maximize R^2^ across all linear models.
 This approach uncovers regions in the data that can be modeled using simpler
@@ -61,22 +61,22 @@ exploration and feature engineering, including visualization tools to help
 humans, who are adapted to perceive a three-dimensional world, understand
 relationships in higher-dimensional spaces.
 
-https://www.h2o.ai/
+[https://www.h2o.ai/](https://www.h2o.ai/)
 
 #### DataScience.com
 
 DataScience.com (Culver City, CA; founded 2014; Series A Dec 2015) released its
 data science platform in October 2016 and
-Skater,footnote:[https://www.datascience.com/resources/tools/skater] a Python
-library for model interpretation, in May 2017. Skater includes implementations
-of partial dependence plots and LIME. The team at DataScience.com developed
+Skater,^[[https://www.datascience.com/resources/tools/skater](https://www.datascience.com/resources/tools/skater)] a Python
+library for model interpretation in May 2017. Skater includes implementations
+of partial dependence plots and LIME. The team at [DataScience.com](DataScience.com) developed
 their own in-house sampler for LIME with the aim of improving the efficiency of
 the algorithm. The company provides robust solutions for both global and local
 interpretability as part of its data science platform and services offering. We
 welcome its decision to open-source Skater, a meaningful contribution to the
 data science community.
 
-https://www.datascience.com/
+[https://www.datascience.com/](https://datascience.com)
 
 #### DataRobot
 
@@ -91,7 +91,7 @@ target variables, DataRobot allows us to construct partial dependence plots.
 Word clouds visualize the relative importance of individual words to the
 decisions of a given algorithm. Finally, DataRobot includes implementations of
 white-box algorithms, including the RuleFit
-algorithm.footnote:[http://statweb.stanford.edu/~jhf/ftp/RuleFit.pdf]
+algorithm.^[[http://statweb.stanford.edu/~jhf/ftp/RuleFit.pdf](http://statweb.stanford.edu/~jhf/ftp/RuleFit.pdf)]
 
 A current limitation to DataRobot's interpretability solutions is that maximal
 correlation, word clouds, and partial dependence plots cannot capture complex
@@ -99,7 +99,7 @@ relationships between sets of variables and their combined impact on the target
 variable. Likewise, the white-box algorithm RuleFit may not always be the best
 algorithmic choice for a given machine learning use case.
 
-https://www.datarobot.com/
+[https://www.datarobot.com/](https://www.datarobot.com/)
 
 #### Bonsai
 
@@ -113,8 +113,8 @@ Bonsai aims to build an interpretable solution, and to speed up the training of
 models, by asking humans to guide the algorithm as it learns. Specifically,
 humans need to identify the key subtasks and determine the best order in which
 to perform these in order for the algorithm to achieve mastery; that is, humans
-need to identify the best learning path.footnote:[See Bengio et al. (2009),
-link:http://dl.acm.org/citation.cfm?id=1553380["Curriculum Learning."]]
+need to identify the best learning path.^[See Bengio et al. (2009),
+*["Curriculum Learning."](http://dl.acm.org/citation.cfm?id=1553380)]*]
 According to the Bonsai developers, this approach allows the algorithm to train
 faster by leveraging human knowledge to reduce the search space for the
 solution. It also ensures that human concepts map onto machine-solvable tasks,
@@ -122,10 +122,10 @@ thereby facilitating an intuitive understanding of the capabilities of the
 algorithm. In a sense, the Bonsai platform forces models to "think like us," to
 use similar subtasks or concepts in problem solving -- a different but
 intriguing approach to interpretability than that covered in this
-report.footnote:[AlphaGo, an AI Go player, can not only beat humans at Go.
-link:https://news.ycombinator.com/item?id=11259022[According to some players],
+report.^[AlphaGo, an AI Go player, can not only beat humans at Go.
+[According to some players](https://news.ycombinator.com/item?id=11259022),
 it seems to use fundamentally different concepts and strategies than humans.
 The approach taken by Bonsai would nudge AlphaGo to "think" more like human
 players.]
 
-https://bons.ai/
+[https://bons.ai/](https://bons.ai)
