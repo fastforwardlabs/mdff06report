@@ -6,7 +6,7 @@ common situation, you need an approach that allows you to interpret a black-box
 model. Thanks to recent research, this is not only possible, but relatively
 simple.
 
-![New techniques can make highly accurate neural network algorithms much more interpretable.](figures/3-11.png)
+![FIGURE 3.12 New techniques can make highly accurate neural network algorithms much more interpretable.](figures/3-11.png)
 
 Until recently, the usual way to interpret a black-box model was to train two
 models: the uninterpretable, highly accurate model that you use in production,
@@ -17,7 +17,7 @@ of the truth and, at a high level, may capture some of the broad strokes of the
 model. By inspecting the interpretable shadow model, you can offer
 explanations.
 
-![A shadow model can be trained from more complex models.](figures/3-04.png)
+![FIGURE 3.13 A shadow model can be trained from more complex models.](figures/3-04.png)
 
 The problem is that the shadow model is not only simplistic by construction.
 Its explanations can be misleading in ways you have no easy way of knowing.
@@ -43,7 +43,7 @@ asked to figure out how a black-box system worked. The input is _perturbed_,
 and the effect of that perturbation on the output is noted. This is repeated
 many times, until a local understanding of the model is built up.
 
-![By perturbing feature inputs, a local understanding of the model can be built up.](figures/3-05.png)
+![FIGURE 3.14  By perturbing feature inputs, a local understanding of the model can be built up.](figures/3-05.png)
 
 Let's look at a real-world example of the application of this basic idea in its
 simplest, most manual form. The website Credit Karma offers a Credit Score
@@ -52,7 +52,7 @@ can then change one of the two dozen or so inputs, to see what the effect is.
 The natural thing to do is to try changing them all, one at a time, to see
 which has the biggest effect.
 
-![Credit Karma lets users see how changes affect their credit score.](figures/3-06.png)
+![FIGURE 3.15 Credit Karma lets users see how changes affect their credit score.](figures/3-06.png)
 
 Credit score is a nonlinear model; two people can open the same new credit card
 and it can have very different effects on their credit score. This means it is
@@ -72,7 +72,7 @@ it provides a simple method to interpret arbitrary black-box models. The
 algorithm is computationally simple, and the public reference implementation is
 a drop-in addition to many machine learning pipelines.
 
-![LIME perturbs features to find a local linearly interpretable space.](figures/3-07.png)
+![Figure 3.16 LIME perturbs features to find a local linearly interpretable space.](figures/3-07.png)
 
 LIME takes as input a trained model and the particular example whose
 classification you want to explain. It then randomly perturbs the features of
@@ -130,7 +130,7 @@ online and deliberately avoided reading about its structure. Nevertheless, we
 were able to use LIME to probe it, and build up some trust that it was paying
 attention to reasonable words.
 
-![LIME word explanations of the clickbaitiness of headlines.](figures/3-12.png)
+![FIGURE 3.17 LIME word explanations of the clickbaitiness of headlines.](figures/3-12.png)
 
 The image perturbation strategy suggested by the creators of LIME is
 qualitatively similar. The image is divided up into high-level "superpixels,"
@@ -140,7 +140,7 @@ the black-box model.^[[Fong and
 Vedaldi (2017)](https://arxiv.org/abs/1704.03296) recently proposed an image perturbation strategy that results in
 even better "explanations."]
 
-![LIME superpixel explanations of the classification of an image of a dog playing a guitar. Figure and example from LIME paper [https://arxiv.org/abs/1602.04938](https://arxiv.org/abs/1602.04938).](figures/3-08.png)
+![FIGURE 3.18 LIME superpixel explanations of the classification of an image of a dog playing a guitar. Figure and example from LIME paper [https://arxiv.org/abs/1602.04938](https://arxiv.org/abs/1602.04938).](figures/3-08.png)
 
 While LIME is designed with local explanation in mind, with enough explanations
 in hand, you can begin to build up in your head a global picture of the model.
@@ -169,9 +169,10 @@ is going to churn _because_ they do not have TV service," which may be a
 misinterpretation. The risk of this is highest when when the supposed causal
 relationship seems to confirm your expectations.
 
-.Global black-box interpretation with FairML
-[[fairml]]
-****
+
+::: info
+##### *Global black-box interpretation with FairML*
+
 FairML is an open source tool released by Julius Adebayo when he was a member
 of the Fast Forward Labs team. It is similar to LIME in the sense that it
 probes a black-box model by perturbing input, but it provides a single global
@@ -181,5 +182,6 @@ a model for harmful global biases it is a great tool. For example, it can be
 used to measure the extent to which a model depends on "protected features"
 that, from a legal and ethical point of view, should make no difference to its
 output (see <<ethics>>). A more detailed introduction to FairML is available
-on the Fast Forward Labs blog.^[[http://blog.fastforwardlabs.com/2017/03/09/fairml-auditing-black-box-predictive-models.html(http://blog.fastforwardlabs.com/2017/03/09/fairml-auditing-black-box-predictive-models.html)]
-****
+on the Fast Forward Labs blog.^[[http://blog.fastforwardlabs.com/2017/03/09/fairml-auditing-black-box-predictive-models.html](http://blog.fastforwardlabs.com/2017/03/09/fairml-auditing-black-box-predictive-models.html)]
+
+:::

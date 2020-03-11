@@ -99,9 +99,8 @@ making deep learning research less a case of trial and error and more a case of
 principled, hypothesis-driven experimentation. This is great news for machine
 learning and artificial intelligence.
 
-.The upside of uninterpretability
-****
-[[upside]]
+::: info
+##### *The upside of uninterpretability*
 
 Truly uninterpretable models are black boxes, which leak as little information
 as possible to the end user. This can be a feature, rather than a bug. Opacity
@@ -113,4 +112,5 @@ small number of API calls.^[See e.g., [https://arxiv.org/abs/1609.02943(https://
 And a model that can be stolen can also be _gamed_ -- i.e., the input can be
 adjusted to get the desired output. The more uninterpretable the model, the
 less vulnerable it is to theft and gaming.
-****
+
+:::

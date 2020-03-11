@@ -19,9 +19,9 @@ course, it is often good business to build a product that serves as many people
 as possible. A product that depends on a discriminatory model suffers in this
 regard.
 
-.The legal landscape
-[[regulations-box]]
-****
+::: info
+##### *The legal landscape*
+
 The legal landscape is complex and fast-moving. Here are a few of the relevant
 regulations:
 
@@ -34,7 +34,8 @@ regulations:
  - Federal Reserve SR 11-7 (Guidance on Model Risk Management)
  - European Union General Data Protection Regulation, Article 22 (see
    "<<gdpr>>")
-****
+
+:::
 
 To make this discussion a little more concrete, let's consider a specific
 context in the United States. The Equal Employment Opportunity Commission
@@ -71,8 +72,10 @@ interpretability, such as those discussed in <<how>>, are essential to ensure
 we build models that do not discriminate and that therefore comply with the
 law, are ethical, and are good for our businesses.
 
-.Resources on algorithmic discrimination
-****
+::: info
+
+##### *Resources on algorithmic discrimination*
+
  - Barocas and Selbst (2016), "Big Data’s Disparate
    Impact."^[[https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899)] This
    clearly written and well-organized non-technical paper focuses on the
@@ -85,7 +88,8 @@ law, are ethical, and are good for our businesses.
    a wide-ranging polemic that we highly recommend to anyone who works with
    data scientists, or is one. It considers the issues touched upon in this
    chapter throughout.
-****
+
+:::
 
 ### Safety
 
@@ -109,8 +113,8 @@ industry in the United States is bound by SR 11-7, Guidance on Model Risk
 Management,^[[https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm](https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm)]
 which among other things requires that model behavior be explained.
 
-.GDPR Article 22 and the right to an explanation
-****
+##### *GDPR Article 22 and the right to an explanation*
+
 The European Union's General Data Protection Regulation will apply in the EU
 from May 2018.^[[http://www.privacy-regulation.eu/en/22.htm](http://www.privacy-regulation.eu/en/22.htm)]
 There has been much debate about the intentions and practical
@@ -136,7 +140,8 @@ Hopefully things will become clearer when the regulation comes into force;
 in the meantime, for further information we recommend the clear, practical
 article "How to Comply with GDPR Article 22" by Reuben
 Binns.^[[http://www.reubenbinns.com/blog/how-to-comply-with-gdpr-article-22-automated-credit-decisions/](http://www.reubenbinns.com/blog/how-to-comply-with-gdpr-article-22-automated-credit-decisions/)]
-****
+
+:::
 
 ### Negligence and Codes of Conduct
 

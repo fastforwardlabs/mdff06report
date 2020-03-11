@@ -94,8 +94,9 @@ For our use case, we are interested in the features with the largest positive
 importances, which tell us which features are most responsible for the model
 thinking the customer will churn.
 
-.Computational resources
-*****
+::: info
+##### *Computational resources*
+
 In order to comprehensively probe the area around an example, LIME needs to
 perturb every feature, and then build a linear model with the same features.
 This means the time it takes to construct an explanation is most sensitive to
@@ -109,7 +110,8 @@ proprietary churn dataset with 100 features. That increased the time required
 for an explanation to 1s on the same hardware. We could have increased the
 power of the hardware or reduced the number of perturbations below the
 standard 5,000 to speed this up if necessary.
-*****
+
+:::
 
 We wrapped our dataset, `scikit-learn` classifier, and LIME explainer in a
 standard Python Flask web API. This allows frontend applications to get
