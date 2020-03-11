@@ -196,8 +196,8 @@ improvements are made through a mixture of trial and error and intuition. See
 
 A striking example of debugging is given in the paper introducing Local
 Interpretable Model-agnostic Explanations (LIME),^[Ribeiro, Singh, and
-Guestrin (2016), ["'Why Should I Trust
-You?': Explaining the Predictions of Any Classifier."](https://arxiv.org/abs/1602.04938)] the black-box
+Guestrin (2016), *["'Why Should I Trust
+You?': Explaining the Predictions of Any Classifier."](https://arxiv.org/abs/1602.04938)*] the black-box
 interpretability technique we use in this report's prototype (<<prototype>>).
 In that paper, the authors describe a convolutional neural network image
 classification model able to distinguish between images of wolves and Husky

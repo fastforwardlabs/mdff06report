@@ -6,7 +6,7 @@ also saw that there is a fundamental tension between these goals and a model's
 ability to get decisions right. Traditionally, you can have an interpretable model
 or you can have an accurate model, but you can't have both.
 
-![How do we get a model that is both highly interpretable and highly accurate?](figures/3-09.png)
+![FIGURE 3.1 How do we get a model that is both highly interpretable and highly accurate?](figures/3-09.png)
 
 In this chapter we'll first explain the technical reasons for this tension
 between interpretability and accuracy. We'll then look at two ways to have your
@@ -31,7 +31,7 @@ information: their annual income, and the amount they want to borrow. For a
 training sample we also have the outcome. If we were to plot the training data,
 we might see something like <<figure_repayment_linear>>.
 
-![Linear models are easy to understand and explain.](figures/2-11.png)
+![FIGURE 3.2 Linear models are easy to understand and explain.](figures/2-11.png)
 
 At a high level, this training data shows that people who repay tend to earn a
 lot and borrow a little. But the details are important. You can draw a straight
@@ -39,7 +39,7 @@ line on this chart that separates the repayers and
 non-repayers. You can then build an accurate model by simply asking the question, "Is
 the applicant above or below the line?" Formally, this is a _linear model_; i.e.,
 one in which the predicted repayment probability is a linear function of income
-and loan amount.footnote:[This discussion skips a mathematical detail -- the
+and loan amount.^[This discussion skips a mathematical detail -- the
 sigmoid function -- but without loss of generality.] In other words:
 
     Probability of repayment = A × income + B × loan amount
@@ -59,13 +59,13 @@ trust in the model is high. And we can use the numbers `A` and `B` to tell a
 borrower why we think they are unlikely to repay in precise but plain words
 (e.g., "Given your income, you are asking to borrow $1,000 too much.").
 
-![Given a new data point, we can explain why it is classified the way it is.](figures/2-12.png)
+![FIGURE 3.3 Given a new data point, we can explain why it is classified the way it is.](figures/2-12.png)
 
 Let's look at a tougher problem. Suppose we plot the longitude and latitude of
 temperature sensors in a field, and mark with a check or cross whether the
 yield of corn was high or low (<<figure_nonlinear>>).
 
-![Many problems are not linearly separable.](figures/2-13.png)
+![FIGURE 3.4 Many problems are not linearly separable.](figures/2-13.png)
 
 As you can see, there is no way to draw a straight line
 that separates the high-yield and low-yield areas of this field. That means it
@@ -86,7 +86,7 @@ the points in the previous figure sit into three or more dimensions, until it
 is possible to separate the high- and low-yield areas of the field with a plane
 (<<figure_nonlinear_separated>>).
 
-![The classification for the nonlinear crop data.](figures/2-19.png)
+![FIGURE 3.5 The classification for the nonlinear crop data.](figures/2-19.png)
 
 This model will be accurate, but the distortion of the inputs means that it no
 longer operates in terms of our raw input features. We cannot write down a
@@ -99,7 +99,7 @@ to the west will increase yield, we have to answer that it depends on how far
 north you are. Our model's internal structure is a step removed from the
 relatively intuitive raw input.
 
-![There is no longer a simple explanation for why a data point is classified the way it is.](figures/2-14.png)
+![FIGURE 3.6 There is no longer a simple explanation for why a data point is classified the way it is.](figures/2-14.png)
 
 If we take one more step up in problem and model complexity, the internal
 structure of the model gets still more removed from the input. A neural network
@@ -108,7 +108,7 @@ similar to but more complex than the single one performed by an SVM. The
 equation it encodes will not only be very long, but almost impossible
 to reason about with confidence.
 
-![More complex models create a space that is even more difficult to explain.](figures/2-15.png)
+![FIGURE 3.7 More complex models create a space that is even more difficult to explain.](figures/2-15.png)
 
 A random forest model is often used where the problem is hard and the main
 concern is accuracy. It is an _ensemble_, which means that it is in a sense a
@@ -133,7 +133,7 @@ possible, then the model is much harder to interpret. Models that are sparse,
 meanwhile, are mathematically simple in a way that raises the possibility that
 they can be written down as a set of simple rules.
 
-![White-box models are highly interpretable. Recent innovation is focused on increasing their accuracy.](figures/3-10.png)
+![FIGURE 3.8 White-box models are highly interpretable. Recent innovation is focused on increasing their accuracy.](figures/3-10.png)
 
 #### GAMs
 
@@ -167,7 +167,7 @@ demonstrate to a regulator that a model responds _monotonically_ to a
 particular feature.footnote:[`f(x)` is monotonic if it _always_ increases when
 `x` increases.]
 
-![Partial dependence plots let you see the relationship between the prediction and key features.](figures/3-02.png)
+![FIGURE 3.9 Partial dependence plots let you see the relationship between the prediction and key features.](figures/3-02.png)
 
 GA^2^Ms extend GAMs by allowing _pairwise_ interactions, or models of the form:
 
@@ -181,7 +181,7 @@ stop here for a very good reason: you can make a partial dependence plot of
 dependence plot of three variables. It is the partial dependence plots that
 give the model its interpretability.
 
-![Partial dependence plots with pairwise interactions.](figures/3-03.png)
+![FIGURE 3.10 Partial dependence plots with pairwise interactions.](figures/3-03.png)
 
 We've described a situation with just three features, `x`, `y`, and `z`. But
 it's more common to have many more features. This raises the possibility of
@@ -189,8 +189,8 @@ exponentially many pairwise terms. For example, with 50 features there are over
 a thousand possible pairwise terms. Trying to inspect all these plots would
 diminish interpretability rather than enhancing it. For this reason, GA^2^Ms
 include only the `k` pairwise terms that most improve accuracy, where `k` is a
-small number determined like any other hyperparameter.^:[[See Lou et al.
-(2013), *["Accurate Intelligible Models with Pairwise Interactions,"]((http://www.cs.cornell.edu/~yinlou/papers/lou-kdd13.pdf)* and the reference
+small number determined like any other hyperparameter.^[See Lou et al.
+(2013), *["Accurate Intelligible Models with Pairwise Interactions,"]((http://www.cs.cornell.edu/~yinlou/papers/lou-kdd13.pdf)* and the referenced
 [Java implementation](https://github.com/yinlou/mltk).]
 
 #### Rule Lists
@@ -201,7 +201,7 @@ the input data. These rules are the building blocks of rule lists. For
 example, it's possible to predict survival of passengers on the _Titanic_ using
 <<figure_rule_list>>.
 
-![An example rule list predicting the survival of passengers on the Titanic.](figures/3-14.png)
+![FIGURE 3.11 An example rule list predicting the survival of passengers on the Titanic.](figures/3-14.png)
 
 Rule lists are special cases of decision trees, where all the leaves are on the
 same side of the tree. As such, they are highly interpretable.
