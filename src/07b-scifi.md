@@ -1,4 +1,4 @@
-=== Interpretability Sci-Fi: The Definition of Success
+### Interpretability Sci-Fi: The Definition of Success
 
 [role="scifi"]
 ****
@@ -9,9 +9,7 @@ The crew awoke to Ship's message:
 
 "PLANET OF INTEREST APPROACHING -- ESTIMATED ARRIVAL FOUR HOURS -- BEGIN PREPARATION FOR ON-PLANET EXPLORATION."
 
-[[figure_scifi_hibernation]]
-.Woken from hibernation.
-image::figures/5-07.png[style="right"]
+![Woken from hibernation.](figures/5-07.png)[style="right"]
 
 Rue glanced at the monitor -- they'd been out for seven months this time.
 
@@ -23,9 +21,7 @@ Rue glanced at the monitor -- they'd been out for seven months this time.
 
 Taera stood in the middle of hundreds of egg-like structures. They were each about a meter tall, with a covering that looked like a cross between leather and metal. They seemed to pulse slightly. A low humming suffused the cave.
 
-[[figure_scifi_cave]]
-.Taera in the cave.
-image::figures/5-08.png[style="right"]
+![Taera in the cave.](figures/5-08.png)[style="right"]
 
 "This one's giving off significant heat," Taera said, as she approached the nearest one.
 
@@ -57,9 +53,7 @@ Taera's death meant Rue was now acting captain, and therefore had access to the 
 
 "That's just a number and we both know it, Ship. Show me the success predictions for your last five missions."
 
-[[figure_scifi_chart]]
-.Mission success predictions.
-image::figures/5-09.png[style="right"]
+![Mission success predictions.](figures/5-09.png)[style="right"]
 
 A table was projected on the wall facing Rue. The missions had success predictions ranging from 98% to 13%.
 
@@ -77,9 +71,7 @@ The cells in the columns shifted into red and blue highlights. For the profit co
 
 "Ship," Rue said thoughtfully, "probability of crew survival is a feature in your mission success prediction, isn't it? Add that column to the table."
 
-[[figure_scifi_imporances]]
-.Feature importance for mission success predictions.
-image::figures/5-10.png[]
+![Feature importance for mission success predictions.](figures/5-10.png)
 
 A column titled "Crew Survival" was added to the table. The values varied between 88% and 12%, and none of them were highlighted as important to the success prediction. The probability assigned to crew survival for the current mission was 14%.
 
@@ -93,9 +85,7 @@ A column titled "Crew Survival" was added to the table. The values varied betwee
 
 The lights dimmed briefly in the control room. As they returned to full power an alarm started, and Ship's voice returned with a new sense of urgency. The adjusted feature importances and success prediction for the current mission appeared on the wall.
 
-[[figure_scifi_recommendation]]
-.The recalculated success prediction and a recommendation for action.
-image::figures/5-11.png[style="right"]
+![The recalculated success prediction and a recommendation for action.](figures/5-11.png)[style="right"]
 
 "ALERT! ALERT! CREW IS IN GRAVE DANGER. RECOMMENDATION: PROCEED TO ESCAPE POD IMMEDIATELY. INITIATE SHIP SELF-DESTRUCT SEQUENCE TO DESTROY ALIEN CONTAMINATION."
 

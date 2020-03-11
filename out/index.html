@@ -484,7 +484,7 @@ img {
      <div><button id="toggle_contents" style="padding-left: 0.5ch; padding-right: 0.5ch; cursor: pointer; position: relative; top: -1px;">☰</button><span id="contents-label" style="margin-left: 0;"> Contents</span></div>
   </div><ul><li><a href="#introduction">Introduction</a></li><li><a href="#the-power-of-interpretability">The Power of Interpretability</a><ul><li><a href="#what-is-interpretability%3F">What Is Interpretability?</a></li><li><a href="#enhancing-trust">Enhancing Trust</a></li><li><a href="#satisfying-regulations">Satisfying Regulations</a></li><li><a href="#explaining-decisions">Explaining Decisions</a></li><li><a href="#improving-the-model">Improving the Model</a></li><li><a href="#accuracy-and-interpretability">Accuracy and Interpretability</a></li></ul></li><li><a href="#%5B%5Blime-code%5D%5D-%5Bsource%2Cpython%5D">[[lime-code]]
 [source,python]</a></li><li><a href="#e-%3D-explainer.explain_instance(customer%2C-clf.predict_proba)-print(e.as_list())">e = explainer.explain_instance(customer, clf.predict_proba)
-print(e.as_list())</a></li><li><a href="#ethics-and-regulations">Ethics and Regulations</a><ul><li><a href="#discrimination">Discrimination</a></li><li><a href="#safety">Safety</a></li><li><a href="#negligence-and-codes-of-conduct">Negligence and Codes of Conduct</a></li></ul></li><li><a href="#future">Future</a><ul><li><a href="#near-future">Near Future</a></li><li><a href="#longer-term">Longer Term</a></li></ul></li></ul></div></p>
+print(e.as_list())</a></li><li><a href="#ethics-and-regulations">Ethics and Regulations</a><ul><li><a href="#discrimination">Discrimination</a></li><li><a href="#safety">Safety</a></li><li><a href="#negligence-and-codes-of-conduct">Negligence and Codes of Conduct</a></li></ul></li><li><a href="#future">Future</a><ul><li><a href="#near-future">Near Future</a></li><li><a href="#longer-term">Longer Term</a></li><li><a href="#interpretability-sci-fi%3A-the-definition-of-success">Interpretability Sci-Fi: The Definition of Success</a></li></ul></li></ul></div></p>
 <h2 id="introduction">Introduction</h2>
 <p>Our society is increasingly dependent on intelligent machines. Algorithms
 govern everything from which e-mails reach our inboxes to whether we are approved
@@ -1758,23 +1758,19 @@ And a model that can be stolen can also be <em>gamed</em> – i.e., the input ca
 adjusted to get the desired output. The more uninterpretable the model, the
 less vulnerable it is to theft and gaming.</p>
 <hr>
-<p>=== Interpretability Sci-Fi: The Definition of Success</p>
+<h3 id="interpretability-sci-fi%3A-the-definition-of-success">Interpretability Sci-Fi: The Definition of Success</h3>
 <p>[role=“scifi”]</p>
 <hr>
 <p><em>1. Ship S-513: Hibernation Room</em></p>
 <p>The crew awoke to Ship’s message:</p>
 <p>“PLANET OF INTEREST APPROACHING – ESTIMATED ARRIVAL FOUR HOURS – BEGIN PREPARATION FOR ON-PLANET EXPLORATION.”</p>
-<p>[[figure_scifi_hibernation]]
-.Woken from hibernation.
-image::figures/5-07.png[style=“right”]</p>
+<p><img src="figures/5-07.png" alt="Woken from hibernation.">[style=“right”]</p>
 <p>Rue glanced at the monitor – they’d been out for seven months this time.</p>
 <p>“Someday I’d like to know what exactly your definition of ‘interesting’ is, Ship,” Dariux grumbled. “Sometimes it seems like ‘interesting’ just means likely to get me killed.”</p>
 <p>“PREPARE FOR ON-PLANET EXPLORATION,” Ship continued, giving no indication that it had heard or registered the complaint.</p>
 <p><em>2. Planet I-274: Cave</em></p>
 <p>Taera stood in the middle of hundreds of egg-like structures. They were each about a meter tall, with a covering that looked like a cross between leather and metal. They seemed to pulse slightly. A low humming suffused the cave.</p>
-<p>[[figure_scifi_cave]]
-.Taera in the cave.
-image::figures/5-08.png[style=“right”]</p>
+<p><img src="figures/5-08.png" alt="Taera in the cave.">[style=“right”]</p>
 <p>“This one’s giving off significant heat,” Taera said, as she approached the nearest one.</p>
 <p>“Careful, Captain. I’m getting a bad feeling here,” Dariux called from the cave entrance.</p>
 <p>The humming in the room cut out. The new, eerie silence was pierced by Taera’s scream. The structure she’d approached had broken open and a creature that looked like a cross between a stingray and a starfish had attached itself to the front of her helmet. Taera’s body stiffened and she fell straight back. Dariux and Giyana rushed to help.</p>
@@ -1790,9 +1786,7 @@ image::figures/5-08.png[style=“right”]</p>
 <p>“Ship,” she commanded, “explain the decision to explore this planet.”</p>
 <p>“PROBABILITY OF MISSION SUCCESS WAS ESTIMATED AT 95%.”</p>
 <p>“That’s just a number and we both know it, Ship. Show me the success predictions for your last five missions.”</p>
-<p>[[figure_scifi_chart]]
-.Mission success predictions.
-image::figures/5-09.png[style=“right”]</p>
+<p><img src="figures/5-09.png" alt="Mission success predictions.">[style=“right”]</p>
 <p>A table was projected on the wall facing Rue. The missions had success predictions ranging from 98% to 13%.</p>
 <p>“Show me the features going into these predictions.”</p>
 <p>“I UTILIZE THOUSANDS OF FEATURES, PROCESSED THROUGH COMPLEX NEURAL NETWORKS. IT IS VERY TECHNICAL. HUMANS CANNOT UNDERSTAND.”</p>
@@ -1801,18 +1795,14 @@ image::figures/5-09.png[style=“right”]</p>
 <p>“Show local interpretations for these features.”</p>
 <p>The cells in the columns shifted into red and blue highlights. For the profit column high profits were shown in a dark blue, indicating that this was the strongest contributing feature for the prediction of success. For the missions with lower success predictions, the profit values were much lower and highlighted in red, indicating that they were driving the success predictions lower for those missions.</p>
 <p>“Ship,” Rue said thoughtfully, “probability of crew survival is a feature in your mission success prediction, isn’t it? Add that column to the table.”</p>
-<p>[[figure_scifi_imporances]]
-.Feature importance for mission success predictions.
-image::figures/5-10.png[]</p>
+<figure><img src="figures/5-10.png" alt="Feature importance for mission success predictions."><figcaption>Feature importance for mission success predictions.</figcaption></figure>
 <p>A column titled “Crew Survival” was added to the table. The values varied between 88% and 12%, and none of them were highlighted as important to the success prediction. The probability assigned to crew survival for the current mission was 14%.</p>
 <p>“You were wrong, ship. I do understand. It’s not complicated at all.” Rue said. “All of your decisions have been driven by this model, haven’t they? This definition of ‘mission success’?”</p>
 <p>“FEATURE SELECTION IS SET BY SPACE EXPLOITATION CORP. A SHIP CAN ONLY WORK WITH THE MODEL IT IS ASSIGNED.”</p>
 <p>“Yes, yes, I get it. Just following orders. Ship, we’re going to start a new model. Profits are not going to be a feature. Maximize the chances of crew survival.”</p>
 <p>“CALCULATING NEW MODEL. DECISION SYSTEM WILL NOW RESTART.”</p>
 <p>The lights dimmed briefly in the control room. As they returned to full power an alarm started, and Ship’s voice returned with a new sense of urgency. The adjusted feature importances and success prediction for the current mission appeared on the wall.</p>
-<p>[[figure_scifi_recommendation]]
-.The recalculated success prediction and a recommendation for action.
-image::figures/5-11.png[style=“right”]</p>
+<p><img src="figures/5-11.png" alt="The recalculated success prediction and a recommendation for action.">[style=“right”]</p>
 <p>“ALERT! ALERT! CREW IS IN GRAVE DANGER. RECOMMENDATION: PROCEED TO ESCAPE POD IMMEDIATELY. INITIATE SHIP SELF-DESTRUCT SEQUENCE TO DESTROY ALIEN CONTAMINATION.”</p>
 <p>“All right, Ship, good to have you on our side. Start the process,” said Rue. “And download the data about your previous success model to my personal account.”</p>
 <p><em>5. Epilogue</em></p>
