@@ -1116,10 +1116,7 @@ thinking the customer will churn.</p>
 <p>In order to comprehensively probe the area around an example, LIME needs to
 perturb every feature, and then build a linear model with the same features.
 This means the time it takes to construct an explanation is most sensitive to
-the number of features in the data.footnote:[Mathematically, its complexity
-is O(F^3^ + P F^2^ + P O(model)), where F is the number of features in the
-data, P is the number of perturbations LIME makes, and O(model) is the
-complexity of the model.] In our tests LIME explained a classification of our
+the number of features in the data.<sup class="footnote-ref"><a href="#fn20" id="fnref20">[20]</a></sup> In our tests LIME explained a classification of our
 model, which had 20 features, in around 0.1s on a commodity PC. This allowed
 for a responsive user interface. We also applied our prototype to a
 proprietary churn dataset with 100 features. That increased the time required
@@ -1161,7 +1158,7 @@ perturbation. It may initially seem a strange choice, then, to use it in a
 globally oriented view. The stacked local interpretations, however, coalesce
 into a powerful global representation of how the algorithm works. For many
 complex algorithms, this is the only kind of global view you can have.</p>
-<p><img src="figures/4b-ps-1.png" alt="The global table displays the churn precision (calculated by the model) and highlights in red and blue the importance of different features in making that prediction (as calculated by LIME). Columns can be sorted by value to explore the relationships across customers.">[scaledwidth=“100%”]</p>
+<figure><img src="figures/4b-ps-1.png" alt="FIGURE 4.1 The global table displays the churn precision (calculated by the model) and highlights in red and blue the importance of different features in making that prediction (as calculated by LIME). Columns can be sorted by value to explore the relationships across customers."><figcaption>FIGURE 4.1 The global table displays the churn precision (calculated by the model) and highlights in red and blue the importance of different features in making that prediction (as calculated by LIME). Columns can be sorted by value to explore the relationships across customers.</figcaption></figure>
 <p>Machine learning models are powerful because of their ability to capture
 nonlinear relationships. Nonlinear relationships cannot be reduced to global
 feature importance without significant information loss. By highlighting local
@@ -1185,7 +1182,7 @@ does, we wouldn’t need the model in the first place.</p>
 <p>While the table view is a powerful interface, it can feel overwhelming. For
 this prototype, we wanted to complement it with an individual customer view
 that would focus on actions you could take in relation to a specific customer.</p>
-<p><img src="figures/4b-ps-2.png" alt="The individual customer view shifts the focus from comparisons across customers to one particular customer.">[scaledwidth=“100%”]</p>
+<figure><img src="figures/4b-ps-2.png" alt="FIGURE 4.2 The individual customer view shifts the focus from comparisons across customers to one particular customer."><figcaption>FIGURE 4.2 The individual customer view shifts the focus from comparisons across customers to one particular customer.</figcaption></figure>
 <p>Free of the table, we are now able to change the displayed feature order. The
 obvious move is to sort the features by their relative importance to the
 prediction. In the vertical orientation, this creates a list of the factors
@@ -1202,7 +1199,7 @@ Credit Karma example), but it would be a long and tedious process.</p>
 further information. The recommendation side panel highlights the top three
 “changeable” features (e.g., not a customer’s age) and uses the model to calculate the percent reduction in
 churn probability that changing each feature would have.</p>
-<p><img src="figures/4b-ps-4.png" alt="The recommendation sidebar highlights the top possible churn reduction actions.">[scaledheight=“200px”]</p>
+<figure><img src="figures/4b-ps-4.png" alt="Figure 4.3 The recommendation sidebar highlights the top possible churn reduction actions."><figcaption>Figure 4.3 The recommendation sidebar highlights the top possible churn reduction actions.</figcaption></figure>
 <p>As the user follows these recommendations, or explores by changing other
 feature values for the individual customer, we not only calculate the new churn
 prediction, we also calculate the weights based on the new feature set. This
@@ -1224,7 +1221,7 @@ showing the highest-importance features for each customer. After all, if you’r
 a customer service representative concerned with convincing a user to stay, why
 would you need to know about features that, according to the model, have no
 discernible effect on the churn prediction?</p>
-<p><img src="figures/4b-ps-3.png" alt="Early interface experiments displayed only the top three features for each customer. The view was focused but provided the user with less context to understand the model.">[scaledwidth=“100%”]</p>
+<figure><img src="figures/4b-ps-3.png" alt="FIGURE 4.4 Early interface experiments displayed only the top three features for each customer. The view was focused but provided the user with less context to understand the model."><figcaption>FIGURE 4.4 Early interface experiments displayed only the top three features for each customer. The view was focused but provided the user with less context to understand the model.</figcaption></figure>
 <p>We experimented with interfaces emphasizing just the top features, and they did
 have the benefit of being more clear and focused. However, the loss of context
 ended up decreasing the user’s trust and understanding of the model. The model
@@ -1256,7 +1253,7 @@ interpretability is a concern, we found that most chose white-box models in
 order to maintain interpretability. These companies are so concerned with
 knowing <em>how</em> a model produced a given result that they are willing to
 potentially trade off the accuracy of the result.</p>
-<figure><img src="figures/5-03.png" alt="Currently, companies concerned with interpretability trade accuracy for higher interpretability. Technologies like LIME could change that."><figcaption>Currently, companies concerned with interpretability trade accuracy for higher interpretability. Technologies like LIME could change that.</figcaption></figure>
+<figure><img src="figures/5-03.png" alt="FIGURE 5.1 Currently, companies concerned with interpretability trade accuracy for higher interpretability. Technologies like LIME could change that."><figcaption>FIGURE 5.1 Currently, companies concerned with interpretability trade accuracy for higher interpretability. Technologies like LIME could change that.</figcaption></figure>
 <p>Some companies using black-box models were unwilling to provide details about
 interpretability, or the applications of their models. We suspect that their
 unwillingness to discuss may be rooted in regulatory concerns. Specifically, at
@@ -1272,7 +1269,7 @@ product? Do the recommended products share certain features in common? Are the
 products complementary? Or is there some other reason? This explanation builds
 trust with the users (especially if the recommendations are good!) by showing
 them what’s happening behind the scenes.</p>
-<figure><img src="figures/5-01.png" alt="Model interpretation can be used to explain product recommendations."><figcaption>Model interpretation can be used to explain product recommendations.</figcaption></figure>
+<figure><img src="figures/5-01.png" alt="FIGURE 5.2 Model interpretation can be used to explain product recommendations."><figcaption>FIGURE 5.2 Model interpretation can be used to explain product recommendations.</figcaption></figure>
 <h4 id="credit-scores">Credit Scores</h4>
 <p>Customer credit evaluation uses interpretable models extensively. When
 evaluating a customer’s credit score, and particularly when <em>denying</em> a
@@ -1316,7 +1313,7 @@ airplane engines that are predicted to have trouble. This is helpful, but
 experience a failure and suggest targeted interventions to remedy, mitigate, or
 entirely prevent the problem. Fed back into the system, this understanding can
 suggest improvements to the design of more robust new systems.</p>
-<figure><img src="figures/5-02.png" alt="Interpretation can be used to identify possible causes of a prediction of engine failure."><figcaption>Interpretation can be used to identify possible causes of a prediction of engine failure.</figcaption></figure>
+<figure><img src="figures/5-02.png" alt="FIGURE 5.3 Interpretation can be used to identify possible causes of a prediction of engine failure."><figcaption>FIGURE 5.3 Interpretation can be used to identify possible causes of a prediction of engine failure.</figcaption></figure>
 <h4 id="healthcare">Healthcare</h4>
 <p>Models that support diagnosis or treatment must be interpretable in order to be
 safe. The danger of subtle problems with training data is particularly acute
@@ -1355,7 +1352,7 @@ distributions, libraries</li>
 </ul>
 <p>Domino Data Lab’s service, for example, does not include off-the-shelf
 interpretability solutions, but it is nevertheless a high-quality data science
-platform.<sup class="footnote-ref"><a href="#fn20" id="fnref20">[20]</a></sup></p>
+platform.<sup class="footnote-ref"><a href="#fn21" id="fnref21">[21]</a></sup></p>
 <p>Still, as we emphasize throughout this report, interpretability is an important
 consideration. As trained data scientists become less involved in model
 selection, training, and deployment, we need tools to enable us to trust models
@@ -1367,7 +1364,7 @@ source platform for data science, including deep learning, with an enterprise
 product offering. The developers summarized their knowledge and offering with
 regard to interpretability in “Ideas on Interpreting Machine Learning,” a white
 paper published by
-O’Reilly.<sup class="footnote-ref"><a href="#fn21" id="fnref21">[21]</a></sup>
+O’Reilly.<sup class="footnote-ref"><a href="#fn22" id="fnref22">[22]</a></sup>
 Their work includes a twist on LIME called k-LIME. k-LIME trains <em>k</em> linear
 models on the data, with <em>k</em> chosen to maximize R^2^ across all linear models.
 This approach uncovers regions in the data that can be modeled using simpler
@@ -1384,8 +1381,8 @@ relationships in higher-dimensional spaces.</p>
 <h4 id="datascience.com">DataScience.com</h4>
 <p>DataScience.com (Culver City, CA; founded 2014; Series A Dec 2015) released its
 data science platform in October 2016 and
-Skater,<sup class="footnote-ref"><a href="#fn22" id="fnref22">[22]</a></sup> a Python
-library for model interpretation in May 2017. Skater includes implementations
+Skater (a Python
+library for model interpretation),<sup class="footnote-ref"><a href="#fn23" id="fnref23">[23]</a></sup> in May 2017. Skater includes implementations
 of partial dependence plots and LIME. The team at <a href="DataScience.com">DataScience.com</a> developed
 their own in-house sampler for LIME with the aim of improving the efficiency of
 the algorithm. The company provides robust solutions for both global and local
@@ -1405,7 +1402,7 @@ target variables, DataRobot allows us to construct partial dependence plots.
 Word clouds visualize the relative importance of individual words to the
 decisions of a given algorithm. Finally, DataRobot includes implementations of
 white-box algorithms, including the RuleFit
-algorithm.<sup class="footnote-ref"><a href="#fn23" id="fnref23">[23]</a></sup></p>
+algorithm.<sup class="footnote-ref"><a href="#fn24" id="fnref24">[24]</a></sup></p>
 <p>A current limitation to DataRobot’s interpretability solutions is that maximal
 correlation, word clouds, and partial dependence plots cannot capture complex
 relationships between sets of variables and their combined impact on the target
@@ -1422,7 +1419,7 @@ smart factories) based on deep reinforcement learning.</p>
 models, by asking humans to guide the algorithm as it learns. Specifically,
 humans need to identify the key subtasks and determine the best order in which
 to perform these in order for the algorithm to achieve mastery; that is, humans
-need to identify the best learning path.<sup class="footnote-ref"><a href="#fn24" id="fnref24">[24]</a></sup>*]
+need to identify the best learning path.<sup class="footnote-ref"><a href="#fn25" id="fnref25">[25]</a></sup>]
 According to the Bonsai developers, this approach allows the algorithm to train
 faster by leveraging human knowledge to reduce the search space for the
 solution. It also ensures that human concepts map onto machine-solvable tasks,
@@ -1430,13 +1427,13 @@ thereby facilitating an intuitive understanding of the capabilities of the
 algorithm. In a sense, the Bonsai platform forces models to “think like us,” to
 use similar subtasks or concepts in problem solving – a different but
 intriguing approach to interpretability than that covered in this
-report.<sup class="footnote-ref"><a href="#fn25" id="fnref25">[25]</a></sup></p>
+report.<sup class="footnote-ref"><a href="#fn26" id="fnref26">[26]</a></sup></p>
 <p><a href="https://bons.ai">https://bons.ai/</a></p>
 <h2 id="ethics-and-regulations">Ethics and Regulations</h2>
 <p>We’ve already touched on some of the reasons why interpretability is essential
 to ensure the application of machine learning is not dangerous, discriminatory,
 or forbidden by regulations. In this chapter we’ll discuss this in more detail.</p>
-<figure><img src="figures/5-06.png" alt="Regulations can require information about how a model works. If your model is uninterpretable you will be unable to comply."><figcaption>Regulations can require information about how a model works. If your model is uninterpretable you will be unable to comply.</figcaption></figure>
+<figure><img src="figures/5-06.png" alt="FIGURE 6.1 Regulations can require information about how a model works. If your model is uninterpretable you will be unable to comply."><figcaption>FIGURE 6.1 Regulations can require information about how a model works. If your model is uninterpretable you will be unable to comply.</figcaption></figure>
 <h3 id="discrimination">Discrimination</h3>
 <p>The issue of discrimination is intimately tied up with interpretability.
 Protected classes have suffered (and continue to suffer) discrimination in
@@ -1486,7 +1483,7 @@ Act. This requires that consumers be provided “all of the key factors that adv
 affected the credit score of the consumer in the model used, the total number
 of which shall not exceed 4.” Again, it may be impossible to fulfill this
 requirement if the model is uninterpretable.</p>
-<p><img src="figures/5-05.png" alt="The Fair Credit Reporting Act requires the consumer be informed about key factors.">[style=“right”]</p>
+<figure><img src="figures/5-05.png" alt="FIGURE 6.2 The Fair Credit Reporting Act requires the consumer be informed about key factors."><figcaption>FIGURE 6.2 The Fair Credit Reporting Act requires the consumer be informed about key factors.</figcaption></figure>
 <p>When discrimination is the result of an algorithmic decision, it can be
 difficult for those affected by the decision, the regulator, or the
 organization that deployed the algorithm to determine the reason (or even to
@@ -1498,14 +1495,14 @@ law, are ethical, and are good for our businesses.</p>
 <h5 id="resources-on-algorithmic-discrimination"><em>Resources on algorithmic discrimination</em></h5>
 <ul>
 <li>Barocas and Selbst (2016), “Big Data’s Disparate
-Impact.”<sup class="footnote-ref"><a href="#fn26" id="fnref26">[26]</a></sup> This
+Impact.”<sup class="footnote-ref"><a href="#fn27" id="fnref27">[27]</a></sup> This
 clearly written and well-organized non-technical paper focuses on the
 practical impact of discriminatory algorithms. Part A is an invaluable list
 of all the ways in which an algorithm can be discriminatory. Parts B and C
 pay particular attention to the status and future of US law.</li>
 <li>O’Neil (2016), <em>Weapons of Math Destruction: How Big Data Increases Inequality and
 Threatens Democracy</em> (Crown Random
-House)<sup class="footnote-ref"><a href="#fn27" id="fnref27">[27]</a></sup>(https://weaponsofmathdestructionbook.com/)]. O’Neil’s book is
+House).<sup class="footnote-ref"><a href="#fn28" id="fnref28">[28]</a></sup>(https://weaponsofmathdestructionbook.com/)] O’Neil’s book is
 a wide-ranging polemic that we highly recommend to anyone who works with
 data scientists, or is one. It considers the issues touched upon in this
 chapter throughout.</li>
@@ -1518,41 +1515,42 @@ where injury or death is a risk, including healthcare (as discussed in
 an algorithm may be necessary not only to reduce its physical danger, but also
 to reduce legal risk to the owner of the algorithm.</p>
 <p>There is also a social obligation (and market incentive) to explain these
-high-stakes algorithms to society. The 2016 IEEE white paper “Ethically Aligned
-Design”<sup class="footnote-ref"><a href="#fn28" id="fnref28">[28]</a></sup> puts
+high-stakes algorithms to society. The 2016 IEEE white paper <em>“Ethically Aligned
+Design”</em><sup class="footnote-ref"><a href="#fn29" id="fnref29">[29]</a></sup> puts
 it well: “For disruptive technologies, such as driverless cars, a certain level
 of transparency to wider society is needed in order to build public confidence
 in the technology.”</p>
 <p>The financial system is a special case. While there is not an immediate
 physical danger, the potential consequences of badly behaved algorithms are
 potentially grave and global. With this in mind, the financial services
-industry in the United States is bound by SR 11-7, Guidance on Model Risk
-Management,<sup class="footnote-ref"><a href="#fn29" id="fnref29">[29]</a></sup>
-which among other things requires that model behavior be explained.</p>
+industry in the United States is bound by <em>SR 11-7: Guidance on Model Risk
+Management,</em><sup class="footnote-ref"><a href="#fn30" id="fnref30">[30]</a></sup>
+which – among other things – requires that model behavior be explained.</p>
+<div class="info">
 <h5 id="gdpr-article-22-and-the-right-to-an-explanation"><em>GDPR Article 22 and the right to an explanation</em></h5>
 <p>The European Union’s General Data Protection Regulation will apply in the EU
-from May 2018.<sup class="footnote-ref"><a href="#fn30" id="fnref30">[30]</a></sup>
+from May 2018.<sup class="footnote-ref"><a href="#fn31" id="fnref31">[31]</a></sup>
 There has been much debate about the intentions and practical
 consequences of this wide-ranging regulation. A 2016 paper created
 considerable excitement and concern by arguing that Article 22 “creates a
 ‘right to explanation,’ whereby a user can ask for an explanation of an
-algorithmic decision that was made about them.”<sup class="footnote-ref"><a href="#fn31" id="fnref31">[31]</a></sup>
+algorithmic decision that was made about them.”<sup class="footnote-ref"><a href="#fn32" id="fnref32">[32]</a></sup>
 Without the careful application of
 approaches such as LIME to craft user-friendly explanations in plain words,
 such a regulation would seem to make it illegal to apply random forests and
 neural networks to data concerning the 500 million citizens of the EU. A
-response with the unambiguous title “Why a Right to Explanation of
+response with the unambiguous title <em>“Why a Right to Explanation of
 Automated Decision-Making Does Not Exist in the General Data Protection
-Regulation”<sup class="footnote-ref"><a href="#fn32" id="fnref32">[32]</a></sup>
+Regulation”</em><sup class="footnote-ref"><a href="#fn33" id="fnref33">[33]</a></sup>
 rejected this interpretation, conceding only that the regulations
 create a right to an “explanation of system functionality.” This view is
 consistent with that of a global accounting firm we talked to while writing
-this report, but there is lack of consensus.<sup class="footnote-ref"><a href="#fn33" id="fnref33">[33]</a></sup>
+this report, but there is lack of consensus.<sup class="footnote-ref"><a href="#fn34" id="fnref34">[34]</a></sup>
 Hopefully things will become clearer when the regulation comes into force;
-in the meantime, for further information we recommend the clear, practical
-article “How to Comply with GDPR Article 22” by Reuben
-Binns.<sup class="footnote-ref"><a href="#fn34" id="fnref34">[34]</a></sup></p>
-<p>:::</p>
+in the meantime, for further information, we recommend the clear, practical
+article <em>“How to Comply with GDPR Article 22”</em> by Reuben
+Binns.<sup class="footnote-ref"><a href="#fn35" id="fnref35">[35]</a></sup></p>
+</div>
 <h3 id="negligence-and-codes-of-conduct">Negligence and Codes of Conduct</h3>
 <p>Professions like medicine and civil engineering have codes of conduct that are
 either legally binding or entrenched norms. To not follow them is considered
@@ -1562,13 +1560,13 @@ think and hope that applying the techniques discussed in this report will
 become a baseline expectation for the competent, safe, and ethical application
 of machine learning. Indeed, the IEEE and ACM have both recently proposed community standards
 that address precisely the topic of this report.</p>
-<p>The 2016 IEEE white paper “Ethically Aligned
-Design”<sup class="footnote-ref"><a href="#fn35" id="fnref35">[35]</a></sup> is
+<p>The 2016 IEEE white paper <em>“Ethically Aligned
+Design”</em><sup class="footnote-ref"><a href="#fn36" id="fnref36">[36]</a></sup> is
 unambiguous in its assertion that ensuring transparency is essential to users,
 engineers, regulators, the legal system, and society in general. To this end,
 the organization has established a working group to define a formal
-professional standard, “IEEE P70001: Transparency of Autonomous
-Systems.”<sup class="footnote-ref"><a href="#fn36" id="fnref36">[36]</a></sup> This
+professional standard, <em>“IEEE P70001: Transparency of Autonomous
+Systems.”</em><sup class="footnote-ref"><a href="#fn37" id="fnref37">[37]</a></sup> This
 standard may become a familiar Request for Proposal (RFP) requirement, like the
 equivalent ISO standards on security and data protection.</p>
 <p>The ACM’s 2017 Statement on Algorithmic Transparency is non-binding but
@@ -1576,7 +1574,7 @@ similarly clear: “systems and institutions that use algorithmic decision-makin
 are encouraged to produce explanations regarding both the procedures followed
 by the algorithm and the specific decisions that are made. This is particularly
 important in public policy
-contexts.”<sup class="footnote-ref"><a href="#fn37" id="fnref37">[37]</a></sup></p>
+contexts.”<sup class="footnote-ref"><a href="#fn38" id="fnref38">[38]</a></sup></p>
 <h2 id="future">Future</h2>
 <p>Model-agnostic interpretability techniques such as LIME are a breakthrough that
 begins to make the goals discussed in &lt;&lt;why&gt;&gt; practical. But the need for
@@ -1646,7 +1644,7 @@ on using fundamental ideas from computer science and logic to allow computers
 to answer with certainty questions such as “If this autopilot detects a plane
 on a collision course, will it take evasive action?” This is computationally
 and theoretically challenging work, and it has a way to go before it is
-practical, and further still to satisfy regulators,<sup class="footnote-ref"><a href="#fn38" id="fnref38">[38]</a></sup> but it will be integral to the
+practical, and further still to satisfy regulators,<sup class="footnote-ref"><a href="#fn39" id="fnref39">[39]</a></sup> but it will be integral to the
 wide-scale deployment of neural networks in safety-critical situations where
 verifiability is a requirement.</p>
 <p>Finally, interpretability techniques will also fuel development of machine
@@ -1807,54 +1805,59 @@ but can be found at
 </li>
 <li id="fn19" class="footnote-item"><p><a href="https://github.com/marcotcr/lime">https://github.com/marcotcr/lime</a> <a href="#fnref19" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn20" class="footnote-item"><p>For a recent complete list of data science platforms, see
-<a href="http://www.kdnuggets.com/2017/02/gartner-2017-mq-data-science-platforms-gainers-losers.html">http://www.kdnuggets.com/2017/02/gartner-2017-mq-data-science-platforms-gainers-losers.html</a>. <a href="#fnref20" class="footnote-backref">↩︎</a></p>
+<li id="fn20" class="footnote-item"><p>Mathematically, its complexity
+is O(F^3^ + P F^2^ + P O(model)), where F is the number of features in the
+data, P is the number of perturbations LIME makes, and O(model) is the
+complexity of the model. <a href="#fnref20" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn21" class="footnote-item"><p><a href="https://www.oreilly.com/ideas/ideas-on-interpreting-machine-learning">https://www.oreilly.com/ideas/ideas-on-interpreting-machine-learning</a> <a href="#fnref21" class="footnote-backref">↩︎</a></p>
+<li id="fn21" class="footnote-item"><p>For a recent complete list of data science platforms, see
+<a href="http://www.kdnuggets.com/2017/02/gartner-2017-mq-data-science-platforms-gainers-losers.html">http://www.kdnuggets.com/2017/02/gartner-2017-mq-data-science-platforms-gainers-losers.html</a>. <a href="#fnref21" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn22" class="footnote-item"><p><a href="https://www.datascience.com/resources/tools/skater">https://www.datascience.com/resources/tools/skater</a> <a href="#fnref22" class="footnote-backref">↩︎</a></p>
+<li id="fn22" class="footnote-item"><p><a href="https://www.oreilly.com/ideas/ideas-on-interpreting-machine-learning">https://www.oreilly.com/ideas/ideas-on-interpreting-machine-learning</a> <a href="#fnref22" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn23" class="footnote-item"><p><a href="http://statweb.stanford.edu/~jhf/ftp/RuleFit.pdf">http://statweb.stanford.edu/~jhf/ftp/RuleFit.pdf</a> <a href="#fnref23" class="footnote-backref">↩︎</a></p>
+<li id="fn23" class="footnote-item"><p><a href="https://www.datascience.com/resources/tools/skater">https://www.datascience.com/resources/tools/skater</a> <a href="#fnref23" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn24" class="footnote-item"><p>See Bengio et al. (2009),
-*<a href="http://dl.acm.org/citation.cfm?id=1553380">“Curriculum Learning.”</a> <a href="#fnref24" class="footnote-backref">↩︎</a></p>
+<li id="fn24" class="footnote-item"><p><a href="http://statweb.stanford.edu/~jhf/ftp/RuleFit.pdf">http://statweb.stanford.edu/~jhf/ftp/RuleFit.pdf</a> <a href="#fnref24" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn25" class="footnote-item"><p>AlphaGo, an AI Go player, can not only beat humans at Go.
+<li id="fn25" class="footnote-item"><p>See Bengio et al. (2009),
+*<a href="http://dl.acm.org/citation.cfm?id=1553380">“Curriculum Learning.”</a> <a href="#fnref25" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn26" class="footnote-item"><p>AlphaGo, an AI Go player, can not only beat humans at Go.
 <a href="https://news.ycombinator.com/item?id=11259022">According to some players</a>,
 it seems to use fundamentally different concepts and strategies than humans.
 The approach taken by Bonsai would nudge AlphaGo to “think” more like human
-players. <a href="#fnref25" class="footnote-backref">↩︎</a></p>
+players. <a href="#fnref26" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn26" class="footnote-item"><p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899</a> <a href="#fnref26" class="footnote-backref">↩︎</a></p>
+<li id="fn27" class="footnote-item"><p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899</a> <a href="#fnref27" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn27" class="footnote-item"><p>https://weaponsofmathdestructionbook.com/ <a href="#fnref27" class="footnote-backref">↩︎</a></p>
+<li id="fn28" class="footnote-item"><p>https://weaponsofmathdestructionbook.com/ <a href="#fnref28" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn28" class="footnote-item"><p><a href="http://standards.ieee.org/develop/indconn/ec/ead_v1.pdf">http://standards.ieee.org/develop/indconn/ec/ead_v1.pdf</a> <a href="#fnref28" class="footnote-backref">↩︎</a></p>
+<li id="fn29" class="footnote-item"><p><a href="http://standards.ieee.org/develop/indconn/ec/ead_v1.pdf">http://standards.ieee.org/develop/indconn/ec/ead_v1.pdf</a> <a href="#fnref29" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn29" class="footnote-item"><p><a href="https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm">https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm</a> <a href="#fnref29" class="footnote-backref">↩︎</a></p>
+<li id="fn30" class="footnote-item"><p><a href="https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm">https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm</a> <a href="#fnref30" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn30" class="footnote-item"><p><a href="http://www.privacy-regulation.eu/en/22.htm">http://www.privacy-regulation.eu/en/22.htm</a> <a href="#fnref30" class="footnote-backref">↩︎</a></p>
+<li id="fn31" class="footnote-item"><p><a href="http://www.privacy-regulation.eu/en/22.htm">http://www.privacy-regulation.eu/en/22.htm</a> <a href="#fnref31" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn31" class="footnote-item"><p><a href="https://arxiv.org/abs/1606.08813">https://arxiv.org/abs/1606.08813</a> <a href="#fnref31" class="footnote-backref">↩︎</a></p>
+<li id="fn32" class="footnote-item"><p><a href="https://arxiv.org/abs/1606.08813">https://arxiv.org/abs/1606.08813</a> <a href="#fnref32" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn32" class="footnote-item"><p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2903469">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2903469</a> <a href="#fnref32" class="footnote-backref">↩︎</a></p>
+<li id="fn33" class="footnote-item"><p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2903469">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2903469</a> <a href="#fnref33" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn33" class="footnote-item"><p>The UK’s decision to leave
+<li id="fn34" class="footnote-item"><p>The UK’s decision to leave
 the EU further complicates things in that jurisdiction. See paragraphs 43-46 of
 the UK House of Commons Science and Technology Committee report <a href="http://bit.ly/2urMtJr">“Robotics
-and Artificial Intelligence”</a> for the current UK government position. <a href="#fnref33" class="footnote-backref">↩︎</a></p>
+and Artificial Intelligence”</a> for the current UK government position. <a href="#fnref34" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn34" class="footnote-item"><p><a href="http://www.reubenbinns.com/blog/how-to-comply-with-gdpr-article-22-automated-credit-decisions/">http://www.reubenbinns.com/blog/how-to-comply-with-gdpr-article-22-automated-credit-decisions/</a> <a href="#fnref34" class="footnote-backref">↩︎</a></p>
+<li id="fn35" class="footnote-item"><p><a href="http://www.reubenbinns.com/blog/how-to-comply-with-gdpr-article-22-automated-credit-decisions/">http://www.reubenbinns.com/blog/how-to-comply-with-gdpr-article-22-automated-credit-decisions/</a> <a href="#fnref35" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn35" class="footnote-item"><p><a href="http://standards.ieee.org/develop/indconn/ec/ead_v1.pdf">http://standards.ieee.org/develop/indconn/ec/ead_v1.pdf</a> <a href="#fnref35" class="footnote-backref">↩︎</a></p>
+<li id="fn36" class="footnote-item"><p><a href="http://standards.ieee.org/develop/indconn/ec/ead_v1.pdf">http://standards.ieee.org/develop/indconn/ec/ead_v1.pdf</a> <a href="#fnref36" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn36" class="footnote-item"><p><a href="https://standards.ieee.org/develop/project/7001.html">https://standards.ieee.org/develop/project/7001.html</a> <a href="#fnref36" class="footnote-backref">↩︎</a></p>
+<li id="fn37" class="footnote-item"><p><a href="https://standards.ieee.org/develop/project/7001.html">https://standards.ieee.org/develop/project/7001.html</a> <a href="#fnref37" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn37" class="footnote-item"><p><a href="http://www.acm.org/binaries/content/assets/public-policy/2017_usacm_statement_algorithms.pdf">http://www.acm.org/binaries/content/assets/public-policy/2017_usacm_statement_algorithms.pdf</a> <a href="#fnref37" class="footnote-backref">↩︎</a></p>
+<li id="fn38" class="footnote-item"><p><a href="http://www.acm.org/binaries/content/assets/public-policy/2017_usacm_statement_algorithms.pdf">http://www.acm.org/binaries/content/assets/public-policy/2017_usacm_statement_algorithms.pdf</a> <a href="#fnref38" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn38" class="footnote-item"><p>For an
+<li id="fn39" class="footnote-item"><p>For an
 introduction to this field, we recommend <a href="https://arxiv.org/abs/1702.01135">“Reluplex: An Efficient SMT Solver for
-Verifying Deep Neural Networks”</a> and this informal two-part article: “Proving that safety-critical neural networks do what they’re supposed to: where we are, where we’re going” <a href="http://bit.ly/2sDpoD1">Part 1</a>, <a href="http://bit.ly/2tOwXGW">Part 2</a>. <a href="#fnref38" class="footnote-backref">↩︎</a></p>
+Verifying Deep Neural Networks”</a> and this informal two-part article: “Proving that safety-critical neural networks do what they’re supposed to: where we are, where we’re going” <a href="http://bit.ly/2sDpoD1">Part 1</a>, <a href="http://bit.ly/2tOwXGW">Part 2</a>. <a href="#fnref39" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>

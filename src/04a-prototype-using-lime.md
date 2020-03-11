@@ -100,7 +100,7 @@ thinking the customer will churn.
 In order to comprehensively probe the area around an example, LIME needs to
 perturb every feature, and then build a linear model with the same features.
 This means the time it takes to construct an explanation is most sensitive to
-the number of features in the data.footnote:[Mathematically, its complexity
+the number of features in the data.^[Mathematically, its complexity
 is O(F^3^ + P F^2^ + P O(model)), where F is the number of features in the
 data, P is the number of perturbations LIME makes, and O(model) is the
 complexity of the model.] In our tests LIME explained a classification of our

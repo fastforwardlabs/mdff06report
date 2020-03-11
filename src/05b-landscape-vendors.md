@@ -67,8 +67,8 @@ relationships in higher-dimensional spaces.
 
 DataScience.com (Culver City, CA; founded 2014; Series A Dec 2015) released its
 data science platform in October 2016 and
-Skater,^[[https://www.datascience.com/resources/tools/skater](https://www.datascience.com/resources/tools/skater)] a Python
-library for model interpretation in May 2017. Skater includes implementations
+Skater (a Python
+library for model interpretation),^[[https://www.datascience.com/resources/tools/skater](https://www.datascience.com/resources/tools/skater)] in May 2017. Skater includes implementations
 of partial dependence plots and LIME. The team at [DataScience.com](DataScience.com) developed
 their own in-house sampler for LIME with the aim of improving the efficiency of
 the algorithm. The company provides robust solutions for both global and local
@@ -114,7 +114,7 @@ models, by asking humans to guide the algorithm as it learns. Specifically,
 humans need to identify the key subtasks and determine the best order in which
 to perform these in order for the algorithm to achieve mastery; that is, humans
 need to identify the best learning path.^[See Bengio et al. (2009),
-*["Curriculum Learning."](http://dl.acm.org/citation.cfm?id=1553380)]*]
+*["Curriculum Learning."](http://dl.acm.org/citation.cfm?id=1553380)]]
 According to the Bonsai developers, this approach allows the algorithm to train
 faster by leveraging human knowledge to reduce the search space for the
 solution. It also ensures that human concepts map onto machine-solvable tasks,
