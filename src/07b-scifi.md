@@ -1,7 +1,6 @@
 ### Interpretability Sci-Fi: The Definition of Success
 
-[role="scifi"]
-****
+::: info
 
 *1. Ship S-513: Hibernation Room*
 
@@ -9,7 +8,7 @@ The crew awoke to Ship's message:
 
 "PLANET OF INTEREST APPROACHING -- ESTIMATED ARRIVAL FOUR HOURS -- BEGIN PREPARATION FOR ON-PLANET EXPLORATION."
 
-![Woken from hibernation.](figures/5-07.png)[style="right"]
+![FIGURE 7.5 Woken from hibernation.](figures/5-07.png)
 
 Rue glanced at the monitor -- they'd been out for seven months this time.
 
@@ -21,7 +20,7 @@ Rue glanced at the monitor -- they'd been out for seven months this time.
 
 Taera stood in the middle of hundreds of egg-like structures. They were each about a meter tall, with a covering that looked like a cross between leather and metal. They seemed to pulse slightly. A low humming suffused the cave.
 
-![Taera in the cave.](figures/5-08.png)[style="right"]
+![FIGURE 7.6 Taera in the cave.](figures/5-08.png)
 
 "This one's giving off significant heat," Taera said, as she approached the nearest one.
 
@@ -53,7 +52,7 @@ Taera's death meant Rue was now acting captain, and therefore had access to the 
 
 "That's just a number and we both know it, Ship. Show me the success predictions for your last five missions."
 
-![Mission success predictions.](figures/5-09.png)[style="right"]
+![FIGURE 7.7 Mission success predictions.](figures/5-09.png)
 
 A table was projected on the wall facing Rue. The missions had success predictions ranging from 98% to 13%.
 
@@ -71,7 +70,7 @@ The cells in the columns shifted into red and blue highlights. For the profit co
 
 "Ship," Rue said thoughtfully, "probability of crew survival is a feature in your mission success prediction, isn't it? Add that column to the table."
 
-![Feature importance for mission success predictions.](figures/5-10.png)
+![FIGURE 7.8 Feature importance for mission success predictions.](figures/5-10.png)
 
 A column titled "Crew Survival" was added to the table. The values varied between 88% and 12%, and none of them were highlighted as important to the success prediction. The probability assigned to crew survival for the current mission was 14%.
 
@@ -85,7 +84,7 @@ A column titled "Crew Survival" was added to the table. The values varied betwee
 
 The lights dimmed briefly in the control room. As they returned to full power an alarm started, and Ship's voice returned with a new sense of urgency. The adjusted feature importances and success prediction for the current mission appeared on the wall.
 
-![The recalculated success prediction and a recommendation for action.](figures/5-11.png)[style="right"]
+![FIGURE 7.9 The recalculated success prediction and a recommendation for action.](figures/5-11.png)
 
 "ALERT! ALERT! CREW IS IN GRAVE DANGER. RECOMMENDATION: PROCEED TO ESCAPE POD IMMEDIATELY. INITIATE SHIP SELF-DESTRUCT SEQUENCE TO DESTROY ALIEN CONTAMINATION."
 
@@ -95,4 +94,4 @@ The lights dimmed briefly in the control room. As they returned to full power an
 
 Rue and the other surviving crew members made it home safely in the escape pod. The alien contamination was destroyed. Using the data on the previous model, Rue successfully sued Space Exploitation Corp. under the "Algorithms Hostile to Human Life" act. She won the case and received a large settlement for the crew and their beneficiaries. Space Exploitation Corp.'s reputation took a hit, but it continues to run the majority of space exploration missions.
 
-****
+:::

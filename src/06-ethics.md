@@ -136,8 +136,8 @@ create a right to an "explanation of system functionality." This view is
 consistent with that of a global accounting firm we talked to while writing
 this report, but there is lack of consensus.^[The UK's decision to leave
 the EU further complicates things in that jurisdiction. See paragraphs 43-46 of
-the UK House of Commons Science and Technology Committee report ["Robotics
-and Artificial Intelligence"](http://bit.ly/2urMtJr) for the current UK government position.]
+the UK House of Commons Science and Technology Committee report [*"Robotics
+and Artificial Intelligence"*](http://bit.ly/2urMtJr) for the current UK government position.]
 Hopefully things will become clearer when the regulation comes into force;
 in the meantime, for further information, we recommend the clear, practical
 article *"How to Comply with GDPR Article 22"* by Reuben

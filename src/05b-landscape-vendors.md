@@ -114,7 +114,7 @@ models, by asking humans to guide the algorithm as it learns. Specifically,
 humans need to identify the key subtasks and determine the best order in which
 to perform these in order for the algorithm to achieve mastery; that is, humans
 need to identify the best learning path.^[See Bengio et al. (2009),
-*["Curriculum Learning."](http://dl.acm.org/citation.cfm?id=1553380)]]
+[*"Curriculum Learning."*](http://dl.acm.org/citation.cfm?id=1553380)]]
 According to the Bonsai developers, this approach allows the algorithm to train
 faster by leveraging human knowledge to reduce the search space for the
 solution. It also ensures that human concepts map onto machine-solvable tasks,

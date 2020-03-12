@@ -65,8 +65,8 @@ model _locally_, in the vicinity of that user in feature space.
 #### LIME
 
 Local Interpretable Model-agnostic Explanation (LIME)^[Ribeiro, Singh,
-and Guestrin (2016), *["'Why Should I
-Trust You?': Explaining the Predictions of Any Classifier."](https://arxiv.org/abs/1602.04938)]*] formalizes the
+and Guestrin (2016), [*"'Why Should I
+Trust You?': Explaining the Predictions of Any Classifier."*](https://arxiv.org/abs/1602.04938)] formalizes the
 perturbation technique described in the previous section. It's exciting because
 it provides a simple method to interpret arbitrary black-box models. The
 algorithm is computationally simple, and the public reference implementation is

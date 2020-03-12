@@ -5,7 +5,7 @@ begins to make the goals discussed in <<why>> practical. But the need for
 interpretable machine learning is only going to grow over the coming years.
 
 
-![Interpretability will become even more important as machine learning is applied in situations where failure can have disastrous consequences.](figures/7-01.png)
+![FIGURE 7.1 Interpretability will become even more important as machine learning is applied in situations where failure can have disastrous consequences.](figures/7-01.png)
 
 Two drivers of this growth are particularly important. The first is that
 machine learning is being applied more broadly. This technology, which
@@ -35,7 +35,7 @@ recommendations that was both accessible and accurate. Then, a user
 dissatisfied with the recommendations could correct the model's
 misunderstanding, perhaps by marking a piece of content as unliked.
 
-![Interpretability can help explain algorithmic decisions to users.](figures/7-02.png)
+![FIGURE 7.2 Interpretability can help explain algorithmic decisions to users.](figures/7-02.png)
 
 As discussed in <<safety>>, our comfort with machine learning is dependent on
 the extent to which we feel as though we understand how it works. Natural
@@ -50,7 +50,7 @@ interpretable. Model-agnostic interpretation promises to open a floodgate that
 allows the most accurate models to be used in situations where previously it
 had not been possible because of regulatory constraints.
 
-![Model-agnostic interpretability can provide a sanity check for models created through automatic machine learning.](figures/7-04.png)
+![FIGURE 7.3Model-agnostic interpretability can provide a sanity check for models created through automatic machine learning.](figures/7-04.png)
 
 Model-agnostic interpretability will also drive the increasing popularity of
 _automatic machine learning_. Automatic machine learning is when a parent
@@ -70,7 +70,7 @@ will use these techniques to demonstrate discrimination in a model.
 Explanations derived from LIME-like techniques will be used by courts to assign
 blame when a model fails.
 
-![Regulators will be able to use model-agnostic interpretability to inspect models.](figures/7-03.png)
+![FIGURE 7.4 Regulators will be able to use model-agnostic interpretability to inspect models.](figures/7-03.png)
 
 Second, we expect current research into the formal computational verifiability
 of neural networks to bear fruit. In this report, we have focused on
@@ -85,8 +85,8 @@ to answer with certainty questions such as "If this autopilot detects a plane
 on a collision course, will it take evasive action?" This is computationally
 and theoretically challenging work, and it has a way to go before it is
 practical, and further still to satisfy regulators,^[For an
-introduction to this field, we recommend ["Reluplex: An Efficient SMT Solver for
-Verifying Deep Neural Networks"](https://arxiv.org/abs/1702.01135) and this informal two-part article: "Proving that safety-critical neural networks do what they're supposed to: where we are, where we're going" [Part 1](http://bit.ly/2sDpoD1), [Part 2](http://bit.ly/2tOwXGW).] but it will be integral to the
+introduction to this field, we recommend [*"Reluplex: An Efficient SMT Solver for
+Verifying Deep Neural Networks"*](https://arxiv.org/abs/1702.01135) and this informal two-part article: *"Proving that safety-critical neural networks do what they're supposed to: where we are, where we're going"* [Part 1](http://bit.ly/2sDpoD1), [Part 2](http://bit.ly/2tOwXGW).] but it will be integral to the
 wide-scale deployment of neural networks in safety-critical situations where
 verifiability is a requirement.
 

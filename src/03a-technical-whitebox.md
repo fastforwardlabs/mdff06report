@@ -189,7 +189,7 @@ a thousand possible pairwise terms. Trying to inspect all these plots would
 diminish interpretability rather than enhancing it. For this reason, GA^2^Ms
 include only the `k` pairwise terms that most improve accuracy, where `k` is a
 small number determined like any other hyperparameter.^[See Lou et al.
-(2013), *["Accurate Intelligible Models with Pairwise Interactions,"]((http://www.cs.cornell.edu/~yinlou/papers/lou-kdd13.pdf)* and the referenced
+(2013), [*"Accurate Intelligible Models with Pairwise Interactions,"*](http://www.cs.cornell.edu/~yinlou/papers/lou-kdd13.pdf) and the reference
 [Java implementation](https://github.com/yinlou/mltk).]
 
 #### Rule Lists
