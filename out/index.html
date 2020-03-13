@@ -483,8 +483,7 @@ img {
 <p>FF06 · <em>Re-release April 2020</em></p>
 <p><div class="table-of-contents"><div id="toc-header" style="display: flex; font-weight: bold; text-transform: uppercase;">
      <div><button id="toggle_contents" style="padding-left: 0.5ch; padding-right: 0.5ch; cursor: pointer; position: relative; top: -1px;">☰</button><span id="contents-label" style="margin-left: 0;"> Contents</span></div>
-  </div><ul><li><a href="#introduction">Introduction</a></li><li><a href="#the-power-of-interpretability">The Power of Interpretability</a><ul><li><a href="#what-is-interpretability%3F">What Is Interpretability?</a></li><li><a href="#enhancing-trust">Enhancing Trust</a></li><li><a href="#satisfying-regulations">Satisfying Regulations</a></li><li><a href="#explaining-decisions">Explaining Decisions</a></li><li><a href="#improving-the-model">Improving the Model</a></li><li><a href="#accuracy-and-interpretability">Accuracy and Interpretability</a></li></ul></li><li><a href="#the-challenge-of-interpretability">The Challenge of Interpretability</a><ul><li><a href="#why-are-some-models-uninterpretable%3F">Why Are Some Models Uninterpretable?</a></li><li><a href="#white-box-models">White-box Models</a><ul><li><a href="#gams">GAMs</a></li><li><a href="#rule-lists">Rule Lists</a></li><li><a href="#slims">SLIMs</a></li></ul></li><li><a href="#black-box-interpretability">Black-box Interpretability</a><ul><li><a href="#perturbation">Perturbation</a></li><li><a href="#lime">LIME</a></li><li><a href="#extensions-and-limitations">Extensions and Limitations</a></li></ul></li></ul></li><li><a href="#prototype">Prototype</a><ul><li><a href="#customer-churn">Customer Churn</a></li><li><a href="#applying-lime">Applying LIME</a></li></ul></li><li><a href="#%5Bsource%2Cpython%5D">[source,python]</a></li><li><a href="#e-%3D-explainer.explain_instance(customer%2C-clf.predict_proba)-print(e.as_list())">e = explainer.explain_instance(customer, clf.predict_proba)
-print(e.as_list())</a><ul><li><a href="#product%3A-refractor">Product: Refractor</a><ul><li><a href="#the-product-possibilities-of-interpretability">The Product Possibilities of Interpretability</a></li><li><a href="#global-view%3A-understanding-the-model">Global View: Understanding the Model</a></li><li><a href="#local-view%3A-understanding-the-customer">Local View: Understanding the Customer</a></li><li><a href="#product-tension%3A-focus-vs.-context">Product Tension: Focus vs. Context</a></li><li><a href="#collaborating-with-algorithms">Collaborating with Algorithms</a></li></ul></li></ul></li><li><a href="#landscape">Landscape</a><ul><li><a href="#interviews">Interviews</a><ul><li><a href="#recommendation-engines">Recommendation Engines</a></li><li><a href="#credit-scores">Credit Scores</a></li><li><a href="#customer-churn">Customer Churn</a></li><li><a href="#fraud-detection">Fraud Detection</a></li><li><a href="#anomaly-detection">Anomaly Detection</a></li><li><a href="#healthcare">Healthcare</a></li></ul></li><li><a href="#data-science-platforms">Data Science Platforms</a><ul><li><a href="#h2o.ai">H2O.ai</a></li><li><a href="#datascience.com">DataScience.com</a></li><li><a href="#datarobot">DataRobot</a></li><li><a href="#bonsai">Bonsai</a></li></ul></li></ul></li><li><a href="#ethics-and-regulations">Ethics and Regulations</a><ul><li><a href="#discrimination">Discrimination</a></li><li><a href="#safety">Safety</a></li><li><a href="#negligence-and-codes-of-conduct">Negligence and Codes of Conduct</a></li></ul></li><li><a href="#future">Future</a><ul><li><a href="#near-future">Near Future</a></li><li><a href="#longer-term">Longer Term</a></li><li><a href="#interpretability-sci-fi%3A-the-definition-of-success">Interpretability Sci-Fi: The Definition of Success</a></li></ul></li><li><a href="#conclusion">Conclusion</a></li></ul></div></p>
+  </div><ul><li><a href="#introduction">Introduction</a></li><li><a href="#the-power-of-interpretability">The Power of Interpretability</a><ul><li><a href="#what-is-interpretability%3F">What Is Interpretability?</a></li><li><a href="#enhancing-trust">Enhancing Trust</a></li><li><a href="#satisfying-regulations">Satisfying Regulations</a></li><li><a href="#explaining-decisions">Explaining Decisions</a></li><li><a href="#improving-the-model">Improving the Model</a></li><li><a href="#accuracy-and-interpretability">Accuracy and Interpretability</a></li></ul></li><li><a href="#the-challenge-of-interpretability">The Challenge of Interpretability</a><ul><li><a href="#why-are-some-models-uninterpretable%3F">Why Are Some Models Uninterpretable?</a></li><li><a href="#white-box-models">White-box Models</a><ul><li><a href="#gams">GAMs</a></li><li><a href="#rule-lists">Rule Lists</a></li><li><a href="#slims">SLIMs</a></li></ul></li><li><a href="#black-box-interpretability">Black-box Interpretability</a><ul><li><a href="#perturbation">Perturbation</a></li><li><a href="#lime">LIME</a></li><li><a href="#extensions-and-limitations">Extensions and Limitations</a></li></ul></li></ul></li><li><a href="#prototype">Prototype</a><ul><li><a href="#customer-churn">Customer Churn</a></li><li><a href="#applying-lime">Applying LIME</a></li><li><a href="#product%3A-refractor">Product: Refractor</a><ul><li><a href="#the-product-possibilities-of-interpretability">The Product Possibilities of Interpretability</a></li><li><a href="#global-view%3A-understanding-the-model">Global View: Understanding the Model</a></li><li><a href="#local-view%3A-understanding-the-customer">Local View: Understanding the Customer</a></li><li><a href="#product-tension%3A-focus-vs.-context">Product Tension: Focus vs. Context</a></li><li><a href="#collaborating-with-algorithms">Collaborating with Algorithms</a></li></ul></li></ul></li><li><a href="#landscape">Landscape</a><ul><li><a href="#interviews">Interviews</a><ul><li><a href="#recommendation-engines">Recommendation Engines</a></li><li><a href="#credit-scores">Credit Scores</a></li><li><a href="#customer-churn">Customer Churn</a></li><li><a href="#fraud-detection">Fraud Detection</a></li><li><a href="#anomaly-detection">Anomaly Detection</a></li><li><a href="#healthcare">Healthcare</a></li></ul></li><li><a href="#data-science-platforms">Data Science Platforms</a><ul><li><a href="#h2o.ai">H2O.ai</a></li><li><a href="#datascience.com">DataScience.com</a></li><li><a href="#datarobot">DataRobot</a></li><li><a href="#bonsai">Bonsai</a></li></ul></li></ul></li><li><a href="#ethics-and-regulations">Ethics and Regulations</a><ul><li><a href="#discrimination">Discrimination</a></li><li><a href="#safety">Safety</a></li><li><a href="#negligence-and-codes-of-conduct">Negligence and Codes of Conduct</a></li></ul></li><li><a href="#future">Future</a><ul><li><a href="#near-future">Near Future</a></li><li><a href="#longer-term">Longer Term</a></li><li><a href="#interpretability-sci-fi%3A-the-definition-of-success">Interpretability Sci-Fi: The Definition of Success</a></li></ul></li><li><a href="#conclusion">Conclusion</a></li></ul></div></p>
 <p>This is an applied research report by <a href="https://www.cloudera.com/products/fast-forward-labs-research.html">Cloudera Fast Forward</a>. We write reports about emerging technologies.  Accompanying each report are working prototypes that exhibit the capabilities of the algorithm and offer detailed technical advice on its practical application. Read our full report on interpretability below or download the PDF, and view our prototype here.</p>
 <h2 id="introduction">Introduction</h2>
 <p>Our society is increasingly dependent on intelligent machines. Algorithms
@@ -596,7 +595,7 @@ if we know and communicate how it works.</p>
 <p>In many industries and jurisdictions, the application of machine learning (or
 algorithmic decision-making) is regulated. This report does not offer legal
 advice. To the extent that we discuss these regulations in any specific detail,
-we do so in &lt;&lt;ethics&gt;&gt;. We bring them up here for two reasons.</p>
+we do so in <a href="#ethics-and-regulations">Chapter 6 - Ethics and Regulations</a>. We bring them up here for two reasons.</p>
 <p>First, if these regulations apply, they almost always imply an absolute
 requirement that you build interpretable models. That is because the goal of
 these regulations is often to prevent the application of dangerous or
@@ -634,7 +633,7 @@ particular prediction – offers an answer to the question of <em>why</em> this
 customer is going to leave. This allows you to understand your customer’s needs
 and your product’s limitations. It even raises the possibility of taking a
 well-chosen action to reduce the probability of churn. This problem is the
-focus of our prototype (&lt;&lt;prototype&gt;&gt;).</p>
+focus of our <a href="#prototype">prototype</a>.</p>
 <p>A model that predicts hardware failure in an engine or on a server is of course
 extremely useful. You can send an engineer out to inspect an appliance that is
 predicted to fail. But if the model is locally interpretable, then you can not
@@ -645,7 +644,7 @@ the lender, it is of enormous interest to the borrower. But showing borrowers
 a credit rating number on its own is of limited use if they want to know what
 they need to do to improve it. The consumer app Credit Karma<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup> allows its users to figure this out for
 themselves using a brute force method similar to the new algorithm that we use
-in this report’s prototype (see &lt;&lt;perturbation&gt;&gt;).</p>
+in this report’s prototype (see <a href="#perturbation">perturbation</a>).</p>
 <p>Interpretable models also tend to be more user-friendly. For example, the APGAR
 score used at childbirth gives an integer score out of 10. The higher the
 number, the healthier the newborn baby. The score is comprised of three
@@ -653,15 +652,15 @@ numbers, measured by eye and combined by mental calculation.
 This heuristic is not machine learning, but it is algorithmic decision-making.
 The simplicity of the APGAR score means that, in a fast-moving environment, the
 obstetrician or midwife trusts its outputs and can reason about the problem
-with the inputs in their head: the ultimate in usability. As we discuss in
-&lt;&lt;downside&gt;&gt;, this simplicity comes at a cost: the model is less accurate than
+with the inputs in their head: the ultimate in usability. As we discuss below in
+the <a href="#accuracy-and-interpretability">Accuaracy and Interpretability</a> section, this simplicity comes at a cost: the model is less accurate than
 a huge neural network would be. But it can often be worth trading a little
 accuracy for interpretability, even in contexts less extreme than hospitals.</p>
 <figure><img src="figures/2-09.png" alt="FIGURE 2.7 The APGAR score, used in evaluating the health of infants, shows how a simple model can inspire confidence because its operations are understandable."><figcaption>FIGURE 2.7 The APGAR score, used in evaluating the health of infants, shows how a simple model can inspire confidence because its operations are understandable.</figcaption></figure>
 <h3 id="improving-the-model">Improving the Model</h3>
 <p>An uninterpretable model suffers from the performance and regulatory risks
-discussed earlier (see &lt;&lt;trust&gt;&gt;, and &lt;&lt;regulations&gt;&gt;), and closes the door on
-products that take advantage of explanations (&lt;&lt;explanations&gt;&gt;). It’s also much
+discussed earlier (see <a href="#enhancing-trust">Enhancing Trust</a>, and <a href="#satisfying-regulations">Satisfying Regulations</a> above), and closes the door on
+products that take advantage of explanations (see the previous section, <a href="#explaining-decisions">Explaining Decisions</a>). It’s also much
 harder to improve.</p>
 <p>Debugging or incrementally improving an uninterpretable black-box model is
 often a matter of trial and error. Your only option is to run through a list of
@@ -673,7 +672,7 @@ driven by hypotheses rather than trial and error, which makes improvements
 quicker.<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></p>
 <p>A striking example of debugging is given in the paper introducing Local
 Interpretable Model-agnostic Explanations (LIME),<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup> the black-box
-interpretability technique we use in this report’s prototype (&lt;&lt;prototype&gt;&gt;).
+interpretability technique we use in this report’s <a href="#prototype">prototype</a>.
 In that paper, the authors describe a convolutional neural network image
 classification model able to distinguish between images of wolves and Husky
 dogs with high accuracy. LIME’s ability to “explain” individual classifications
@@ -740,11 +739,11 @@ repayment probability decreases with income. That mathematical certainty means
 we can be confident that there is no hidden behavior lurking in the model. Our
 trust in the model is high. And we can use the numbers <code>A</code> and <code>B</code> to tell a
 borrower why we think they are unlikely to repay in precise but plain words
-(e.g., “Given your income, you are asking to borrow $1,000 too much.”).</p>
+(e.g., <em>“Given your income, you are asking to borrow $1,000 too much.”</em>).</p>
 <figure><img src="figures/2-12.png" alt="FIGURE 3.3 Given a new data point, we can explain why it is classified the way it is."><figcaption>FIGURE 3.3 Given a new data point, we can explain why it is classified the way it is.</figcaption></figure>
 <p>Let’s look at a tougher problem. Suppose we plot the longitude and latitude of
 temperature sensors in a field, and mark with a check or cross whether the
-yield of corn was high or low.</p>
+yield of corn was high or low:</p>
 <figure><img src="figures/2-13.png" alt="FIGURE 3.4 Many problems are not linearly separable."><figcaption>FIGURE 3.4 Many problems are not linearly separable.</figcaption></figure>
 <p>As you can see, there is no way to draw a straight line
 that separates the high-yield and low-yield areas of this field. That means it
@@ -868,7 +867,7 @@ discretized, but if the statistical relationships among input attributes are
 affected by discretization, then the decision rules learned are likely to be
 distorted.</p>
 <h4 id="slims">SLIMs</h4>
-<p>The APGAR score for newborn infants (see &lt;&lt;explanations&gt;&gt;) is calculated by
+<p>The APGAR score for newborn infants (see <a href="#explaining-decisions">Explaining Decisions</a>) is calculated by
 assigning scores of 0, 1, or 2 to five attributes of the baby and adding them
 up:</p>
 <pre><code>APGAR = appearance + pulse + grimace + activity + respiration
@@ -966,7 +965,7 @@ unknown ways, LIME offers a local explanation that is correct.</p>
 preceding explanation glosses over mathematical detail, but is conceptually
 complete). It allows you to train a model in any way you like and still have
 an answer to the local question, “Why has this particular decision been made?”
-We used LIME to build the prototype for this report (&lt;&lt;prototype&gt;&gt;).</p>
+We used LIME to build the <a href="#prototype">prototype</a> for this report.</p>
 <h4 id="extensions-and-limitations">Extensions and Limitations</h4>
 <p>LIME is well suited to tabular data. It perturbs categorical features by
 sampling from their distribution in the training data, and it perturbs
@@ -1074,7 +1073,7 @@ that describe their service or activity (payment method, monthly charge, etc.).<
 a linear model, a random forest, and a simple neural network. The model has an
 accuracy of around 80% and is completely uninterpretable.</p>
 <h3 id="applying-lime">Applying LIME</h3>
-<p>As described in &lt;&lt;lime&gt;&gt;, LIME explains the classification of a particular
+<p>As <a href="#lime">described above</a> in Chapter 3, LIME explains the classification of a particular
 example by perturbing its features and running these perturbed variations
 through the classifier. This allows LIME to probe the behavior of the
 classifier in the vicinity of the example, and thus to build up a picture of
@@ -1099,15 +1098,17 @@ classification. A large negative number, on the other hand, means that a
 feature’s value implies that the example belongs in a different class.
 Numbers close to zero indicate that a feature is unimportant.</p>
 <p>This code will give us a list of <code>(feature, importance)</code> tuples:</p>
-<h2 id="%5Bsource%2Cpython%5D">[source,python]</h2>
-<p>from lime.lime_tabular import LimeTabularExplainer
+<div class="info">
+<pre><code>from lime.lime_tabular import LimeTabularExplainer
 explainer = LimeTabularExplainer(training_data=X,
-training_labels=y,
-feature_names=feature_names,
-class_names=class_names)</p>
-<h1 id="clf-is-the-churn-classifier-we-want-to-explain">clf is the churn classifier we want to explain</h1>
-<h2 id="e-%3D-explainer.explain_instance(customer%2C-clf.predict_proba)print(e.as_list())">e = explainer.explain_instance(customer, clf.predict_proba)
-print(e.as_list())</h2>
+                             training_labels=y,
+                             feature_names=feature_names,
+                             class_names=class_names)
+# clf is the churn classifier we want to explain
+e = explainer.explain_instance(customer, clf.predict_proba)
+print(e.as_list())
+</code></pre>
+</div>
 <p>For our use case, we are interested in the features with the largest positive
 importances, which tell us which features are most responsible for the model
 thinking the customer will churn.</p>
@@ -1278,14 +1279,14 @@ Traditionally this is done with simple models that are inherently
 interpretable. Technologies like LIME permit the use of more complex and
 potentially more accurate models while preserving the ability to explain the
 reasons for denial or assigning a particular score. The ethical considerations
-associated with these kinds of decisions are discussed in &lt;&lt;ethics&gt;&gt;.</p>
+associated with these kinds of decisions are discussed in <a href="#ethics-and-regulations">Chapter 6 - Ethics and Regulations</a>.</p>
 <h4 id="customer-churn-2">Customer Churn</h4>
 <p>As we demonstrate with our prototype, churn modeling is another clear case for
 interpretability. Knowing when a user is likely to defect is helpful on a
 number of levels. It’s useful for predicting revenue streams, testing
 effectiveness of promotions or marketing campaigns, and evaluating customer
 service efficacy. Interpretation of churn models compounds their utility. For
-example, as shown in our prototype (&lt;&lt;prototype&gt;&gt;), interpretation of churn
+example, as shown in our <a href="#prototype">prototype</a>, interpretation of churn
 data can explain <em>why</em> a given customer or set of customers are likely to
 churn. This information offers customer service personnel the ability to retain
 more customers by helping them identify those who may be considering taking
@@ -1439,8 +1440,7 @@ or forbidden by regulations. In this chapter we’ll discuss this in more detail
 Protected classes have suffered (and continue to suffer) discrimination in
 sensitive situations such as employment, lending, housing, and healthcare.
 Decisions in such areas are increasingly made by algorithms. Legislation such
-as the US Civil Rights Act therefore directly impacts machine learning (see
-&lt;&lt;regulations-box&gt;&gt;). Complying with legislation is the least we can do:
+as the US Civil Rights Act therefore directly impacts machine learning. Complying with legislation is the least we can do:
 ethical concerns should also constrain our use of machine learning. And of
 course, it is often good business to build a product that serves as many people
 as possible. A product that depends on a discriminatory model suffers in this
@@ -1457,8 +1457,7 @@ regulations:</p>
 <li>Fair Credit Reporting Act</li>
 <li>Fair Housing Act</li>
 <li>Federal Reserve SR 11-7 (Guidance on Model Risk Management)</li>
-<li>European Union General Data Protection Regulation, Article 22 (see
-“&lt;&lt;gdpr&gt;&gt;”)</li>
+<li>European Union General Data Protection Regulation, Article 22 (see <a href="#gdpr-article-22-and-the-right-to-an-explanation">GDPR</a>)</li>
 </ul>
 </div>
 <p>To make this discussion a little more concrete, let’s consider a specific
@@ -1488,7 +1487,7 @@ requirement if the model is uninterpretable.</p>
 difficult for those affected by the decision, the regulator, or the
 organization that deployed the algorithm to determine the reason (or even to
 confirm whether discrimination took place). Techniques that ensure
-interpretability, such as those discussed in &lt;&lt;how&gt;&gt;, are essential to ensure
+interpretability, such as those discussed in <a href="#the-challenge-of-interpretability">Chapter 3 - The Challenge of Interpretability</a>, are essential to ensure
 we build models that do not discriminate and that therefore comply with the
 law, are ethical, and are good for our businesses.</p>
 <div class="info">
@@ -1511,7 +1510,7 @@ chapter throughout.</li>
 <h3 id="safety">Safety</h3>
 <p>Algorithms must be audited and understood before they are deployed in contexts
 where injury or death is a risk, including healthcare (as discussed in
-&lt;&lt;trust&gt;&gt;, and &lt;&lt;healthcare&gt;&gt;) and driverless vehicles. Deep understanding of
+<a href="#enhancing-trust">trust</a>, and <a href="#healthcare">healthcare</a> and driverless vehicles. Deep understanding of
 an algorithm may be necessary not only to reduce its physical danger, but also
 to reduce legal risk to the owner of the algorithm.</p>
 <p>There is also a social obligation (and market incentive) to explain these
@@ -1577,17 +1576,17 @@ important in public policy
 contexts.”<sup class="footnote-ref"><a href="#fn38" id="fnref38">[38]</a></sup></p>
 <h2 id="future">Future</h2>
 <p>Model-agnostic interpretability techniques such as LIME are a breakthrough that
-begins to make the goals discussed in &lt;&lt;why&gt;&gt; practical. But the need for
+begins to make the goals discussed in <a href="#the-power-of-interpretability">Chapter 2 - The Power of Interpretability</a> practical. But the need for
 interpretable machine learning is only going to grow over the coming years.</p>
 <figure><img src="figures/7-01.png" alt="FIGURE 7.1 Interpretability will become even more important as machine learning is applied in situations where failure can have disastrous consequences."><figcaption>FIGURE 7.1 Interpretability will become even more important as machine learning is applied in situations where failure can have disastrous consequences.</figcaption></figure>
 <p>Two drivers of this growth are particularly important. The first is that
 machine learning is being applied more broadly. This technology, which
 sometimes seems like “magic,” will increasingly be applied in situations where
 failures can have disastrous consequences, such as systemic damage to the
-economy or even loss of life (see &lt;&lt;safety&gt;&gt;).</p>
+economy or even loss of life (see the <a href="#safety">Safety</a> section of <a href="#ethics-and-regulations">Chapter 6</a>).</p>
 <p>The second driver is that the most advanced and accurate approaches to machine
 learning are also the least interpretable. This is an inevitable consequence of
-the interpretability/accuracy trade-off discussed in &lt;&lt;downside&gt;&gt;. Competitive
+the interpretability/accuracy trade-off discussed in the <a href="#accuracy-and-interpretability">Accuracy and Interpretability</a> section of <a href="#the-power-of-interpretability">Chapter 2</a>. Competitive
 pressure will require more and more businesses to use these accurate black-box
 models, which will result in the more widespread use of model-agnostic
 interpretability techniques.</p>
@@ -1596,7 +1595,7 @@ interpretability techniques.</p>
 increasingly wide use. In the short term, our prototype could be applied to
 essentially any binary classifier of tabular data, and become a powerful
 internal tool. Indeed, the basic idea may become a commodity vendor machine
-learning technology (see &lt;&lt;vendors&gt;&gt;).</p>
+learning technology (see the <a href="#data-science-platforms">Data Science Platforms</a> section of <a href="#landscape">Chapter 5</a>).</p>
 <p>With a little extra work, LIME’s output could be used to generate natural
 language explanations that can be shown to non-technical end users. For
 example, suppose a product recommender were able to give an explanation of its
@@ -1604,7 +1603,7 @@ recommendations that was both accessible and accurate. Then, a user
 dissatisfied with the recommendations could correct the model’s
 misunderstanding, perhaps by marking a piece of content as unliked.</p>
 <figure><img src="figures/7-02.png" alt="FIGURE 7.2 Interpretability can help explain algorithmic decisions to users."><figcaption>FIGURE 7.2 Interpretability can help explain algorithmic decisions to users.</figcaption></figure>
-<p>As discussed in &lt;&lt;safety&gt;&gt;, our comfort with machine learning is dependent on
+<p>As discussed in the <a href="#safety">Safety</a> section of <a href="#ethics-and-regulations">Chapter 6</a>, our comfort with machine learning is dependent on
 the extent to which we feel as though we understand how it works. Natural
 language explanations will be invaluable in gaining support for machine
 learning in wider society, amongst those who might find the raw output of
@@ -1623,7 +1622,7 @@ This possibility is rather alarming to many experts, and precludes the
 possibility of offering explanations to users or regulators. This concern is
 alleviated if you are able to sanity check the model’s behavior using a system
 such as LIME, or if the automated process is constrained to use interpretable
-models such as those discussed in &lt;&lt;whitebox&gt;&gt;.</p>
+models such as those discussed in the <a href="#white-box-models">White-box Models</a> section of <a href="#the-challenge-of-interpretability">Chapter 3</a>.</p>
 <h3 id="longer-term">Longer Term</h3>
 <p>In the next three to five years, we expect three concrete developments. The
 first is the <em>adversarial</em> application of model-agnostic interpretability –
@@ -1752,7 +1751,7 @@ Readmission.”</a></em> <a href="#fnref1" class="footnote-backref">↩︎</a></
 <li id="fn3" class="footnote-item"><p>This difficulty continues to plague deep learning. The models
 are hard to interpret, which means the field lacks theory, and thus
 improvements are made through a mixture of trial and error and intuition. See
-&lt;&lt;long_term&gt;&gt;. <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+the <a href="#longer-term">“Longer Term”</a> section in <a href="#future">Chapter 7 - Future</a>. <a href="#fnref3" class="footnote-backref">↩︎</a></p>
 </li>
 <li id="fn4" class="footnote-item"><p>Ribeiro, Singh, and
 Guestrin (2016), <em><a href="https://arxiv.org/abs/1602.04938">“‘Why Should I Trust

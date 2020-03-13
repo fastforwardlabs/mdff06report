@@ -1,7 +1,7 @@
 ## Future
 
 Model-agnostic interpretability techniques such as LIME are a breakthrough that
-begins to make the goals discussed in <<why>> practical. But the need for
+begins to make the goals discussed in [Chapter 2 - The Power of Interpretability](#the-power-of-interpretability) practical. But the need for
 interpretable machine learning is only going to grow over the coming years.
 
 
@@ -11,11 +11,11 @@ Two drivers of this growth are particularly important. The first is that
 machine learning is being applied more broadly. This technology, which
 sometimes seems like "magic," will increasingly be applied in situations where
 failures can have disastrous consequences, such as systemic damage to the
-economy or even loss of life (see <<safety>>).
+economy or even loss of life (see the [Safety](#safety) section of [Chapter 6](#ethics-and-regulations)).
 
 The second driver is that the most advanced and accurate approaches to machine
 learning are also the least interpretable. This is an inevitable consequence of
-the interpretability/accuracy trade-off discussed in <<downside>>. Competitive
+the interpretability/accuracy trade-off discussed in the [Accuracy and Interpretability](#accuracy-and-interpretability) section of [Chapter 2](#the-power-of-interpretability). Competitive
 pressure will require more and more businesses to use these accurate black-box
 models, which will result in the more widespread use of model-agnostic
 interpretability techniques.
@@ -26,7 +26,7 @@ In the next one to two years, we expect to see approaches like LIME in
 increasingly wide use. In the short term, our prototype could be applied to
 essentially any binary classifier of tabular data, and become a powerful
 internal tool. Indeed, the basic idea may become a commodity vendor machine
-learning technology (see <<vendors>>).
+learning technology (see the [Data Science Platforms](#data-science-platforms) section of [Chapter 5](#landscape)).
 
 With a little extra work, LIME's output could be used to generate natural
 language explanations that can be shown to non-technical end users. For
@@ -37,7 +37,7 @@ misunderstanding, perhaps by marking a piece of content as unliked.
 
 ![FIGURE 7.2 Interpretability can help explain algorithmic decisions to users.](figures/7-02.png)
 
-As discussed in <<safety>>, our comfort with machine learning is dependent on
+As discussed in the [Safety](#safety) section of [Chapter 6](#ethics-and-regulations), our comfort with machine learning is dependent on
 the extent to which we feel as though we understand how it works. Natural
 language explanations will be invaluable in gaining support for machine
 learning in wider society, amongst those who might find the raw output of
@@ -59,7 +59,7 @@ This possibility is rather alarming to many experts, and precludes the
 possibility of offering explanations to users or regulators. This concern is
 alleviated if you are able to sanity check the model's behavior using a system
 such as LIME, or if the automated process is constrained to use interpretable
-models such as those discussed in <<whitebox>>.
+models such as those discussed in the [White-box Models](#white-box-models) section of [Chapter 3](#the-challenge-of-interpretability).
 
 ### Longer Term
 

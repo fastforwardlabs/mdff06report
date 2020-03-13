@@ -97,7 +97,7 @@ LIME is an exciting breakthrough. It's an extremely simple idea (the
 preceding explanation glosses over mathematical detail, but is conceptually
 complete). It allows you to train a model in any way you like and still have
 an answer to the local question, "Why has this particular decision been made?"
-We used LIME to build the prototype for this report (<<prototype>>).
+We used LIME to build the [prototype](#prototype) for this report.
 
 #### Extensions and Limitations
 

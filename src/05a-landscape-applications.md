@@ -44,7 +44,7 @@ Traditionally this is done with simple models that are inherently
 interpretable. Technologies like LIME permit the use of more complex and
 potentially more accurate models while preserving the ability to explain the
 reasons for denial or assigning a particular score. The ethical considerations
-associated with these kinds of decisions are discussed in <<ethics>>.
+associated with these kinds of decisions are discussed in [Chapter 6 - Ethics and Regulations](#ethics-and-regulations).
 
 #### Customer Churn
 
@@ -53,7 +53,7 @@ interpretability. Knowing when a user is likely to defect is helpful on a
 number of levels. It's useful for predicting revenue streams, testing
 effectiveness of promotions or marketing campaigns, and evaluating customer
 service efficacy. Interpretation of churn models compounds their utility. For
-example, as shown in our prototype (<<prototype>>), interpretation of churn
+example, as shown in our [prototype](#prototype), interpretation of churn
 data can explain _why_ a given customer or set of customers are likely to
 churn. This information offers customer service personnel the ability to retain
 more customers by helping them identify those who may be considering taking

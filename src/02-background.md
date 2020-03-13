@@ -22,7 +22,7 @@ opens the door to new kinds of products.
 
 ![FIGURE 2.2 If you trust a model, interpretability can provide you with concrete actions to pursue.](figures/2-04.png)
 
-### Enhancing Trust
+### Enhancing Trust 
 
 Data scientists have a well-established protocol to measure the performance of
 a model: _validation_. They train a model with perhaps 80% of their training
@@ -101,7 +101,7 @@ if we know and communicate how it works.
 In many industries and jurisdictions, the application of machine learning (or
 algorithmic decision-making) is regulated. This report does not offer legal
 advice. To the extent that we discuss these regulations in any specific detail,
-we do so in <<ethics>>. We bring them up here for two reasons.
+we do so in [Chapter 6 - Ethics and Regulations](#ethics-and-regulations). We bring them up here for two reasons.
 
 First, if these regulations apply, they almost always imply an absolute
 requirement that you build interpretable models. That is because the goal of
@@ -146,7 +146,7 @@ particular prediction -- offers an answer to the question of _why_ this
 customer is going to leave. This allows you to understand your customer's needs
 and your product's limitations. It even raises the possibility of taking a
 well-chosen action to reduce the probability of churn. This problem is the
-focus of our prototype (<<prototype>>).
+focus of our [prototype](#prototype).
 
 A model that predicts hardware failure in an engine or on a server is of course
 extremely useful. You can send an engineer out to inspect an appliance that is
@@ -159,7 +159,7 @@ the lender, it is of enormous interest to the borrower. But showing borrowers
 a credit rating number on its own is of limited use if they want to know what
 they need to do to improve it. The consumer app Credit Karma^[[http://creditkarma.com/](http://creditkarma.com/)] allows its users to figure this out for
 themselves using a brute force method similar to the new algorithm that we use
-in this report's prototype (see <<perturbation>>).
+in this report's prototype (see [perturbation](#perturbation)).
 
 Interpretable models also tend to be more user-friendly. For example, the APGAR
 score used at childbirth gives an integer score out of 10. The higher the
@@ -168,8 +168,8 @@ numbers, measured by eye and combined by mental calculation.
 This heuristic is not machine learning, but it is algorithmic decision-making.
 The simplicity of the APGAR score means that, in a fast-moving environment, the
 obstetrician or midwife trusts its outputs and can reason about the problem
-with the inputs in their head: the ultimate in usability. As we discuss in
-<<downside>>, this simplicity comes at a cost: the model is less accurate than
+with the inputs in their head: the ultimate in usability. As we discuss below in
+the [Accuaracy and Interpretability](#accuracy-and-interpretability) section, this simplicity comes at a cost: the model is less accurate than
 a huge neural network would be. But it can often be worth trading a little
 accuracy for interpretability, even in contexts less extreme than hospitals.
 
@@ -178,8 +178,8 @@ accuracy for interpretability, even in contexts less extreme than hospitals.
 ### Improving the Model
 
 An uninterpretable model suffers from the performance and regulatory risks
-discussed earlier (see <<trust>>, and <<regulations>>), and closes the door on
-products that take advantage of explanations (<<explanations>>). It's also much
+discussed earlier (see [Enhancing Trust](#enhancing-trust), and [Satisfying Regulations](#satisfying-regulations) above), and closes the door on
+products that take advantage of explanations (see the previous section, [Explaining Decisions](#explaining-decisions)). It's also much
 harder to improve.
 
 Debugging or incrementally improving an uninterpretable black-box model is
@@ -192,13 +192,13 @@ driven by hypotheses rather than trial and error, which makes improvements
 quicker.^[This difficulty continues to plague deep learning. The models
 are hard to interpret, which means the field lacks theory, and thus
 improvements are made through a mixture of trial and error and intuition. See
-<<long_term>>.]
+the ["Longer Term"](#longer-term) section in [Chapter 7 - Future](#future).]
 
 A striking example of debugging is given in the paper introducing Local
 Interpretable Model-agnostic Explanations (LIME),^[Ribeiro, Singh, and
 Guestrin (2016), *["'Why Should I Trust
 You?': Explaining the Predictions of Any Classifier."](https://arxiv.org/abs/1602.04938)*] the black-box
-interpretability technique we use in this report's prototype (<<prototype>>).
+interpretability technique we use in this report's [prototype](#prototype).
 In that paper, the authors describe a convolutional neural network image
 classification model able to distinguish between images of wolves and Husky
 dogs with high accuracy. LIME's ability to "explain" individual classifications

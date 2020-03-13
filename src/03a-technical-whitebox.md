@@ -44,7 +44,7 @@ sigmoid function -- but without loss of generality.] In other words:
 
     Probability of repayment = A × income + B × loan amount
 
-where the coefficients `A` and `B` are two numbers.
+where the coefficients `A` and `B` are two numbers. 
 
 Such a model is interpretable. `A` is just a number, and not a function of any
 other number, so we can easily check whether it is positive. If it is, we can
@@ -57,13 +57,13 @@ repayment probability decreases with income. That mathematical certainty means
 we can be confident that there is no hidden behavior lurking in the model. Our
 trust in the model is high. And we can use the numbers `A` and `B` to tell a
 borrower why we think they are unlikely to repay in precise but plain words
-(e.g., "Given your income, you are asking to borrow $1,000 too much.").
+(e.g., *"Given your income, you are asking to borrow $1,000 too much."*).
 
 ![FIGURE 3.3 Given a new data point, we can explain why it is classified the way it is.](figures/2-12.png)
 
 Let's look at a tougher problem. Suppose we plot the longitude and latitude of
 temperature sensors in a field, and mark with a check or cross whether the
-yield of corn was high or low.
+yield of corn was high or low:
 
 ![FIGURE 3.4 Many problems are not linearly separable.](figures/2-13.png)
 
@@ -221,7 +221,7 @@ distorted.
 
 #### SLIMs
 
-The APGAR score for newborn infants (see <<explanations>>) is calculated by
+The APGAR score for newborn infants (see [Explaining Decisions](#explaining-decisions)) is calculated by
 assigning scores of 0, 1, or 2 to five attributes of the baby and adding them
 up:
 

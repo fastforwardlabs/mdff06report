@@ -48,7 +48,7 @@ accuracy of around 80% and is completely uninterpretable.
 
 ### Applying LIME
 
-As described in <<lime>>, LIME explains the classification of a particular
+As [described above](#lime) in Chapter 3, LIME explains the classification of a particular
 example by perturbing its features and running these perturbed variations
 through the classifier. This allows LIME to probe the behavior of the
 classifier in the vicinity of the example, and thus to build up a picture of
@@ -78,23 +78,26 @@ Numbers close to zero indicate that a feature is unimportant.
 
 This code will give us a list of `(feature, importance)` tuples: 
 
-[source,python]
-----
-from lime.lime_tabular import LimeTabularExplainer
-explainer = LimeTabularExplainer(training_data=X,
+
+::: info
+
+    from lime.lime_tabular import LimeTabularExplainer
+    explainer = LimeTabularExplainer(training_data=X,
                                  training_labels=y,
                                  feature_names=feature_names,
                                  class_names=class_names)
-# clf is the churn classifier we want to explain
-e = explainer.explain_instance(customer, clf.predict_proba)
-print(e.as_list())
-----
+    # clf is the churn classifier we want to explain
+    e = explainer.explain_instance(customer, clf.predict_proba)
+    print(e.as_list())
+
+:::
 
 For our use case, we are interested in the features with the largest positive
 importances, which tell us which features are most responsible for the model
 thinking the customer will churn.
 
 ::: info
+
 ##### *Computational resources*
 
 In order to comprehensively probe the area around an example, LIME needs to

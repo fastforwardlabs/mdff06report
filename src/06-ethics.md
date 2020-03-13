@@ -12,8 +12,7 @@ The issue of discrimination is intimately tied up with interpretability.
 Protected classes have suffered (and continue to suffer) discrimination in
 sensitive situations such as employment, lending, housing, and healthcare.
 Decisions in such areas are increasingly made by algorithms. Legislation such
-as the US Civil Rights Act therefore directly impacts machine learning (see
-<<regulations-box>>). Complying with legislation is the least we can do:
+as the US Civil Rights Act therefore directly impacts machine learning. Complying with legislation is the least we can do:
 ethical concerns should also constrain our use of machine learning. And of
 course, it is often good business to build a product that serves as many people
 as possible. A product that depends on a discriminatory model suffers in this
@@ -32,8 +31,7 @@ regulations:
  - Fair Credit Reporting Act
  - Fair Housing Act
  - Federal Reserve SR 11-7 (Guidance on Model Risk Management)
- - European Union General Data Protection Regulation, Article 22 (see
-   "<<gdpr>>")
+ - European Union General Data Protection Regulation, Article 22 (see [GDPR](#gdpr-article-22-and-the-right-to-an-explanation))
 
 :::
 
@@ -68,7 +66,7 @@ When discrimination is the result of an algorithmic decision, it can be
 difficult for those affected by the decision, the regulator, or the
 organization that deployed the algorithm to determine the reason (or even to
 confirm whether discrimination took place). Techniques that ensure
-interpretability, such as those discussed in <<how>>, are essential to ensure
+interpretability, such as those discussed in [Chapter 3 - The Challenge of Interpretability](#the-challenge-of-interpretability), are essential to ensure
 we build models that do not discriminate and that therefore comply with the
 law, are ethical, and are good for our businesses.
 
@@ -95,7 +93,7 @@ law, are ethical, and are good for our businesses.
 
 Algorithms must be audited and understood before they are deployed in contexts
 where injury or death is a risk, including healthcare (as discussed in
-<<trust>>, and <<healthcare>>) and driverless vehicles. Deep understanding of
+[trust](#enhancing-trust), and [healthcare](#healthcare) and driverless vehicles. Deep understanding of
 an algorithm may be necessary not only to reduce its physical danger, but also
 to reduce legal risk to the owner of the algorithm.
 
