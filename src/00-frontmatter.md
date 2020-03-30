@@ -2,7 +2,7 @@
 
 FF06 · _April 2020 Re-release_ 
 
-![Interpretability report cover](/figures/ff06-cover.png)
+![Interpretability report cover](figures/ff06-cover.png)
 
 [[TOC]]
 
