@@ -543,8 +543,9 @@ function makeJS() {
 }
 
 function makeHead() {
-  let title = 'Deep Learning for Anomaly Detection'
-  let description = 'TK'
+  let title = 'Interpretability 2020'
+  let description =
+    'An online research report on interpretability for machine learning by Cloudera Fast Forwaard.'
   return `<head>
     <meta charset="utf-8" />
 
@@ -553,12 +554,12 @@ function makeHead() {
 
     <meta property="og:title" content="${title}" /> 
     <meta property="og:description" content="${description}" />
-    <meta property="og:image" content="https://experiments.fastforwardlabs.com/log/textflix-report/textflix-report-share.png" />
-    <meta property="og:url" content="https://experiments.fastforwardlabs.com/log/textflix-report" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="https://ff06-2020.fastforwardlabs.com" />
     <meta name="twitter:card" content="summary_large_image" />
     
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     
     ${makeStyle()}
     ${makeJS()}
