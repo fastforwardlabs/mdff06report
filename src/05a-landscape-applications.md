@@ -46,7 +46,7 @@ potentially more accurate models while preserving the ability to explain the
 reasons for denial or assigning a particular score. The ethical considerations
 associated with these kinds of decisions are discussed in [Chapter 6 - Ethics and Regulations](#ethics-and-regulations).
 
-#### Customer Churn
+#### Customer Churn Use Case
 
 As we demonstrate with our prototype, churn modeling is another clear case for
 interpretability. Knowing when a user is likely to defect is helpful on a

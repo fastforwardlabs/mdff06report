@@ -168,7 +168,7 @@ particular feature.^[`f(x)` is monotonic if it _always_ increases when
 
 ![FIGURE 3.9 Partial dependence plots let you see the relationship between the prediction and key features.](figures/3-02.png)
 
-GA^2^Ms extend GAMs by allowing _pairwise_ interactions, or models of the form:
+GA^2^2Ms extend GAMs by allowing _pairwise_ interacti^ons, or models of the form:
 
     f(x) + g(y) + h(z) + p(xy) + q(yz)
 

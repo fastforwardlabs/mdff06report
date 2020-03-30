@@ -108,7 +108,7 @@ is useful in publicly accessible machine learning APIs. A linear model is fully
 specified by a number (or coefficient) for each of its input features. If a
 model is known or suspected to be linear, and can be asked to make predictions
 quickly and cheaply, then it can be _stolen_ with a finite and perhaps very
-small number of API calls.^[See e.g., [https://arxiv.org/abs/1609.02943(https://arxiv.org/abs/1609.02943).]
+small number of API calls.^[See e.g., [https://arxiv.org/abs/1609.02943](https://arxiv.org/abs/1609.02943).]
 And a model that can be stolen can also be _gamed_ -- i.e., the input can be
 adjusted to get the desired output. The more uninterpretable the model, the
 less vulnerable it is to theft and gaming.
