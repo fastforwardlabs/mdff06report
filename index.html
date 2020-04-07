@@ -1,21 +1,21 @@
 <!DOCTYPE html>
     <html lang="en">
       <head>
-    <meta charset="utf-8" />
+<meta charset="utf-8" />
 
-    <title>Interpretability 2020</title>
-    <meta name="description" content="An online research report on interpretability for machine learning by Cloudera Fast Forwaard." />
+<title>Interpretability 2020</title>
+<meta name="description" content="An online research report on interpretability for machine learning by Cloudera Fast Forward." />
 
-    <meta property="og:title" content="Interpretability 2020" /> 
-    <meta property="og:description" content="An online research report on interpretability for machine learning by Cloudera Fast Forwaard." />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="https://ff06-2020.fastforwardlabs.com" />
-    <meta name="twitter:card" content="summary_large_image" />
-    
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    
-    <style type="text/css">
+<meta property="og:title" content="Interpretability 2020" /> 
+<meta property="og:description" content="An online research report on interpretability for machine learning by Cloudera Fast Forward." />
+<meta property="og:image" content="https://ff06-2020.fastforwardlabs.com/interpretability.png" />
+<meta property="og:url" content="https://ff06-2020.fastforwardlabs.com" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<meta name="viewport" content="width=device-width" />
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+<style type="text/css">
     
   @font-face {
     font-family: 'Plex Mono';
@@ -77,8 +77,7 @@
       padding-left: 2ch;
       padding-right: 2ch;
       margin: 0 auto;
-      display: flex;
-      flex-direction: column;
+      display: block;
       padding-bottom: 0px;
     }
    p, ul, ol {
@@ -93,7 +92,11 @@
     li p:first-child {
       text-indent: 0;
     }
- 
+
+    #pdf-logo {
+      display: none;
+    }
+
    hr {
       margin: 0;
       border-top-color: black;
@@ -117,7 +120,7 @@ h2 {
   font-size: 31.5px;
   line-height: 42px;
   font-weight: bold;
-  margin-top: 14px;
+  margin-top: 28px;
   margin-bottom: 14px;
 }
 h3 {
@@ -151,10 +154,16 @@ h6 {
 p {
   margin-bottom: 14px;
 }
+.content {
+  position: relative;
+  }
 figure {
   margin: 0;
   margin-top: 14px;
   margin-bottom: 28px;
+  display: block;
+  position: relative;
+  page-break-inside: avoid;
 }
 blockquote {
   margin: 0;
@@ -184,32 +193,39 @@ figcaption {
 }
 img {
   display: block;
+  position: relative;
   max-width: 100%;
   margin: 0 auto;
-}
-.debug > * {
-  outline: solid 1px green;
-}
-.debug {
-  background-position: 0 -0.5; position: absolute; top: 0; left: 0; width: 100%; height: 100000px; background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8bGluZSB4MT0iMCIgeTE9IjAuNSIgeDI9IjI4IiB5Mj0iMC41IiBzdHJva2U9ImxpZ2h0Ymx1ZSIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPGxpbmUgeDE9IjAiIHkxPSI3LjUiIHgyPSIyOCIgeTI9IjcuNSIgc3Ryb2tlPSJsaWdodGJsdWUiIHN0cm9rZS13aWR0aD0iMSIvPgogIDxsaW5lIHgxPSIwIiB5MT0iMTQuNSIgeDI9IjI4IiB5Mj0iMTQuNSIgc3Ryb2tlPSJsaWdodGJsdWUiIHN0cm9rZS13aWR0aD0iMSIvPgogIDxsaW5lIHgxPSIwIiB5MT0iMjEuNSIgeDI9IjI4IiB5Mj0iMjEuNSIgc3Ryb2tlPSJsaWdodGJsdWUiIHN0cm9rZS13aWR0aD0iMSIvPgo8L3N2Zz4=');
-}
-code {
-  font-size: 0.9em;
-  line-height: 1.2;
-  background: #efefef;
-  padding: 0 0.3em;
-}
-pre {
-  font-size: 0.9em;
-  line-height: 1.2;
-  background: #efefef;
-  overflow-x: scroll;
-  max-width: 100%;
-  padding-left: 1ch;
-  padding-right: 1ch;
-  padding-top:0.625em;
+  page-break-inside: avoid;
 }
 
+table {
+  min-width: 100%;
+  text-align: left;
+  margin-top: 14px;
+  font-size: 13.125px;
+  line-height: 18.900000000000002px;
+  border-collapse: collapse;
+}
+table, th, td {
+  border: solid 1px black;
+}
+td {
+  padding-left: 0.5ch;
+  padding-right: 0.5ch;
+  valign: top;
+  vertical-align: top;
+}
+th {
+  padding-left: 0.5ch;
+  padding-right: 0.5ch;
+  vertical-align: top;
+  background: #efefef;
+}
+table ul, table ol {
+  list-style-position: inside;
+  padding-left: 0;
+}
 
   a {
     color: inherit;
@@ -233,12 +249,19 @@ pre {
     display: none;
   }
 
+  #report-iso {
+    display: none;
+  }
+
 .table-of-contents {
     counter-reset: chapters;
 }
  .table-of-contents ul {
     list-style: none;
-    padding-left: 0
+    padding-left: 0;
+  }
+ .table-of-contents > ul {
+    padding-bottom: 28px;
   }
   .table-of-contents > ul > li > a:before {
           counter-increment: chapters;
@@ -247,11 +270,16 @@ pre {
  .table-of-contents > ul > li {
     font-weight: bold;
   }
+ .table-of-contents > ul > li {
+    font-weight: bold;
+  }
+
  .table-of-contents > ul > li > ul > li {
     font-weight: normal;
     font-style: normal;
     text-transform: none;
     letter-spacing: 0;
+    margin-left: 0;
   }
  .table-of-contents > ul > li > ul > li > ul > li {
     font-weight: normal;
@@ -278,13 +306,33 @@ pre {
   }
 
  .table-of-contents > ul > li > ul > li > a {
-    padding-left: 4ch;
+    font-size: 15.75px;
+      line-height: 25.2px;
+    // padding-left: 4ch;
   }
   .table-of-contents > ul > li > ul > li > ul > li > a {
     padding-left: 5ch;
   }
 
-
+h1 {
+    counter-reset: chp;
+}
+h2 {
+  position: relative;
+  display: block;
+  page-break-before: always;
+  padding-top: 42px;
+}
+  h2:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+      font-size: 17.5px;
+    color: black;
+    counter-increment: chp;
+    content: "chapter " counter(chp);
+    text-transform: uppercase;
+  }
 
   .toc-desktop-hidden .table-of-contents {
     width: auto;
@@ -315,7 +363,7 @@ pre {
       margin-left: 1ch;
       margin-right: 1ch;
     }
- 
+
   @media screen and (max-width: 1028px) {
     h1 {
       font-size: 36.75px;
@@ -333,7 +381,7 @@ pre {
       margin-top: 7px;
       margin-bottom: 7px;
     }
- 
+
     body {
       padding-left: 0;
       padding-top: 42px;
@@ -357,7 +405,7 @@ pre {
       z-index: 2;
       border-top: solid 42px #aaa;
     }
- 
+
     .table-of-contents > ul {
       display: none;
     }
@@ -387,7 +435,7 @@ pre {
   }
 }
 </style>
-    <script>
+<script>
     function inViewport(elem) {
       let bounding = elem.getBoundingClientRect();
       return (
@@ -407,7 +455,7 @@ pre {
     }
 
     window.addEventListener("load", (event) => {
-      let headings = document.querySelectorAll('h1, h2, h3, h4');
+      let headings = document.querySelectorAll('h2, h3');
       let links = document.querySelectorAll('.table-of-contents ul li a')
 
       observer = new IntersectionObserver((entry, observer) => {
@@ -482,27 +530,31 @@ pre {
     }, false);
   </script>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140718127-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140718127-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-140718127-1');
-    </script>
-  </head>
+gtag('config', 'UA-140718127-1');
+</script>
+</head>
       <body>
-        <div class="content nodebug" style="position: relative;">
-          <div style="margin-top: 28px;"><a href="https://experiments.fastforwardlabs.com" >Cloudera Fast Forward</a></div>
+        <div class="content" style="position: relative;">
+          <div id="html-logo" style="margin-top: 28px; line-height: 0; display: flex;">
+            <a href="https://www.cloudera.com/products/fast-forward-labs-research.html"><img alt="Cloudera Fast Forward" style="display: block; height: 14px; margin-bottom: 7px;" src='/figures/cloudera-fast-forward-logo.png' /></a>
+          </div>
+          <div id="pdf-logo" style="margin-top: 28px; ">
+            <a href="https://www.cloudera.com/products/fast-forward-labs-research.html">Cloudera Fast Forward</a>
+          </div>
           <h1 id="interpretability">Interpretability</h1>
 <p>FF06 · <em>April 2020 Re-release</em></p>
-<figure><img src="figures/ff06-cover.png" alt="Interpretability report cover"><figcaption>Interpretability report cover</figcaption></figure>
+<figure><img src="figures/ff06-2020-cover.png" alt="Interpretability report cover"><figcaption>Interpretability report cover</figcaption></figure>
 <p><div class="table-of-contents"><div id="toc-header" style="display: flex; font-weight: bold; text-transform: uppercase;">
      <div><button id="toggle_contents" style="padding-left: 0.5ch; padding-right: 0.5ch; cursor: pointer; position: relative; top: -1px;">☰</button><span id="contents-label" style="margin-left: 0;"> Contents</span></div>
-  </div><ul><li><a href="#introduction">Introduction</a></li><li><a href="#the-power-of-interpretability">The Power of Interpretability</a><ul><li><a href="#what-is-interpretability%3F">What Is Interpretability?</a></li><li><a href="#enhancing-trust">Enhancing Trust</a></li><li><a href="#satisfying-regulations">Satisfying Regulations</a></li><li><a href="#explaining-decisions">Explaining Decisions</a></li><li><a href="#improving-the-model">Improving the Model</a></li><li><a href="#accuracy-and-interpretability">Accuracy and Interpretability</a></li></ul></li><li><a href="#the-challenge-of-interpretability">The Challenge of Interpretability</a><ul><li><a href="#why-are-some-models-uninterpretable%3F">Why Are Some Models Uninterpretable?</a></li><li><a href="#white-box-models">White-box Models</a><ul><li><a href="#gams">GAMs</a></li><li><a href="#rule-lists">Rule Lists</a></li><li><a href="#slims">SLIMs</a></li></ul></li><li><a href="#black-box-interpretability">Black-box Interpretability</a><ul><li><a href="#perturbation">Perturbation</a></li><li><a href="#lime">LIME</a></li><li><a href="#extensions-and-limitations">Extensions and Limitations</a></li></ul></li></ul></li><li><a href="#prototype">Prototype</a><ul><li><a href="#customer-churn">Customer Churn</a></li><li><a href="#applying-lime">Applying LIME</a></li><li><a href="#product%3A-refractor">Product: Refractor</a><ul><li><a href="#the-product-possibilities-of-interpretability">The Product Possibilities of Interpretability</a></li><li><a href="#global-view%3A-understanding-the-model">Global View: Understanding the Model</a></li><li><a href="#local-view%3A-understanding-the-customer">Local View: Understanding the Customer</a></li><li><a href="#product-tension%3A-focus-vs.-context">Product Tension: Focus vs. Context</a></li><li><a href="#collaborating-with-algorithms">Collaborating with Algorithms</a></li></ul></li></ul></li><li><a href="#landscape">Landscape</a><ul><li><a href="#interviews">Interviews</a><ul><li><a href="#recommendation-engines">Recommendation Engines</a></li><li><a href="#credit-scores">Credit Scores</a></li><li><a href="#customer-churn-use-case">Customer Churn Use Case</a></li><li><a href="#fraud-detection">Fraud Detection</a></li><li><a href="#anomaly-detection">Anomaly Detection</a></li><li><a href="#healthcare">Healthcare</a></li></ul></li><li><a href="#data-science-platforms">Data Science Platforms</a><ul><li><a href="#h2o.ai">H2O.ai</a></li><li><a href="#datascience.com">DataScience.com</a></li><li><a href="#datarobot">DataRobot</a></li><li><a href="#bonsai">Bonsai</a></li></ul></li></ul></li><li><a href="#ethics-and-regulations">Ethics and Regulations</a><ul><li><a href="#discrimination">Discrimination</a></li><li><a href="#safety">Safety</a></li><li><a href="#negligence-and-codes-of-conduct">Negligence and Codes of Conduct</a></li></ul></li><li><a href="#future">Future</a><ul><li><a href="#near-future">Near Future</a></li><li><a href="#longer-term">Longer Term</a></li><li><a href="#interpretability-sci-fi%3A-the-definition-of-success">Interpretability Sci-Fi: The Definition of Success</a></li></ul></li><li><a href="#conclusion">Conclusion</a></li></ul></div></p>
-<p><em>This is an applied research report by <a href="https://www.cloudera.com/products/fast-forward-labs-research.html">Cloudera Fast Forward</a>. We write reports about emerging technologies.  Accompanying each report are working prototypes that exhibit the capabilities of the algorithm and offer detailed technical advice on its practical application. Read our full report on interpretability below or download the PDF, and view our prototype here.</em></p>
+  </div><ul><li><a href="#introduction">Introduction</a></li><li><a href="#the-power-of-interpretability">The Power of Interpretability</a><ul><li><a href="#what-is-interpretability%3F">What Is Interpretability?</a></li><li><a href="#enhancing-trust">Enhancing Trust</a></li><li><a href="#satisfying-regulations">Satisfying Regulations</a></li><li><a href="#explaining-decisions">Explaining Decisions</a></li><li><a href="#improving-the-model">Improving the Model</a></li><li><a href="#accuracy-and-interpretability">Accuracy and Interpretability</a></li></ul></li><li><a href="#the-challenge-of-interpretability">The Challenge of Interpretability</a><ul><li><a href="#why-are-some-models-uninterpretable%3F">Why Are Some Models Uninterpretable?</a></li><li><a href="#white-box-models">White-box Models</a></li><li><a href="#black-box-interpretability">Black-box Interpretability</a></li></ul></li><li><a href="#prototype">Prototype</a><ul><li><a href="#customer-churn">Customer Churn</a></li><li><a href="#applying-lime">Applying LIME</a></li><li><a href="#product%3A-refractor">Product: Refractor</a></li></ul></li><li><a href="#landscape">Landscape</a><ul><li><a href="#interviews">Interviews</a></li><li><a href="#data-science-platforms">Data Science Platforms</a></li></ul></li><li><a href="#ethics-and-regulations">Ethics and Regulations</a><ul><li><a href="#discrimination">Discrimination</a></li><li><a href="#safety">Safety</a></li><li><a href="#negligence-and-codes-of-conduct">Negligence and Codes of Conduct</a></li></ul></li><li><a href="#future">Future</a><ul><li><a href="#near-future">Near Future</a></li><li><a href="#longer-term">Longer Term</a></li><li><a href="#interpretability-sci-fi%3A-the-definition-of-success">Interpretability Sci-Fi: The Definition of Success</a></li></ul></li><li><a href="#conclusion">Conclusion</a></li></ul></div></p>
+<p><em>This is an applied research report by <a href="https://www.cloudera.com/products/fast-forward-labs-research.html">Cloudera Fast Forward</a>. We write reports about emerging technologies.  Accompanying each report are working prototypes that exhibit the capabilities of the algorithm and offer detailed technical advice on its practical application. Read our full report on interpretability below or <a href="/ff06-2020-interpretability.pdf">download the PDF</a>. For this report we built an interpretability prototype: <a href="https://refractor.fastforwardlabs.com">Refractor</a>.</em></p>
 <h2 id="introduction">Introduction</h2>
 <p>Our society is increasingly dependent on intelligent machines. Algorithms
 govern everything from which e-mails reach our inboxes to whether we are approved
@@ -845,12 +897,12 @@ that there are no dangerous biases lurking in the model or, if necessary, to
 demonstrate to a regulator that a model responds <em>monotonically</em> to a
 particular feature.<sup class="footnote-ref"><a href="#fn7" id="fnref7">[7]</a></sup></p>
 <figure><img src="figures/3-02.png" alt="FIGURE 3.9 Partial dependence plots let you see the relationship between the prediction and key features."><figcaption>FIGURE 3.9 Partial dependence plots let you see the relationship between the prediction and key features.</figcaption></figure>
-<p>GA<sup>2</sup>2Ms extend GAMs by allowing <em>pairwise</em> interacti^ons, or models of the form:</p>
+<p>GA^2^2Ms extend GAMs by allowing <em>pairwise</em> interacti^ons, or models of the form:</p>
 <pre><code>f(x) + g(y) + h(z) + p(xy) + q(yz)
 </code></pre>
 <p>That is, they allow a tightly constrained version of the kind of feature
 engineering we saw in the field yield example earlier. There is in principle
-nothing to stop us introducing a model with another term, <code>r(xyz)</code>, but GA<sup>2</sup>Ms
+nothing to stop us introducing a model with another term, <code>r(xyz)</code>, but GA^2^Ms
 stop here for a very good reason: you can make a partial dependence plot of
 <code>p(xy)</code> by drawing a heatmap, but it is extremely difficult to make a partial
 dependence plot of three variables. It is the partial dependence plots that
@@ -860,7 +912,7 @@ give the model its interpretability.</p>
 it’s more common to have many more features. This raises the possibility of
 exponentially many pairwise terms. For example, with 50 features there are over
 a thousand possible pairwise terms. Trying to inspect all these plots would
-diminish interpretability rather than enhancing it. For this reason, GA<sup>2</sup>Ms
+diminish interpretability rather than enhancing it. For this reason, GA^2^Ms
 include only the <code>k</code> pairwise terms that most improve accuracy, where <code>k</code> is a
 small number determined like any other hyperparameter.<sup class="footnote-ref"><a href="#fn8" id="fnref8">[8]</a></sup></p>
 <h4 id="rule-lists">Rule Lists</h4>
@@ -894,7 +946,7 @@ up:</p>
 about easily is an important feature. Scores like this are in widespread use in
 clinical medicine. But this extreme simplicity necessarily comes at the expense
 of accuracy.</p>
-<p>In the same way GA<sup>2</sup>Ms use a tightly controlled freeing up of a linear
+<p>In the same way GA^2^Ms use a tightly controlled freeing up of a linear
 classifier to increase accuracy, Supersparse Linear Integer Models
 (SLIMs)<sup class="footnote-ref"><a href="#fn11" id="fnref11">[11]</a></sup> make a small change to
 scoring systems to increase their accuracy. That change is to permit each
@@ -1049,7 +1101,7 @@ model, this may gloss over important details, but for the purposes of auditing
 a model for harmful global biases it is a great tool. For example, it can be
 used to measure the extent to which a model depends on “protected features”
 that, from a legal and ethical point of view, should make no difference to its
-output (see &lt;&lt;ethics&gt;&gt;). A more detailed introduction to FairML is available
+output (see &lt;<ethics>&gt;). A more detailed introduction to FairML is available
 on the Fast Forward Labs blog.<sup class="footnote-ref"><a href="#fn17" id="fnref17">[17]</a></sup></p>
 </div>
 <h2 id="prototype">Prototype</h2>
@@ -1385,7 +1437,7 @@ regard to interpretability in “Ideas on Interpreting Machine Learning,” a wh
 paper published by
 O’Reilly.<sup class="footnote-ref"><a href="#fn22" id="fnref22">[22]</a></sup>
 Their work includes a twist on LIME called k-LIME. k-LIME trains <em>k</em> linear
-models on the data, with <em>k</em> chosen to maximize R<sup>2</sup> across all linear models.
+models on the data, with <em>k</em> chosen to maximize R^2^ across all linear models.
 This approach uncovers regions in the data that can be modeled using simpler
 linear, interpretable models, offering a solution that sits comfortably between
 global and local interpretability.</p>
@@ -1822,7 +1874,7 @@ but can be found at
 <li id="fn19" class="footnote-item"><p><a href="https://github.com/marcotcr/lime">https://github.com/marcotcr/lime</a> <a href="#fnref19" class="footnote-backref">↩︎</a></p>
 </li>
 <li id="fn20" class="footnote-item"><p>Mathematically, its complexity
-is O(F<sup>3</sup> + P F<sup>2</sup> + P O(model)), where F is the number of features in the
+is O(F^3^ + P F^2^ + P O(model)), where F is the number of features in the
 data, P is the number of perturbations LIME makes, and O(model) is the
 complexity of the model. <a href="#fnref20" class="footnote-backref">↩︎</a></p>
 </li>
@@ -1882,5 +1934,26 @@ Verifying Deep Neural Networks”</em></a> and this informal two-part article: <
 
         </div>
       </body>
+      <!-- Google Analytics -->
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-157475426-2', 'auto');
+        ga('send', 'pageview');
+
+        window.addEventListener('load', function() {
+          document.getElementById('report-pdf-download').addEventListener('click', function() {
+            ga('send', {
+              hitType: 'pageview',
+              page: '/ff06-2020-interpretability.pdf'
+            });
+          });
+        })
+
+      </script>
+      <!-- End Google Analytics -->
     </html>
   
