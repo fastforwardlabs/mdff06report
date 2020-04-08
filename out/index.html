@@ -198,6 +198,23 @@ img {
   margin: 0 auto;
   page-break-inside: avoid;
 }
+code {
+  font-size: 0.9em;
+  line-height: 1.2;
+  background: #efefef;
+  padding: 0 0.3em;
+}
+pre {
+  font-size: 0.9em;
+  line-height: 1.2;
+  background: #efefef;
+  overflow-x: scroll;
+  max-width: 100%;
+  padding-left: 1ch;
+  padding-right: 1ch;
+  padding-top:0.625em;
+  padding-bottom:0.625em;
+}
 
 table {
   min-width: 100%;
@@ -530,6 +547,27 @@ h2 {
     }, false);
   </script>
 
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-157475426-4', 'auto');
+  ga('send', 'pageview');
+
+  window.addEventListener('load', function() {
+    document.getElementById('report-pdf-download').addEventListener('click', function() {
+      ga('send', {
+        hitType: 'pageview',
+        page: '/ff06-2020-interpretability.pdf'
+      });
+    });
+  })
+
+</script>
+<!-- End Google Analytics -->
 </head>
       <body>
         <div class="content" style="position: relative;">
@@ -1562,7 +1600,7 @@ of all the ways in which an algorithm can be discriminatory. Parts B and C
 pay particular attention to the status and future of US law.</li>
 <li>O’Neil (2016), <em>Weapons of Math Destruction: How Big Data Increases Inequality and
 Threatens Democracy</em> (Crown Random
-House).<sup class="footnote-ref"><a href="#fn28" id="fnref28">[28]</a></sup>(https://weaponsofmathdestructionbook.com/)] O’Neil’s book is
+House).<sup class="footnote-ref"><a href="#fn28" id="fnref28">[28]</a></sup> O’Neil’s book is
 a wide-ranging polemic that we highly recommend to anyone who works with
 data scientists, or is one. It considers the issues touched upon in this
 chapter throughout.</li>
@@ -1889,7 +1927,7 @@ players. <a href="#fnref26" class="footnote-backref">↩︎</a></p>
 </li>
 <li id="fn27" class="footnote-item"><p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899</a> <a href="#fnref27" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn28" class="footnote-item"><p>https://weaponsofmathdestructionbook.com/ <a href="#fnref28" class="footnote-backref">↩︎</a></p>
+<li id="fn28" class="footnote-item"><p><a href="https://weaponsofmathdestructionbook.com/">https://weaponsofmathdestructionbook.com/</a> <a href="#fnref28" class="footnote-backref">↩︎</a></p>
 </li>
 <li id="fn29" class="footnote-item"><p><a href="http://standards.ieee.org/develop/indconn/ec/ead_v1.pdf">http://standards.ieee.org/develop/indconn/ec/ead_v1.pdf</a> <a href="#fnref29" class="footnote-backref">↩︎</a></p>
 </li>
@@ -1925,26 +1963,5 @@ Verifying Deep Neural Networks”</em></a> and this informal two-part article: <
 
         </div>
       </body>
-      <!-- Google Analytics -->
-      <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-157475426-4', 'auto');
-        ga('send', 'pageview');
-
-        window.addEventListener('load', function() {
-          document.getElementById('report-pdf-download').addEventListener('click', function() {
-            ga('send', {
-              hitType: 'pageview',
-              page: '/ff06-2020-interpretability.pdf'
-            });
-          });
-        })
-
-      </script>
-      <!-- End Google Analytics -->
-    </html>
+   </html>
   

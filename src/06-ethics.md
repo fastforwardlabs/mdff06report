@@ -82,7 +82,7 @@ law, are ethical, and are good for our businesses.
    pay particular attention to the status and future of US law.
  - O'Neil (2016), _Weapons of Math Destruction: How Big Data Increases Inequality and
    Threatens Democracy_ (Crown Random
-   House).^[https://weaponsofmathdestructionbook.com/](https://weaponsofmathdestructionbook.com/)] O'Neil's book is
+   House).^[[https://weaponsofmathdestructionbook.com/](https://weaponsofmathdestructionbook.com/)] O'Neil's book is
    a wide-ranging polemic that we highly recommend to anyone who works with
    data scientists, or is one. It considers the issues touched upon in this
    chapter throughout.

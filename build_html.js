@@ -125,6 +125,23 @@ img {
   margin: 0 auto;
   page-break-inside: avoid;
 }
+code {
+  font-size: 0.9em;
+  line-height: 1.2;
+  background: #efefef;
+  padding: 0 0.3em;
+}
+pre {
+  font-size: 0.9em;
+  line-height: 1.2;
+  background: #efefef;
+  overflow-x: scroll;
+  max-width: 100%;
+  padding-left: 1ch;
+  padding-right: 1ch;
+  padding-top:0.625em;
+  padding-bottom:0.625em;
+}
 
 table {
   min-width: 100%;
