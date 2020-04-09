@@ -185,3 +185,49 @@ output (see <<ethics>>). A more detailed introduction to FairML is available
 on the Fast Forward Labs blog.^[[http://blog.fastforwardlabs.com/2017/03/09/fairml-auditing-black-box-predictive-models.html](http://blog.fastforwardlabs.com/2017/03/09/fairml-auditing-black-box-predictive-models.html)]
 
 :::
+
+#### SHAP
+
+Following the release of LIME, there has been continuous research focused on improving accuracy
+as well as the user experience tooling for explaining blackbox models. One such contribution, 
+which has rapidly become an widely used, is the ^[[https://github.com/slundberg/shap](SHAP) SHAP: A game theoretic approach to explain the output of any machine learning model.]. SHAP stands for SHapley Additive exPlanations and its primary contribution is the introduction of a game theoretic foundation (Shapley values) for assigning feature importance values for each prediction produced by a model. [Shapley values](https://en.wikipedia.org/wiki/Shapley_value) (introduced by Lloyd Shapley in 1953) are a method for fairly assigning credit to participants in a cooperative multiplayer game based on their contributions to the overall game outcome.
+
+To compute the Shapley value for a given player, we compute each outcome where the player was present and compare it to the outcome where they were not present. For a game consisting of N players, there is a large surface of outcome combinations (N!) where each player is present or absent, making the computation of Shapley values computationally expensive.
+
+ More importantly, the Shapley value approach for assigning credit is _fair_ because it adheres to a list of certain mathematical properties (Efficiency, Symmetry, Linearity, Anonymity, Marginalism)  beyond the scope of this writeup. When applied to model explanations (assigning credit for each feature in a prediction), the integration of the Shapley approach yields two valuable properties 
+- local accuracy (an approximate model used to explain the original model should match the output of the original model for a given input)
+- consistency (if the original model changes such that a feature has a larger impact in every possible ordering, then its attribution should not decrease)
+
+In their paper ^[[https://arxiv.org/pdf/1705.07874.pdf](SHAP) https://arxiv.org/pdf/1705.07874.pdf], the authors of SHAP show that most approaches to explaining black box models (LIME, DeepLIFT, Relevance Propagation) can be categorized as additive feature attribution methods and that a Shapley value approach is the only approach that guarantees the local accuracy and consistency properties within the category. The authors also show through experiments how these properties help to  avoid unintuitive results that can sometimes be observed with non-shapely methods like LIME.
+
+SHAP is implemented as a python library with an easy to use interface and a set of useful visualizations. To address the complexity of computing Shapley values, the authors implement optimizations that take advantage of the structure of specific models. For example, the shap `TreeExplainer` is optimized for tree based models (XGBoost/LightGBM/CatBoost/scikit-learn/pyspark models) while DeepExplainer and GradientExplainer are optimized for neural networks. However, SHAP remains slow when used in model agnostic mode (KernelSHAP).
+
+The code below how to generate a list of Shapley values that quantify the effect of each feature on the model prediction.
+
+::: info
+    import shap
+    # model is a sklearn decision tree model applied to the churn dataset used in the prototype
+    explainer = shap.TreeExplainer(model)
+    shap_values = explainer.shap_values(X_test)
+
+:::
+
+The SHAP python library also provides a helpul visualizations that further illustrate the global and local impact of each feature.
+
+::: info
+    # Local explanation for single instance
+    shap.force_plot(explainer.expected_value, shap_values[0,:], X_test.iloc[0,:], matplotlib=True) 
+
+    # Global explanation for all instances in test set
+    shap.summary_plot(shap_values, X_test)
+    shap.summary_plot(shap_values, X_test, plot_type="bar")
+:::
+
+
+![FIGURE 3.18 The SHAP library provides the `force_plot` visualization which shows the local feature importance for each a given data instance.](figures/3-Shap3.png)
+
+![FIGURE 3.19 The SHAP library provides the `summary_plot` visualization which shows the global feature importance entire test set.](figures/3-Shap1.png)
+
+![FIGURE 3.20 The SHAP library provides the summary_plot visualization (type=bar) which shows the global feature importance for entire test set.](figures/3-Shap2.png)
+   
+
