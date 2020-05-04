@@ -1136,16 +1136,16 @@ on the Fast Forward Labs blog.<sup class="footnote-ref"><a href="#fn17" id="fnre
 <h4 id="shap">SHAP</h4>
 <p>Following the release of LIME, there has been continuous research focused on improving accuracy
 as well as the user experience tooling for explaining blackbox models. One such contribution,
-which has rapidly become an widely used, is the <sup class="footnote-ref"><a href="#fn18" id="fnref18">[18]</a></sup>. SHAP stands for SHapley Additive exPlanations and its primary contribution is the introduction of a game theoretic foundation (Shapley values) for assigning feature importance values for each prediction produced by a model. <a href="https://en.wikipedia.org/wiki/Shapley_value">Shapley values</a> (introduced by Lloyd Shapley in 1953) are a method for fairly assigning credit to participants in a cooperative multiplayer game based on their contributions to the overall game outcome.</p>
+which has rapidly become an widely used, is SHAP <sup class="footnote-ref"><a href="#fn18" id="fnref18">[18]</a></sup>. SHAP stands for SHapley Additive exPlanations and its primary contribution is the introduction of a game theoretic foundation (Shapley values) for assigning feature importance values for each prediction produced by a model. <a href="https://en.wikipedia.org/wiki/Shapley_value">Shapley values</a> (introduced by Lloyd Shapley in 1953) are a method for fairly assigning credit to participants in a cooperative multiplayer game based on their contributions to the overall game outcome.</p>
 <p>To compute the Shapley value for a given player, we compute each outcome where the player was present and compare it to the outcome where they were not present. For a game consisting of N players, there is a large surface of outcome combinations (N!) where each player is present or absent, making the computation of Shapley values computationally expensive.</p>
 <p>More importantly, the Shapley value approach for assigning credit is <em>fair</em> because it adheres to a list of certain mathematical properties (Efficiency, Symmetry, Linearity, Anonymity, Marginalism)  beyond the scope of this writeup. When applied to model explanations (assigning credit for each feature in a prediction), the integration of the Shapley approach yields two valuable properties</p>
 <ul>
 <li>local accuracy (an approximate model used to explain the original model should match the output of the original model for a given input)</li>
 <li>consistency (if the original model changes such that a feature has a larger impact in every possible ordering, then its attribution should not decrease)</li>
 </ul>
-<p>In their paper <sup class="footnote-ref"><a href="#fn19" id="fnref19">[19]</a></sup>, the authors of SHAP show that most approaches to explaining black box models (LIME, DeepLIFT, Relevance Propagation) can be categorized as additive feature attribution methods and that a Shapley value approach is the only approach that guarantees the local accuracy and consistency properties within the category. The authors also show through experiments how these properties help to  avoid unintuitive results that can sometimes be observed with non-shapely methods like LIME.</p>
-<p>SHAP is implemented as a python library with an easy to use interface and a set of useful visualizations. To address the complexity of computing Shapley values, the authors implement optimizations that take advantage of the structure of specific models. For example, the shap <code>TreeExplainer</code> is optimized for tree based models (XGBoost/LightGBM/CatBoost/scikit-learn/pyspark models) while DeepExplainer and GradientExplainer are optimized for neural networks. However, SHAP remains slow when used in model agnostic mode (KernelSHAP).</p>
-<p>The code below how to generate a list of Shapley values that quantify the effect of each feature on the model prediction.</p>
+<p>In their paper, <sup class="footnote-ref"><a href="#fn19" id="fnref19">[19]</a></sup> the authors of SHAP show that most approaches to explaining black box models (LIME, DeepLIFT, Relevance Propagation) can be categorized as additive feature attribution methods and that a Shapley value approach is the only approach that guarantees the local accuracy and consistency properties within the category. The authors also show through experiments how these properties help to avoid unintuitive results that can sometimes be observed with non-shapely methods like LIME.</p>
+<p>SHAP is implemented as a python library with an easy to use interface and a set of useful visualizations. To address the complexity of computing Shapley values, the authors implement optimizations that take advantage of the structure of specific models. For example, the SHAP <code>TreeExplainer</code> is optimized for tree based models (XGBoost/LightGBM/CatBoost/scikit-learn/pyspark models) while <code>DeepExplainer</code> and <code>GradientExplainer</code> are optimized for neural networks. However, SHAP remains slow when used in model agnostic mode (<code>KernelSHAP</code>).</p>
+<p>The code below shows how to generate a list of Shapley values that quantify the effect of each feature on the model prediction.</p>
 <div class="info">
 <pre><code>import shap
 # model is a sklearn decision tree model applied to the churn dataset used in the prototype
@@ -1153,7 +1153,7 @@ explainer = shap.TreeExplainer(model)
 shap_values = explainer.shap_values(X_test)
 </code></pre>
 </div>
-<p>The SHAP python library also provides a helpul visualizations that further illustrate the global and local impact of each feature.</p>
+<p>The SHAP python library also provides helpul visualizations that further illustrate the global and local impact of each feature.</p>
 <div class="info">
 <pre><code># Local explanation for single instance
 shap.force_plot(explainer.expected_value, shap_values[0,:], X_test.iloc[0,:], matplotlib=True) 
